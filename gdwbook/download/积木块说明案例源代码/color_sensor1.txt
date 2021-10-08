@@ -1,0 +1,38 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_repeat_ext" id="ydsy#2mH|k9eT!}d`l{o" x="275" y="-227">
+<value name="TIMES">
+<block type="math_number" id="];g;x=Ypzy%b6y5-B}0|">
+<field name="NUM">100</field>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id=".`2X$Pp6V/8rVYx|,Z^r">
+<value name="param1">
+<shadow type="text" id="%D%vS?NOu1G7txU=}yjb">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_colorsensor_get_raw" id="pxysf,rL3)-s)!pvw_%w"/>
+</value>
+<next>
+<block type="log_out_put" id="u!QPR=@nTUYh.u18O}65">
+<value name="param1">
+<shadow type="text" id="Cmw7!0S;RSyP,+jjj[sL">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_colorsensor_get_color" id="a3XA~G*ex%^=eEjkr(0O"/>
+</value>
+<next>
+<block type="robot_time_wait" id="wew.dtCv2`M#1mjFVp^m">
+<value name="param96">
+<shadow type="math_number" id="9?rcU2an30qeBjj+F]3T">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

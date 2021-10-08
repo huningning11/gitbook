@@ -1,0 +1,85 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="U6gS8:NnxLI5*w~seg4M">i</variable>
+</variables>
+<block type="robot_ledstrip_init" id="D3C3|UGBe9gE}zC=603_" x="-174" y="-241">
+<value name="param259">
+<shadow type="math_number" id="=_S.AEtQKueU!faqm6(e">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param260">
+<shadow type="math_number" id="@YaO)CsjCtQLV*]N2)HX">
+<field name="NUM">8</field>
+</shadow>
+</value>
+<value name="param261">
+<shadow type="math_number" id="Bv}F:=/Gm,{}/DKI5,l}">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<next>
+<block type="controls_for" id="`e2)du|EGzJt^CNY4,(`">
+<field name="VAR" id="U6gS8:NnxLI5*w~seg4M">i</field>
+<value name="FROM">
+<block type="math_number" id="0QAp@wR1tqrqi1k|]6kC">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="#]_LVkV9n071+wv05e=G">
+<field name="NUM">10</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="pU`_S#$9o|W}#YR3f^7?">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="aEB}!d}o/l3GLUoO{Q#u">
+<value name="param262">
+<shadow type="math_number" id="%C:=:%YU(a%^LqIj%_EV">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="A%QrxPFTKQ?~@#UQZGN9">
+<field name="VAR" id="U6gS8:NnxLI5*w~seg4M">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="robot_color" id="yv@C#!@h0nmyShT~$@4y">
+<value name="param247">
+<shadow type="math_number" id="EhRz67c2|}mm34p50;*G">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="Y%RxfY[7SG$.PAP$gf7H">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="~gdm6Y.3]6^9KPEtovx/">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="GX-Pfx4ANQ$2?r#F:!fb">
+<value name="param96">
+<shadow type="math_number" id="tbmRs|,0}c?H{xKo.oBK">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="Fz(hN12T#I8l[Bro}t,;"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

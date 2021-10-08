@@ -1,0 +1,34 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="}CP,muT`.A{[pG|C$V{H" x="-89" y="-179">
+<value name="param1">
+<shadow type="text" id="Zu-A.=d{t|Y5M+dF-!y)">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_char_num_conv" id="y?$0/%{Y(t6!oOy;V)y-">
+<field name="param741">chr</field>
+<value name="param742">
+<block type="math_number" id="8g!)hNo3$s6y/BRhxrcF">
+<field name="NUM">57</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=".H@O%LIr+QsWX9B[kr(=">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_char_num_conv" id="{2NeYn%4=gn9BBpL.kc8">
+<field name="param741">ord</field>
+<value name="param742">
+<block type="text" id="FsJkkBS}*qf]A,0{C^2w">
+<field name="TEXT">9</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

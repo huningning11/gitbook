@@ -1,0 +1,402 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="9.66jmi{{KJ(wgEOr+|_">按钮</variable>
+<variable id="tKPx%=mD7V#,sSEG5bzL">照片路径</variable>
+<variable id="j:}ipYV3Mcl$.xA|^%)n">识别蔬菜</variable>
+<variable id="*%j5.V..4+*qmRg*Aq$G">名称</variable>
+<variable id="4fuqh,5=lCMD_dky$B-f">价格</variable>
+</variables>
+<block type="controls_whileUntil" id="8wMohwA}_[ivqh=-C0^T" x="169" y="-64">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="6of3u+8Aaibmn_kE`$)B">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="g`l+TA-,+/@Th*o6[9lu">
+<field name="VAR" id="9.66jmi{{KJ(wgEOr+|_">按钮</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="q?ZQPA|fwT!sn8B3aGBz">
+<value name="param">
+<shadow type="math_number" id="swh[FssQ(sH;J_^C8wY)">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="c-lGg}hkoV#9%YgK.ssP">
+<value name="IF0">
+<block type="logic_compare" id="@XZ%=CRw[^T|Y0c|{aD=">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="wM.D)SMyO98M7}@sAsNO">
+<field name="VAR" id="9.66jmi{{KJ(wgEOr+|_">按钮</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="#]qQBv6N[#sW$f;;JB54">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="-#]3T9V#*`7b,;FcmGgR">
+<field name="VAR" id="tKPx%=mD7V#,sSEG5bzL">照片路径</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="H,llnfF7K#A1+ng_D*^3">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="s;OMtC]qdk*^em?yd:N1">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="?ky$^K(g^2Myp|$`NV9E">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="u^8Q?02!V;G.%07bb3H1">
+<value name="param1">
+<shadow type="text" id="gyi26T^|]ZeA5p9:MK2M">
+<field name="TEXT">拍摄成功</field>
+</shadow>
+</value>
+<next>
+<block type="robot_debug_image_out" id="@(wtC{0TLIy_X-(#[l+$">
+<value name="param278">
+<block type="variables_get" id="G+tftLpwa-s7zG=#GrFv">
+<field name="VAR" id="tKPx%=mD7V#,sSEG5bzL">照片路径</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="Dc8?1bGOjaO|sC#3P,Tc">
+<field name="VAR" id="j:}ipYV3Mcl$.xA|^%)n">识别蔬菜</field>
+<value name="VALUE">
+<block type="robot_classify_ingredient" id="Hk8:lW$.03)V;wj$+RzW">
+<value name="param799">
+<shadow type="text" id="l1hUUX%O0xj{?:#JTFBb">
+<field name="TEXT">/home/pi/imageTemp/苹果.jpg</field>
+</shadow>
+<block type="variables_get" id="x37CN}w(R1m$v?8P[}Om">
+<field name="VAR" id="tKPx%=mD7V#,sSEG5bzL">照片路径</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="=gbz?mwfzv$?;Rk1b;k9">
+<value name="param1">
+<shadow type="text" id="b+|rFNk|vgOSX;P.cqDG">
+<field name="TEXT">拍摄成功</field>
+</shadow>
+<block type="variables_get" id="_T%^,m,A18vybzM:XIor">
+<field name="VAR" id="j:}ipYV3Mcl$.xA|^%)n">识别蔬菜</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="#)/T+k+Hcit_8.XjwNG9">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+<value name="VALUE">
+<block type="robot_arry_get_attribute" id="TSH59]xMgtR7h`%dF-O1">
+<value name="param129">
+<block type="variables_get" id="j8$^LO6@6b?(IFK@AUMO">
+<field name="VAR" id="j:}ipYV3Mcl$.xA|^%)n">识别蔬菜</field>
+</block>
+</value>
+<value name="param130">
+<block type="text" id="7]@J6IY`,~2x85gVo!:X">
+<field name="TEXT">name</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="2;+V9{~X~aHfw:Pr?T*j">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">拍摄成功</field>
+</shadow>
+<block type="variables_get" id="e/(xp==0Muf2how8p,V[">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="Dx=5]T?DLNJ[HR4k]95b">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="0O@6RZB;Lk66Q:szH?3@">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="kA$XZP,:h65+lYhL?FTL">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="?NS[FWbES;Ll~OX:M-pN">
+<field name="TEXT">非果蔬食材</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_with_parameter" id="7~c4/~pSwvUb}ll?Il/g">
+<value name="param289">
+<shadow type="text" id=":+Xo,qj=Azfm/]MIQS)R">
+<field name="TEXT">对不起，你拿的不是蔬菜</field>
+</shadow>
+</value>
+<value name="param290">
+<shadow type="math_number" id="WU7#OM@h%z(!0/+@UW]E">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="%R)_k;Gjp$/@.)mVnymu">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="Qj*MqBAZa6+Qvm_YM81l">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="controls_if" id="Ev+MagU7uUe_y1HWqX!q">
+<mutation elseif="4" else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="{PAwy|=QHJv#3j(*O)1-">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="t8e0r+PI%q[vG(tt6Ax4">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="MfhOT[g~=h9flc*w679b">
+<field name="TEXT">白菜</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="ELrQ-|${UU3(j-=V#_il">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="~fPFD-nie/P5H:bz;]GX">
+<field name="NUM">5.99</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="EiJcx4}XYexPik^$_c;a">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="dwbt!)e;C#x7ZJAY~D8k">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="334w~#n/)6Gx=|_2*z6Y">
+<field name="TEXT">苦瓜</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="variables_set" id="D,9*+[diC1}~llPFf(k#">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="p-VimQ9$bF.mZFG2B*iT">
+<field name="NUM">3.98</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="A0n3iqEZ|9v#)si;tnNs">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="]P*bklKqg_gL~2sKZ4%{">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="Q]APBKg@0e=s3*5c%$P;">
+<field name="TEXT">胡萝卜</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="variables_set" id="0eGKt.E18+_F3..]$e/^">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="+r^WwOaV[V=n$^6+ubi^">
+<field name="NUM">10.99</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id=")9:}1IJnX~uqf~jiyLO)">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="zYv`IP?rUt=7=L|:!~m]">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="jJ(Bkqyjz!]};dYA81N.">
+<field name="TEXT">西红柿</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="variables_set" id="1+.tKMoI~JB3afuZG=m~">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="?)NAi.X5gqlbU8w$T5K`">
+<field name="NUM">15.5</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF4">
+<block type="logic_compare" id="|043H+jFIpm]4A0;!$2H">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="yTu?SS?$m.h%UOq~~=b`">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id=",|{5.2dW1a/)D/U$v{p!">
+<field name="TEXT">油麦菜</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO4">
+<block type="variables_set" id="SEWL}mPLjp-A!R_sTk/=">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="(||a}2CJ,DlVi_pD=732">
+<field name="NUM">1.99</field>
+</block>
+</value>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="variables_set" id="}}yjXRIyJR=NH-?gG%tH">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+<value name="VALUE">
+<block type="math_number" id="`b{;S}7l|/z-(@K7*I1K">
+<field name="NUM">6</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_speak_with_parameter" id="7+WHiV+Xu7j=1wP%zG#!">
+<value name="param289">
+<shadow type="text" id="jfP6CLw.{U^vW|ufB`dT">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="text_join" id=":.(xP4d[#KJL-XuysD%Z">
+<mutation items="5"/>
+<value name="ADD0">
+<block type="text" id="Z?`%NUhK^:YWqVZ6c6Fx">
+<field name="TEXT">你好</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="wcu0K_/t_UmNA:xc}]7t">
+<field name="VAR" id="*%j5.V..4+*qmRg*Aq$G">名称</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="gJU|AH-ovmhzKGBFn%:,">
+<field name="TEXT">：</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="variables_get" id="8-*s/#NRO3J})|dTj#Sl">
+<field name="VAR" id="4fuqh,5=lCMD_dky$B-f">价格</field>
+</block>
+</value>
+<value name="ADD4">
+<block type="text" id="c,a8W~/OLl$^=b*!Z*#?">
+<field name="TEXT">元每斤</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id="SCoWX$AE3^jX*wMB|-bm">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="6Yf}!*[Dlb5gyd)D:u0h">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="EgK$He_}v;5FI{8OUG%A">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="}$(ir7m;/|,D#WV4aOgm">
+<value name="param96">
+<shadow type="math_number" id="V|14-(0}K+csS2R3_%V%">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="a4ZT=6QZ_$jyzQpN$}wT">
+<value name="param96">
+<shadow type="math_number" id="xr~a8|83]_4sYSbWSf?x">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

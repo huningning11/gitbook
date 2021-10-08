@@ -1,0 +1,2938 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="]+9sx.BOxSB}krp)7Ri`">i</variable>
+<variable id="EY-:,z/xl(ixer+q!$ax">j</variable>
+<variable id="}P|;4gS]B;`%1ge.Mgpr">速度</variable>
+<variable id="A`|zNM7dlQB}VPCg=u4d">模式</variable>
+<variable id="X~MG6,.t[C)KUP@2y-r!">闪电速度</variable>
+<variable id="*iIf{g-]sK;luZs`xTZ5">手势结果</variable>
+<variable id="M{8b8`WNxJdmHEYP~y$l">运行次数</variable>
+<variable id="(;2PVO0Uw!~$3UopAfva">上次数据</variable>
+</variables>
+<block type="robot_Paj7620_init" id="7-o5e2WcxapjM-pFw~H`" x="0" y="0">
+<next>
+<block type="robot_ledstrip_init" id="7`);$_@4zFq.Tr:,EaBz">
+<value name="param259">
+<shadow type="math_number" id="PSg/s2W[WFOde3Sr,Cbc">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param260">
+<shadow type="math_number" id="C{5BJDX-%sG%CXq)YJ/D">
+<field name="NUM">144</field>
+</shadow>
+</value>
+<value name="param261">
+<shadow type="math_number" id="vV_lT+3,a4AMDV-agXBj">
+<field name="NUM">100</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="L3D78cPd%/(#}(Eu]3h$">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+<value name="VALUE">
+<block type="math_number" id="$Y#T1*fzYVw01hCHK+.R">
+<field name="NUM">0.5</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="TPiK(P/{=yyY^5XIEaHc">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+<value name="VALUE">
+<block type="math_number" id="7XKDafMX,6D%Jv|Dum_:">
+<field name="NUM">5</field>
+</block>
+</value>
+<next>
+<block type="robot_add_thread_function_callback" id="DCeJ/NQxBgF0fl?(K6nu">
+<value name="param309">
+<shadow type="text" id="FARFO.v_u]yLQ,GEYBA+">
+<field name="TEXT">灯带显示</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="YPOi}FaDv]%12qf#L6yr">
+<value name="param1">
+<shadow type="text" id="h!P@,yXZ+0q2]$+y*Dn0">
+<field name="TEXT">starting...</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="AiS|Eu9N/DllkeddBur*">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="gQ8I=s%li_=X/I,%HSfs">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="bL_cle:}9X8iEP~h3,eh">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+<value name="VALUE">
+<block type="robot_get_pajdata" id="S|3O)`+q[{4xjWIvV$mm"/>
+</value>
+<next>
+<block type="robot_time_wait" id="5(:vIiQp~p,h@IXw+6f^">
+<value name="param96">
+<shadow type="math_number" id="xumQ-$%[wTKh*qJ?;8*-">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+<block type="procedures_defnoreturn" id="-}8D|`Uz.L-l?(Hj/b8m" collapsed="true" x="0" y="320">
+<field name="NAME">灯带显示</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_if" id="@XO/7^6jOL/Z??71U7)L">
+<mutation elseif="7"/>
+<value name="IF0">
+<block type="logic_compare" id="BS;U/t@Mk^1i#XnO)_/z">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="]]0{FLp5_0Qd1NDR~[uZ">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="7l910x,(%KaVxC@h`@kx">
+<field name="TEXT">left</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="procedures_callnoreturn" id="C8{QEF}I%[Vq8T@}drKr">
+<mutation name="彩虹追踪"/>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="UQe#@:D7Ez]?pU:RXpXv">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="3Yhb-0kM-|oDY.d?=zb]">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="rJF8h-tD*[5%=uBYafnL">
+<field name="TEXT">forward</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="math_change" id="fUKx9@W-5~D9GHS.9S+x">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+<value name="DELTA">
+<shadow type="math_number" id="aVK#EAo%dfB2vQu%ErHB">
+<field name="NUM">-0.1</field>
+</shadow>
+</value>
+<next>
+<block type="math_change" id="l!%}g5`(x:7H{=M667/L">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+<value name="DELTA">
+<shadow type="math_number" id="]F`t^@+)_wjL!t2$=n:E">
+<field name="NUM">2</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="ns@2/6U]KlOn0bS%9Y*V">
+<value name="IF0">
+<block type="logic_compare" id="QHiJ-.E^4-,nQ?#=[%~)">
+<field name="OP">GTE</field>
+<value name="A">
+<block type="variables_get" id="rWha2]zj?wL6Y*]YDU[P">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="~?Ke^v^*(clSD)0%px@2">
+<field name="NUM">20</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="-Hk,OuI96{FFC~VkT=L4">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+<value name="VALUE">
+<block type="math_number" id="B(RmLUs7s-{]4G8|;RSu">
+<field name="NUM">20</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="omlpVy!86`@~~Onv6IBO">
+<value name="IF0">
+<block type="logic_compare" id=",TrF:Bd+bKLSmt5N_hHp">
+<field name="OP">LT</field>
+<value name="A">
+<block type="variables_get" id="nhbW;|%)HmCrO3eN[J)g">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="!7LB4(]}mbvVzeZoL~J]">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="W_pwXHq1SjhczAc_pp=+">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+<value name="VALUE">
+<block type="math_number" id="SW+SLM{xOOv!,e=YC4MW">
+<field name="NUM">0.02</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="variables_set" id="b?mW3^D?@zQv=2r#hXh]">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+<value name="VALUE">
+<block type="variables_get" id="):qDoC7{`ijH0C`V~vtE">
+<field name="VAR" id="(;2PVO0Uw!~$3UopAfva">上次数据</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="rF,po+=[m|8:1_{.=ZHU">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="tN?8.QS`KO7w9,-cxFV1">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="dO!A,2h$?Js$w/)M6VSN">
+<field name="TEXT">right</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="procedures_callnoreturn" id="~{/2I`iPo!CYVv^{!C5o">
+<mutation name="闪电"/>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id="xqlw?EC6t?c`u)R:us%y">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="g6s2b?!O=-NH4IUe)6:B">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="}.icmvL)~6zSWRFxAVY9">
+<field name="TEXT">backward</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="math_change" id="o|sFI*V2kthK3:Z!I|D^">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+<value name="DELTA">
+<shadow type="math_number" id="(kAJ//44;Gnlfdb1D2La">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="math_change" id="nbGKa-A8M28}=tx7{|tI">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+<value name="DELTA">
+<shadow type="math_number" id="3L$7[=XWlD2JM/v=ueTR">
+<field name="NUM">-2</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="1A@~f?Q9a`OYYh0!FOf:">
+<value name="IF0">
+<block type="logic_compare" id="V}~{o(;N+S+_1PC76syy">
+<field name="OP">LTE</field>
+<value name="A">
+<block type="variables_get" id="E72qh|ZB)*MBh,#L*g[)">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="eC0PWUE(3n1UG|rF!4JA">
+<field name="NUM">6</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="E4+oDVCb`!p_)Y~Qcmvj">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+<value name="VALUE">
+<block type="math_number" id="u^]xFRtI]WrNVoO]_Qc8">
+<field name="NUM">6</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="3KHiJ9#0f(5VIOBwGRU0">
+<value name="IF0">
+<block type="logic_compare" id="_oECi75EcQTkCO6n^_e%">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="`^!-Td3Js(Pfj!o?yB7g">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="dA|%Z[M)bUJqb.O=zfz_">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="F2ri:*nsPn4CO.b@LU:/">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+<value name="VALUE">
+<block type="math_number" id="w%?,l/=00M_Mo2l+-y~Q">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="variables_set" id="DgttDPqTnT?jC{{$.WO*">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+<value name="VALUE">
+<block type="variables_get" id="dy]L~HL,2P%g*1VgdQ:4">
+<field name="VAR" id="(;2PVO0Uw!~$3UopAfva">上次数据</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF4">
+<block type="logic_compare" id="i^Go2+v1T4*j}7Gkp7g5">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="r:pmQokkSr;6lC#Li}|7">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="*8OJiE;xN__A4$0wGLBU">
+<field name="TEXT">clockwise</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO4">
+<block type="procedures_callnoreturn" id="iOlinrI^ks+k9x{7(vb2">
+<mutation name="彩虹"/>
+</block>
+</statement>
+<value name="IF5">
+<block type="logic_compare" id="k:d3^oWx)]7EXV7#`K?L">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="x670%?Gh8yE:~C]Kx)DJ">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="evx#Q?^h.%Ei`9*.lIDg">
+<field name="TEXT">up</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO5">
+<block type="math_change" id="0JQ|Oi^WxyW5NH*::lye">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+<value name="DELTA">
+<shadow type="math_number" id="HZjC?0P^_6:12L.||}}$">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="Mkth[N)1InSeFm]7wR$T">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="VALUE">
+<block type="math_number" id="9zbDRDQG[Z:o%o.p+|r=">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF6">
+<block type="logic_compare" id="E~?)%]owNV,+H@u;]nOU">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="LB!E3zXYD4zU0,5bPlIr">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="Rq}x*S+-,ni?+L7xEB]:">
+<field name="TEXT">down</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO6">
+<block type="math_change" id="6nl1;KQh,yCoo|a0U)z~">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+<value name="DELTA">
+<shadow type="math_number" id="WulsWjmqR?SAB`e7SfNQ">
+<field name="NUM">-1</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id=",107)+YB1d[KE/9L.%(w">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="VALUE">
+<block type="math_number" id="}[.ODPVuRXOu!rRD(1_F">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF7">
+<block type="logic_compare" id="TJH_l-Tyznd!%T%?M~G,">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="4U8Vjo:Z4f5-rm+cUYJT">
+<field name="VAR" id="*iIf{g-]sK;luZs`xTZ5">手势结果</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="0Q/(?M.bd3=5Q#/-_S2P">
+<field name="TEXT">anti-clockwise</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO7">
+<block type="procedures_callnoreturn" id=",8sV7k3Ogakb=KK9C=nE">
+<mutation name="关闭"/>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="A5rWAG63F/7`tk$gTTsQ">
+<mutation elseif="4"/>
+<value name="IF0">
+<block type="logic_compare" id="5_]~SxD}RU3E:;2/zm91">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="N]P+1ydyrm:3-JFAM7G~">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="?{rv#OEdoZ!dirwb:hr=">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_if" id="uyvEz-qoygIF#B=r`]ud">
+<value name="IF0">
+<block type="logic_compare" id="uZUF`Ojq)^aPZFdSwQ@+">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="G4lL@H:ntD1xZ$q27_2Z">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="H/bq~9gQ4|.Kyn#/+#:S">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_for" id="6upOqX6kgg8m{I$9/nUc">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="$$vy8RP*Y$O}cFGq]rCe">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="kKky#B+SULHopn7yu^`k">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id=")h2wayj#J/)Hl%Pv3uxJ">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="fx#IS4~pU;K$EVqRGkZS">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="+E,cFD8*PY|Yv2MJ#SI@">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="p_pj(lFBvTDBTX|(}5M2">
+<field name="param401">#660000</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="NGz@y9;`HcrcmY;!{_4/"/>
+</next>
+</block>
+</statement>
+<next>
+<block type="math_change" id="UY$h,5q!M=g[(?B~hu%4">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="DELTA">
+<shadow type="math_number" id="e~N=7(3[3BL8Yv0nO;fn">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="L]k,BGa7hHH!lj_=mUIf">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="ojEgT~A24k7uZg`GN!b5">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Cnu@Q[HW~[axdd[zh6!r">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="controls_if" id="E%aCPxW)?l(7.?BsLV3,">
+<value name="IF0">
+<block type="logic_compare" id="+:4IG[|sboM4_DjmJ[i+">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="@da-u2asO5dNy-Yw!-p=">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="%=-FaZhkO{Gw2O$-g,vx">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_for" id="Q,o^,gts3M@Pbl:qG!Hv">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="xF9B,za5xR)oG@um3zq(">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="J^MOJ;O+G+2NHN$Hmwo.">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="D/AsmF(1480cC5!w]/n_">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="-yK_)6F(P_Bi$^w.2A#*">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="f}!!.@9h]dAnN=jl:@c(">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id=":QO@MOLV?K)btAkxD+7U">
+<field name="param401">#000066</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="CxMo:P$*H.PxB}^g9D9x"/>
+</next>
+</block>
+</statement>
+<next>
+<block type="math_change" id="MpsL$Z35w]0V;fq.kz!I">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="DELTA">
+<shadow type="math_number" id="XRu$x~boC7-MFSD!5[wL">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="k`Hl:|.yZXt4!5zI=ocg">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="Q,]EMHI?m)-[2?UQ8!vi">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="m2e[%,d?3RPR+*+s)*dB">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="controls_if" id="8[lyqaJt{CDuQ*}lIB#I">
+<value name="IF0">
+<block type="logic_compare" id="Y7?JJ|GHiP`Slr`%vdsl">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="i!JsNg33GJGNLOKt5cA_">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id=":SAq,$}tgc4b|*GwQ~5[">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_for" id="[%KSUPpKWArew)C}Nb@@">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="{:eg/0^@(2gUw7vx[osW">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="rTmKR;f3Lc4G@l2ZK~kT">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="fvDML8bqJh0NG(z-?8)U">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id=":Y4h|hKP+djK)O?*rO:C">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Lf{1];NIM8FYBbrhy=E1">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="}OS,Y?1cn8P}0oK`-LAI">
+<field name="param401">#009900</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="FbQee^,*,icgaKG@g+jU"/>
+</next>
+</block>
+</statement>
+<next>
+<block type="math_change" id="Imi_I0h].x.HU9=DgC1R">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="DELTA">
+<shadow type="math_number" id="qo0Ch3x1LR7aXB|2?qmN">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id="v.}[;^yukBMq^3}lMmQK">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="9{cy~=`7_$zGh1-t*.@[">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="_pSRxQROuzPJPHD{Cz6i">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="controls_if" id="iMm$J+Vy*fz?*fxM2gjW">
+<value name="IF0">
+<block type="logic_compare" id="|J#f,K/S^v@5X%,`O:sy">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="^?!T,pZ:Lr8Rm-XD1#WF">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="QCW)gP#i3[~.m~Soz!qH">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_for" id="_FwEVM}JH3hC_-~1n)o,">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="YJF}/?.jND(j(TsCB(:R">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="7^1B6H/FFcJ4XF($E|MV">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="#mf0Xu:xpO1_}iT`t|Mq">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="vqAb[lBuv%`Q#H8a7{uk">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Or;rw:n*sz7eO.,|w.I,">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="p_#`XDHN{Ua,Bts2$q/?">
+<field name="param401">#ffffff</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="tZOTZ3.$alt~}Kqa8}WU"/>
+</next>
+</block>
+</statement>
+<next>
+<block type="math_change" id="{RCT:2@lO+]v_,~h^i|.">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="DELTA">
+<shadow type="math_number" id=".hZV9xtd70-nXtUW]Yrs">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<value name="IF4">
+<block type="logic_compare" id="x#u;UDCYX^lf^DqQ3+Qu">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="N-gNaIqePT7Hl=@O$*|]">
+<field name="VAR" id="A`|zNM7dlQB}VPCg=u4d">模式</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="X3s+d$apDipI,,/QXTF-">
+<field name="NUM">5</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO4">
+<block type="controls_if" id="mM)|WLD+R*Gj;.Ayl-mc">
+<value name="IF0">
+<block type="logic_compare" id="*gd(e0c9zbw2[C(v.mod">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="z4m9mE*tVleLFS,hDG1-">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Q?=LcDsao3Z`CHB(0HCL">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="controls_for" id="flFlU;5?``s`,Vlx?Ssw">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="zl/.oHHs:UNtSco(iB^l">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="pbHKqxPE_Q!/Pf4R=v8n">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="^90DE|7p9oTwT=R,kj;?">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="-,Ai5{9YsAtYR]:?=4dp">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="FxZNcE5l#C1:TM-tCcc/">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="gkxLz:96;$W`V{h^{BH}">
+<field name="param401">#993399</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="=!zq;R)guX+-o*VkL,D["/>
+</next>
+</block>
+</statement>
+<next>
+<block type="math_change" id="!a(@)pUNG:R]u_NRup(0">
+<field name="VAR" id="M{8b8`WNxJdmHEYP~y$l">运行次数</field>
+<value name="DELTA">
+<shadow type="math_number" id="UO(9sVtO)=t^JDAN1Kt:">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="heD^(%rVU3BzX8:RsKMw" collapsed="true" x="0" y="372">
+<field name="NAME">彩虹追踪</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_for" id="ISWh_VS`4;=W5$WCV5([">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="DeH~Mfu@`4g-Wn!`UW[`">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="-)TI@2)gx+K1{9o{eRTb">
+<field name="NUM">123</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="P{AaAuECS1]A#?TU3is}">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="FEnnsmL%XZuw@[=tC;mB">
+<value name="param262">
+<shadow type="math_number" id="r7,~Or@F29g^A)Qv$~Xw">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Xc,Dok,~bUm(FIk3|7A1">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="3_8*Wt}K[3E@vg(yo9,I">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="R?VSdVrhXx^mbZF(XOKz">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="#a6o:BSETuu-xg]D2}D9">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="),IE+J.BYInzTdV54bb?">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="r0m)Z)`fudHZlG=#(Dp_">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="YbTg0Q0AdMq9dtW@m.2}">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="{!K_gJX*ir}#*^^p,/$Y">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="=frSSGp/MZVTIvHQptPt">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="xd?%bAJ%|8jK*l{VMgo!">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="WSTbN9z0hQ9x:Pd2hQWf">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="6I$,+O!z0_l9^Abi?k!r">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="M(,19nS@u*c0^NX$_XB.">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="U2fw[`sunbs%Q1Sb5_gf">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="m{a/8$ZLh(:xIkfdA|KS">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="6CF~gDs+xW~YmPHP$PDR">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="f=%eTDv#Uw@DAkM5f97r">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="aKkH!!G~z5-yT}ICMh[K">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="?==Wj1llp.@V9/GBYgT(">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="[1{sJjK3?-;L36gR3HXp">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="*ZK`%I2)S%v`vxB]Q.Xq">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="dEqo15p=$jfq)D/9E9tx">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="xgJ*fcUV~^+6}:Dhew*7">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="$#B:-MoH%!0]i6.I+z}j">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="E;yH4!KC%OsSXjrH3}Op">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="$(GQ$n-M;`Y|e`)p/;Y9">
+<field name="NUM">11</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="j$fQH4m%xHSE.{:OET`L">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="J-LXeq56RsD3bPy5Mwfa">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="[v+1YpSI0p308Iy#*_]R">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="Hptw%OXfDLQFt7UKmB3%">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="DjFcAvrg+4h4:}?n4J+,">
+<field name="NUM">12</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="dAen#*`v9rPIJQZF!`dW">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="kyLK/E22y#a-xu4~g3zA">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="4G`@KTt.V1{X=o.gXrh!">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="ZFZa1%RIu#3U(%K9hkzB">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="/Ct`fr+t0n3IWwRp7d_Z">
+<field name="NUM">13</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="dr;6{`p8o;}Z}OCI*gK#">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="iXRg85yn|s:uqGZd4)My">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="B/*O!OxGy:5J;kPqSDrB">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id=")_27/!+q7rpcQh#K!lUT">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="{HKyrRm2Y%9SBBgejX}!">
+<field name="NUM">14</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="@F0?nbVk8Fiu#mXebMhH">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="]q05z$hNK84d8nLu)w`;">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="^O)0D,TLsbAV4B*+MT]#">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="|h%oj#h)c:x~|KXk=+}Y">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="kf@kFmLg4X%x522@PiiH">
+<field name="NUM">21</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="c)x9)yLMYgp}%/B{Id3r">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="ca]CyA9G^Q54]tI[%u,2">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="|BIHD,c-X*=#@;A1R%74">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="f9@wC}!}b;5cKdxyw-63">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="=4BX%{_W$?H,rDpmJ1ws">
+<field name="NUM">22</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="t7lOa%C-Ja6N6sPsgc!*">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="x]F]+](WNW5b*`8F?I!O">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="}nNW)dq]/ON2:ru`,.x]">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id=":k0isCEMDV#qUYdUY6-v">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="gG7)t|W?gC5#s}VR3lg;">
+<field name="NUM">23</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="|_vOm[nak6/2(sT-t3)8">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="LN4dh_FHB}+BXzEof5BB">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="mQ^YuhmZ6+Nnv[z]mjph">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="w5ETO-5?mIv7aV9hFotP">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="y/V`}agVu@PzDqiV}AEh">
+<field name="NUM">24</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="9JZCvF5W9B,%P?:z?Y`z">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="[NeS7_/sN][BWKa#?ZB-">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="z[SjrNih;gTB3`)l`PW.">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="}#0,4*O*0cfY9xX4p$Kl">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id=".qb-1agp0}OMXFEp,ewu">
+<field name="NUM">31</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="FFGF359TuG$s5{h13nO8">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="!oY?{gXdy$~ftL/+Zt*Q">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="cIBYXsu2X(]CN}oA8%*u">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="~-KK,99x4Se*CHpb|kqr">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="n8qa(z0~y95-3Hna3;Vk">
+<field name="NUM">32</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="l4=[iE=a[1.cY~6_i#Gc">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="+;tT)vn,gMn!Yto*s8LT">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="m~O~cF*Xe]K3~@z}[P0*">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id=")AJ)8s#:}Avh4j^FQ*CT">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="nFK3%61b[vQCo%9r}(xS">
+<field name="NUM">33</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="Uq,JgpExUKG-Aoea%h`2">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="OlxKzbjR5,z}9*o?!aPV">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="mEHcq)+JH^R8;Ejx`@C@">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="BWjM#.ssIkEkF8WW$o9D">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="2)4k~K[c_lh%A={c8=F@">
+<field name="NUM">34</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="iIUs$hkVu+ng$W+|#)!9">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="HjC8C5[f$joS0#~BXnk5">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="M%pV?LhvOqJmzX(1_Jg,">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="Zp{U#F{VpbX.wf*vga=o">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="`h5L!^iMAVK6`keEeW7:">
+<field name="NUM">41</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="@x-3$-BO^Ii,vSB8Kn4{">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="At^o#M?o}R,C8eLfol/|">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="0XQCZ_~G^tTqq([s_*qb">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="vJJwh?3i7xO`Id3GhD0i">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="M;=/Y),D3EY7x?Qg1h?S">
+<field name="NUM">42</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="lXC@gg}!6BpF9Yr0pis3">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="qs[-f!B9|9toZ!#MEnfa">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="Mi2DR;!J,)Sl-K4SUh=z">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="rW0=QgEjv79/w%N!Bi1A">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="a^Vt;sPMZB;?52%E1}mH">
+<field name="NUM">43</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id=")c?H!`zIQJf]o%6]M63F">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="H/M.:t{;-e[c|oz!6yyg">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="pY![b,P,+gX~!gBy]hEA">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="0|y@{DN%b^noj#}qk@/y">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="n0uR;=7RBFV2HHYs1)dX">
+<field name="NUM">44</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="Y6v?M!^dGa1jV+lJ~0Jc">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="Ss*+80tNdw%{?/bgDXOf">
+<next>
+<block type="robot_time_wait" id="p=2zse3P$w^4(Hz4Y9+#">
+<value name="param96">
+<shadow type="math_number" id="O}@;$s32ZlBlz^-s#}Pi">
+<field name="NUM">0.01</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_for" id="ZZsvu$27gb[W){uD/-]Z">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="p[D:C[V(0cE`TCcs::bF">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="EvN8Pxyo_bU~!yR)lWSX">
+<field name="NUM">19</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="NqV0=YNGT3[f_J}RAk.`">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="s`AYyD6A4@(679M.*o80">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Z/V*=c``.fb@L|X`n/6z">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="6qrYPGz):=U36SUQMhX,">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="WM6#2)+wpd@=t{Vi5QR^">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="8FIw1tlPnA+,PxwRC5l]">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="YtiUZVP/D{uIF?bv`)xm">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="8gC|G3;7uq)RtZ.n}^i|">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="WAML6TF+jnQjdCRg;:y0">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="!4~{m6@UT*.TSeDkrmv4">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="B|RQr^%{wOM0LN!/~MY;">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="7=tbURU5UV;B32MRfI4i">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="y;FH_@$]LWyA,3xf99DS">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="*tV^s5CR=idJBk}y[avf">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="w$7:L|@zf3*d(X[9GrEr">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="ZdF),Y{qyXmSsZU{als,">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="`:aUAW*q.G/A$72/nM_J">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="OkSyXT(+:Z}{fWu~*Qsa">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="YBq{pG}|}I;kAL0k6UH%">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="D`fy`zkcZA%UxNTi}8By">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id=":ov/0,w:b@_lz!-;KbU-">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="je4lT8Z+3vs1|roa.aZl">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="$d9R}hHw^w[;:wKIKBDH">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="m1vkp,?oSIZ/@~~#VFPv">
+<field name="param401">#3366ff</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="%60KO.Yp|///%zMz=SzP">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="B;D]z%rZj$]!z;1?n9qm">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="e%$dM?O9*r^ob($Y=c-p">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="PeY2hI}x1[ER6`^aDc^1">
+<field name="NUM">11</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="Q}5Z!=|WEDb=i:iNdT{*">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="0`J}HIW9`iA#@x-@M/j9">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="X|9gk:pTVy=cXH)hNRK:">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="`L6]@@%9+/u-Rld0Ok9O">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Px,vUu:n|r#:TRVGJ=yV">
+<field name="NUM">12</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="6(;4taL{Ykw8Zs6!LQf^">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="~]-h|`4?[sOVe{xz$SB}">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id=")ABP9;-i_38E?R+^!SH9">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="4k5dS9%)T]+C6pb2,q`)">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="bK|1JDFom!?:u5n2ztJ!">
+<field name="NUM">13</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id=";3*o}v14_I8(.QLzY~.F">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="QOz1ho5)~(#4z{_n)AnK">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id=";i:8Tg,~~IBC6ebmCh,|">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="vD|1y-=`FYIV?@KNYV[;">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="o~25:scj4L|nv=h_(!8I">
+<field name="NUM">14</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="cE-Y[LoRW7xNJUp1z(^,">
+<field name="param401">#33cc00</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="nm:O_SL}Ve~Wv(VOos5j">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="XbVeM}:q$#3*0;}tJp06">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="3N|]2B0xkJk]Qsq:JG;-">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Bu6OIzjfhM[z5/T|h!1x">
+<field name="NUM">21</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="/_Tw;T@KN~7-,x7*h3te">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="RUbDZ.HN!b04zf69H_ZA">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="!*4EAWPw(w!7=TrQ`{{*">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="~w_%*PG4n=pUP#QPtAEN">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="K*KQ_6f^=JS!Vk%DyIFY">
+<field name="NUM">22</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="ug=^p:v,)4?vd|gs3sSl">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="S..!Z;ZA]~,)$,6,RndJ">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="qr+2y]O+]yu]CT#b6.JP">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="lFR-ql0~U@w7zQgVOG]q">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="[XYOjS-QQ%;Xym!zo`Ay">
+<field name="NUM">23</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="si[IXX/Ka0Io7lsl0ONQ">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="msbe~3vJ~0-RcfhEJa%A">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="C|L27yj/j]u@I2F5d==C">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="G1Rz77CP5q*aOZ5r{prU">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="$}vJ=l|03wG^jVE*]q_U">
+<field name="NUM">24</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="+3.Iex^ok$/M91Crq{~h">
+<field name="param401">#cc66cc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="S%fGohFrmwl#7,gC/zAb">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="^tMXsu|s:v[h:A.[fj=q">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="f`Ag#VD[dL-7H^@=iKiP">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id=",7he[O/rbA;{1qX-iF]2">
+<field name="NUM">31</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="e)`0*f4Iz8Vk,/U$*~S$">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="x_C8N3gLB0w@dS+3.AiU">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="ADdDA,KKM}0!e1PsBlrP">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="f]hYqr*/Sn?KWU,S^EuO">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="g0@Nk2[i#LxyfSa@O`xc">
+<field name="NUM">32</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="{MhW}KoKvs6I6fZnkwo[">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="aV!0-AzTTzprJVwI9cc3">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="7B`fGpUzk/;.9*MRfwVW">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="o;nP*VbYt}SAFahGPv`?">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="WEEm@|m{B@a`8tWViBL1">
+<field name="NUM">33</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="f*a4P/#B2(|=|3wcT$)!">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="1*|;3N1]fG8HxKh[1nTs">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="*|}+Q=.3SK0y~fa68Sl~">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="ZpnDRF3ZkEmLL7Z}#hjD">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="#Ou0Z.mPJYXU)!P__/Bs">
+<field name="NUM">34</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="}l2L(=gK6=8{gq7)g5.T">
+<field name="param401">#ff6600</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="RBt/#,6Xdvz7{cTs-hOZ">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="YabnO#Ry,zpZJzHw:UnF">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="Ad3aBnB@GNE#eu#kF+DB">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="rBiZi9OC]o=%2!IIRM)W">
+<field name="NUM">41</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="]+BS!OYxV2%Z{zYla+LK">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="1J85H8oB@:A7x:d{{oG(">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="34S`ST8CvZ`MmDBW}Y%F">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="`5v+Uo32u!bsJ0mbKq$e">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="@Q||*]S!I(.u]lL+_uAl">
+<field name="NUM">42</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="h*GS0n-JYIDU9b=RD7xP">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="u9cRo6|4r1i5_Te?PsZ7">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="@j457!:i_`wEV1X@J9a2">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="/w%Maa+j8_ue71C6m}-)">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="RpEqkl3:yB}pi#r]+yR8">
+<field name="NUM">43</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="VMv*YyKDY/CR/Gm4}bMB">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="$6P.3;s2Z}8AK%5Q]qPK">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id=".xb3yxmKMr5.l~7e/Zay">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="5q$q-P%%I-{P$U$_Xy%h">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="k5|@W`)+*J1aIov1]^oC">
+<field name="NUM">44</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="d?YD~hWVQhj#Dw^w[Xjf">
+<field name="param401">#ffff66</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="hIGZ+M6EqXry={!ZSS=~">
+<next>
+<block type="robot_time_wait" id="_QwBjc#ORJ{zR|(q0Hu5">
+<value name="param96">
+<shadow type="math_number" id="F?{K7Wh@*bw:$0Ykq@Ni">
+<field name="NUM">0.01</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="*HJ5Mv!6(jW2]`*N]=hq" collapsed="true" x="0" y="424">
+<field name="NAME">彩虹</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_for" id="T/]$RF^P^ysGZ%`Rh_`~">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="IviKTbQWQ,_0]FKwDw4]">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="W{Yb@i+=4bpOvre*D*N_">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="]dhU{uk3t1a;o-1+GUw6">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="h*7P*LN2Ff0)@q3JIXi,">
+<mutation elseif="2"/>
+<value name="IF0">
+<block type="logic_compare" id="K~ca-mJ+`sU7t@^lFLNs">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="w|QC,3TZf]Cwzg/9ZSb1">
+<value name="DIVIDEND">
+<block type="variables_get" id="bB$~p86^.KZr1|fQF0kt">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="VGW:YE+fy}2co?QH-s)I">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="u75*n%=mk@}nCbLyYx+P">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="@7YGB*65=e+jXdXlb,]S">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="%R=?b4.PNlrV2sN2vM#P">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id=",r(d!.AV{Qk?4V#MZV{_">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="}+xGFxh~0G!=1$X%lUY^">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="nJte_X4rX`o%%7vJH%]J">
+<value name="DIVIDEND">
+<block type="variables_get" id="^s0rC?B9c@pyI2G,A}TO">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="HB67`j,N3-v~6Pkk-h!4">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Sp)^?Tdo]g./J[w.Q|7$">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_ledstrip_setpixelcolor" id="Yyt%HJ#O-?H1B[QnyJbC">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="@3fS;aOh@eA-u}g#AUp;">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="^rUYD|p~3=t_|Q1pXP_c">
+<field name="param401">#009900</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="Z$nPu*MW|y/w(jh,=8IO">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="H?ha1;fgpqB%{)nSWg6a">
+<value name="DIVIDEND">
+<block type="variables_get" id="$5l*ljG0lZ8g#W5QK@;(">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="Tj4b2j@89@u%epyNV@P9">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="z4N#PUk`V%+yUsCKgr1@">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_ledstrip_setpixelcolor" id="(x(751B(.wfsw?S]`9{T">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="A*..~aEM.Lq[[1?ixL[C">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="FzR.uH/7EqI#@ZH0KKH1">
+<field name="param401">#ffffff</field>
+</block>
+</value>
+</block>
+</statement>
+</block>
+</statement>
+<next>
+<block type="robot_lewstrip_show" id="pGffyBzH:jGQNXAgQfc.">
+<next>
+<block type="robot_time_wait" id="ZW|4U;IEdbis*s54}5DO">
+<value name="param96">
+<shadow type="math_number" id="Lx?xhuj`)Q^@~FZ;.rS6">
+<field name="NUM">0.5</field>
+</shadow>
+<block type="variables_get" id="6IZt1YWqu3hz69S@yK@Q">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+</block>
+</value>
+<next>
+<block type="controls_for" id="PDKyn}7@gb!:L~r)LIss">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="UgG8Pu)xkBSaSl!qrHoI">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="kNc=8GKCIj)3,tCd#l8:">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="V%}]S^aB;mxCmGIW/RaB">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="b92)+#_$9d%HRd6VY8F`">
+<mutation elseif="2"/>
+<value name="IF0">
+<block type="logic_compare" id="N/#QZp|2t5jx?;M2@5ZQ">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="]S+A{kJ^_*!?sC#h2qw7">
+<value name="DIVIDEND">
+<block type="variables_get" id="qcJq{6AG_?wnGhk9{%-E">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="lua[K:Ruq-yyQMKO[BLn">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Kw*nR/F6sl*~5{_sXKh|">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="0oDF0S9,N}4y%q2{.v[+">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="oppC#1=Ik;ctNt^8WfKX">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="kaacRV;6*F(T*f[=p]%N">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="]7;+[AecB~uyST0:in/]">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="aG:E#6*G}-n,Suo.EWH~">
+<value name="DIVIDEND">
+<block type="variables_get" id="l0_CW.NxRo;],]{Vt^c;">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="#=+KGI@Y5g=/#QVdDWl%">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="6w])[$!YIF]rvg,-170=">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_ledstrip_setpixelcolor" id="guBRYTfm:%@a#]yD%g7M">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Cnrjf{m%A,Jv{*IH-3Jv">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="}!|8R:/}u0vysoIrrT_W">
+<field name="param401">#009900</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="j^mKu~gO5qJ%W{RI38)a">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="6Rd2_J?_29%{F?QkC92k">
+<value name="DIVIDEND">
+<block type="variables_get" id="A(`Y8Pw@Sd6_L;qEuzkL">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="-b!6Uv3PiQ9K-PzQ=]rp">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="kz.]Wx8~-x0Q!V6`3c}J">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_ledstrip_setpixelcolor" id="u0a,T,#N^Deq(|/v|O]U">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="qxH@/2[_FAUt6)xhYDi!">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="G]sc2b@H,1=Jbb9z-!lR">
+<field name="param401">#ffffff</field>
+</block>
+</value>
+</block>
+</statement>
+</block>
+</statement>
+<next>
+<block type="robot_lewstrip_show" id="c@=qd[+#jsZ,1#XvK0bj">
+<next>
+<block type="robot_time_wait" id=")1=k|PezyfG=qQJ81{2M">
+<value name="param96">
+<shadow type="math_number" id="vqJEw!HNkQ#qi2y?[12h">
+<field name="NUM">0.5</field>
+</shadow>
+<block type="variables_get" id="CGVcc.yT`XXUbQ6}EU{O">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+</block>
+</value>
+<next>
+<block type="controls_for" id="=2.*j;Yv,3X9]T8GxOLE">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="]rrt!RshS{|(Vij]KMMF">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="H!y1HQCe,PUWodMf3_=e">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="#BKg#k37QUBZ8%sdIoZ1">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="v*pA~ec;A@Pucc[!2D[%">
+<mutation elseif="2"/>
+<value name="IF0">
+<block type="logic_compare" id="ciUOo$dVd0=6)b+N]jSr">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="iuVE$-NmX$Q+_jRb[bO1">
+<value name="DIVIDEND">
+<block type="variables_get" id="Z7,RMuxrBE,cyR:[RmZY">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="WgwHG7]hE6jlCKiu7SxC">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="?c[Xt~dv)R((mevYwzT,">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="F.W)+Y{D*NRekU:fliuZ">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="SNap5N:n*e@nd@%?gPew">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="o@=iJM1F1kx5sAK=ZalW">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="MuTIUD+c=UzrOCV#vHbR">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="$Keb~jx=cL,y]CsUM_v6">
+<value name="DIVIDEND">
+<block type="variables_get" id="`yf!0@jf^TG[vHJL0|d6">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="Vn*da{,,f5|=up@-YO,Q">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="USs6c=nk{5ba72$;??S/">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_ledstrip_setpixelcolor" id="{/$,J_)t3P%ZqqDK^g[R">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Tuy/]e4N*LHj}}QP3F0,">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="KW;Xq87]*9(jHNjb71M#">
+<field name="param401">#009900</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id=";%Ip~lqm3nmo|c$95q=)">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="~sWy~UxRh^(f:NdIT+E;">
+<value name="DIVIDEND">
+<block type="variables_get" id="~aiNU;zKQ:B8KRLEmz#F">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="}]QvD|.fZ7)+YnwDG0/G">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="F:|!gE].X#biB}cMN_ef">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_ledstrip_setpixelcolor" id="GuTl9HOp^g7WonypZ!AR">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="`OW5#SCoFddIQKTF2jVR">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="d3%.`5J0B5layIQ_*W:%">
+<field name="param401">#ffffff</field>
+</block>
+</value>
+</block>
+</statement>
+</block>
+</statement>
+<next>
+<block type="robot_lewstrip_show" id="F]$3*r)rpq]:5RTyiR9~">
+<next>
+<block type="robot_time_wait" id="w!p]QcKSgOGD^?~bkM7?">
+<value name="param96">
+<shadow type="math_number" id="H)Qq^$s[u3FA,k]pM?Ch">
+<field name="NUM">0.5</field>
+</shadow>
+<block type="variables_get" id="or%O1BWwtU]G3SxY?%W7">
+<field name="VAR" id="}P|;4gS]B;`%1ge.Mgpr">速度</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="VDa7B?Ud{kpaLo#r@36j" collapsed="true" x="0" y="476">
+<field name="NAME">闪电</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_for" id="dvg{zP~*qJ8oF_t9,%vs">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+<value name="FROM">
+<block type="math_number" id="TMCW~qo4$+6QpiaNDeze">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="QTGaB~=##6Gs?zd)5PTe">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="variables_get" id="rUy14/J~p**pp/cqKPfS">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_for" id="iC;fx]Nub.N+:pY,Ij85">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="]S:(4lX;j$(a[N:qJTT4">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="7VL2wz0Z~?r7:}s#1.T8">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="Lou$y9Al|0H%P@w}kPwD">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="CeVtq.MOdU@P5}DZ=7{N">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="kwHc`k:Q}Un469u0lO8k">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="2iV9[1J;fJnP[d4XVgw/">
+<field name="param401">#000000</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="controls_for" id="/Z*7lxii2aTrH]A3X,xf">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="variables_get" id="aMK0;G@DsMYIsHrUAy-$">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_arithmetic" id="z+-8uU4W{4RdbX|N,$5d">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="Cp#TB#AXcv#i}wrW3ZA3">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="@k1Q@kWigt/;i6Z4K7sV">
+<field name="NUM">15</field>
+</block>
+</value>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="9oNnz~E_-c?Rz6o?;ks3">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="O$2W/0-WT8ObDp;]KJoO">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="/qt^JJ_[@Z`o2A]@BM6,">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="DoomR(O=[h;ywGlyAGDu">
+<field name="param401">#ffcc66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="W7LBGL88+v0W3A;8TdF@">
+<value name="param262">
+<shadow type="math_number" id="8],nj^g4wQo-(lgdc@p,">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="ud^E-T1KPo3:(@phqenN">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="kEeIoQ:Pqe%+cg[23%RN">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Y(ghSu:3$oafjnBO@#2o">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="tFb*rIJ~0!tiJ3|7(sRz">
+<field name="param401">#66cccc</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="UOF8YHRtA^jaQ^yu5`;B">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="Lg;fiaXNwiF_#3OnXTc4">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="y_[3.P|,R8!lUKfHG?!R">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="2R+JDpxUFrir6hsRlWKJ">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="SR0l-7^K;tY7l7)xP[HL">
+<field name="param401">#66cccc</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_lewstrip_show" id="UNM7}a%mb9j4zs}zJ85j"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_for" id="=Of]P6I7t]4m]hh|hKD5">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+<value name="FROM">
+<block type="math_number" id="3G-]o*?^d2j@LjmfN)l$">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="]paR%oZZawwbuWEWup-M">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="BY">
+<block type="variables_get" id="`)v06uN|M4Svzv[%jSdF">
+<field name="VAR" id="X~MG6,.t[C)KUP@2y-r!">闪电速度</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_for" id="m|LauvAwPiTW+~9*2hzU">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="snsq!Q6kHmlb+kk`dau2">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="z;+O9``2Hvdh+6I^X@lM">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="_wK[lMxap;DGIt%|-ju~">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="RXu.]LeMe7:S2}kObne#">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="S;;h]8-Ckzky|%=-evbz">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="o7*CoW*iH.kw:,Z*e2}P">
+<field name="param401">#000000</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="controls_for" id="8,uI+0jJi,t!XS0Z7W~.">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="variables_get" id="RZmVsQecuIuY9[y]xm~]">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_arithmetic" id="#`F0$M$8OJG{woTm7sbV">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="variables_get" id="chVd,gD~,ims|]0:8RvQ">
+<field name="VAR" id="EY-:,z/xl(ixer+q!$ax">j</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="XkRM;oZ0Cd:5$1Hx?U#b">
+<field name="NUM">15</field>
+</block>
+</value>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="H-Ul[vP/k91Us|@hb3g;">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="*PBD9j$2Z(MjYx=ByEDa">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="ORe20{8]n`OQQi9kmUvs">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="xT@[K}9#e1s7W2aT0fx5">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="RJ5W8(a`q58%u(APhwtv">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="kjJHIhZQ~I(O^WHFMA6=">
+<field name="param401">#ffcc66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="1:~.%_%Q|mwg,Etsj%e-">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="k`uiiQQW=/A.a{5%$ukK">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="wLFHTnOAoJO,DF%6F4!k">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="cUn=k3Cw49(*O=)Nrcv+">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="fs`0P-,gm:K7UtJ)LH_P">
+<field name="param401">#ffcc66</field>
+</block>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="iE|mm|nD_x`ozv1GCzUf">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="ez82IT@qF6K/1HUsqw.T">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="(vIGHHu;lo5i,-4y[6T^">
+<field name="param401">#66cccc</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_lewstrip_show" id="SG0W}8tHTIUphvQr`s%d"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="}o,ODhpnWh8l3X?!4M+e" collapsed="true" x="0" y="528">
+<field name="NAME">关闭</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_for" id="];DBj/k5}{YHQY$X8%XA">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+<value name="FROM">
+<block type="math_number" id="@Q-B]bc9*Unm,4RlHzK(">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="=4YJSDPIfY0S.Yjy0n6g">
+<field name="NUM">143</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="-K#bcO3U8WAmqVBe=/]7">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="bs]qY97,kLn;!;})j:,+">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="NoNxS`YKVxo/UI:v`q9d">
+<field name="VAR" id="]+9sx.BOxSB}krp)7Ri`">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="wzz_v2_color" id="/U_rt0_vw#Wz(aHeZCDd">
+<field name="param401">#000000</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id=".P`F~WvsP$}Xf7.YI{9p"/>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+</block>
+</xml>

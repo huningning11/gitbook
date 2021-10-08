@@ -1,0 +1,185 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="NSeXaQaxan=dHHsoh/{T">i</variable>
+<variable id="y[-v+!w#D4N.BRXr2Bpz">j</variable>
+</variables>
+<block type="robot_sense_screen_set_rotation" id=":|GmiL.!]Ixa=wZ0Z=p." x="195" y="-172">
+<value name="param174">
+<shadow type="math_number" id="nj]svR}dBy)2zy}91)dD">
+<field name="NUM">90</field>
+</shadow>
+</value>
+<next>
+<block type="controls_for" id="2DB,x{9KOH{S_:-ed5,5">
+<field name="VAR" id="NSeXaQaxan=dHHsoh/{T">i</field>
+<value name="FROM">
+<block type="math_number" id="z{|=V0e2(i.O}9BRh{qk">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="lsy}.;;oc8r~DU8(sDVM">
+<field name="NUM">7</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="8.t.O(FTkzMbS^$OKdj(">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_for" id="sE5_as3jBI!Bx^.[pV!w">
+<field name="VAR" id="y[-v+!w#D4N.BRXr2Bpz">j</field>
+<value name="FROM">
+<block type="math_number" id="UfTTnyaHfASK|kh:nthM">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="01pz}|,,+):?c@$Rhs.)">
+<field name="NUM">7</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="8H`eOw=G}Y;!(Ayk5:2w">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_sense_screen_set_pixel" id="S:jLyj{0M.[Vith9+H+b">
+<value name="param171">
+<block type="robot_color" id="ZPY8bH*DBffegv)-FEuj">
+<value name="param247">
+<shadow type="math_number" id="GjP:4wy2Q%x=:.OADL#+">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="ox1$2zvlXS8u+^hKd8O{">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="ILX{EY=3ZI!}Dmid4(4t">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number" id="n[kf*8gw=g?:*=zr[j(`">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="T~Yh+Z8f5~}AoYB+7IA4">
+<field name="VAR" id="NSeXaQaxan=dHHsoh/{T">i</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number" id="lk^/z*:v_{G2slX{kPo}">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id=",[dMTr+?II-;P)kaTj|m">
+<field name="VAR" id="y[-v+!w#D4N.BRXr2Bpz">j</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="H`zgdznWA{R|@iWX7A^F">
+<value name="param96">
+<shadow type="math_number" id="Gm;xW|*4Xm[;C4s$,G}A">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<next>
+<block type="robot_sense_screen_set_pixels" id="56$KOr7mQc.1P~0W}njE">
+<value name="param199">
+<block type="wzz_sensehat_matrix" id="i6kisr[w7dScMyMDEub+">
+<field name="p01">#000000</field>
+<field name="p02">#000099</field>
+<field name="p03">#000099</field>
+<field name="p04">#000099</field>
+<field name="p05">#000099</field>
+<field name="p06">#000099</field>
+<field name="p07">#000099</field>
+<field name="p08">#000000</field>
+<field name="p09">#ffff00</field>
+<field name="p10">#000099</field>
+<field name="p11">#ff0000</field>
+<field name="p12">#000099</field>
+<field name="p13">#000099</field>
+<field name="p14">#ff0000</field>
+<field name="p15">#000099</field>
+<field name="p16">#ffff00</field>
+<field name="p17">#000000</field>
+<field name="p18">#000099</field>
+<field name="p19">#000099</field>
+<field name="p20">#33ff33</field>
+<field name="p21">#33ff33</field>
+<field name="p22">#000099</field>
+<field name="p23">#000099</field>
+<field name="p24">#000000</field>
+<field name="p25">#000000</field>
+<field name="p26">#000000</field>
+<field name="p27">#000000</field>
+<field name="p28">#000099</field>
+<field name="p29">#000099</field>
+<field name="p30">#000000</field>
+<field name="p31">#000000</field>
+<field name="p32">#000000</field>
+<field name="p33">#000099</field>
+<field name="p34">#000099</field>
+<field name="p35">#000099</field>
+<field name="p36">#000099</field>
+<field name="p37">#000099</field>
+<field name="p38">#000099</field>
+<field name="p39">#000099</field>
+<field name="p40">#000099</field>
+<field name="p41">#000099</field>
+<field name="p42">#000000</field>
+<field name="p43">#000099</field>
+<field name="p44">#000099</field>
+<field name="p45">#000099</field>
+<field name="p46">#000099</field>
+<field name="p47">#000000</field>
+<field name="p48">#000099</field>
+<field name="p49">#000000</field>
+<field name="p50">#000000</field>
+<field name="p51">#000099</field>
+<field name="p52">#000000</field>
+<field name="p53">#000000</field>
+<field name="p54">#000099</field>
+<field name="p55">#000000</field>
+<field name="p56">#000000</field>
+<field name="p57">#000000</field>
+<field name="p58">#000000</field>
+<field name="p59">#000099</field>
+<field name="p60">#000000</field>
+<field name="p61">#000000</field>
+<field name="p62">#000099</field>
+<field name="p63">#000000</field>
+<field name="p64">#000000</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="9B|A+V%:ngoDl`y;kqE%">
+<value name="param96">
+<shadow type="math_number" id="(IN9xldhL6n3{87t,%Lb">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_sense_screen_clear" id="`ypGJph%P*)@2#H3T?`-"/>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

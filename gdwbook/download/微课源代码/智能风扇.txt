@@ -1,0 +1,171 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="FG%jCywxnd:,25=Cjngq">温度</variable>
+</variables>
+<block type="controls_repeat_ext" id="(i-+B_)k:}ws%Oi%$Dud" x="342" y="116">
+<value name="TIMES">
+<block type="math_number" id="6_WhS(3h:wl++:Mx;HzO">
+<field name="NUM">1000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="4*C)U_`ArJhhR%1wfi}5">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+<value name="VALUE">
+<block type="robot_get_mlx90624_temp" id="HLvtpew~{r4LyPo7Y|!L"/>
+</value>
+<next>
+<block type="log_out_put" id="hc={Slj_qtb8%?(3I$D7">
+<value name="param1">
+<shadow type="text" id="{9g/m!qhe4qr#sq$DHel">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="@N=X$8e!O~C(Mt{w@/*K">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="O9PtUUSGJ76()Rp!B(63">
+<mutation elseif="3" else="1"/>
+<value name="IF0">
+<block type="logic_compare" id=")^kR7*@%-|l}l5WuU[;W">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="o09*29}}gdBvlr5-oqk:">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="lU8kT9N`#rcq`#fhuQ-n">
+<field name="NUM">35</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_pwm_output" id="=?E9_2qP/iwKt5@_}~;a">
+<value name="param13">
+<shadow type="math_number" id="RtSakXvoD9J6Y5+A];k@">
+<field name="NUM">23</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="t4yL%eK}5H1,j`]+$cC+">
+<field name="NUM">3000</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="?Fb$,aMLc;E2;tUo,^k8">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="T,povH+w1%rZ/l;cuY7$">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="HbHer-Oh)I*R75/7,[r4">
+<field name="NUM">33</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_pwm_output" id="F2A.PVc7N=9|[$h7b|$h">
+<value name="param13">
+<shadow type="math_number" id="Cd}V(/JacOxJpK3*ksp1">
+<field name="NUM">23</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="+%5Pw{;[6jld+y?t,hzx">
+<field name="NUM">2000</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="*l,`fR3;AmM2Pam-dF[^">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="jb:TYv,67QaB|*(5+Wq[">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="fL@ooPUm::kQV]}mh1/w">
+<field name="NUM">30</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_pwm_output" id="yo,C%^.I=vml5,:HTMs8">
+<value name="param13">
+<shadow type="math_number" id="j{}Vd{Z?j#Ly5NoXb!/e">
+<field name="NUM">23</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="~O0Q+eY~NGBkkUIircpQ">
+<field name="NUM">1000</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id="`||t}d8KqGG(Y{C~F}U~">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="CG}i0cT;0Fe2NjK#IlPB">
+<field name="VAR" id="FG%jCywxnd:,25=Cjngq">温度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="=z^u|};8Dc`TO6Z09%bp">
+<field name="NUM">28</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="robot_pwm_output" id="^qS[G@YpTF.C$MCL-$D|">
+<value name="param13">
+<shadow type="math_number" id="?Qar_3mj%]]rG5U5$RMQ">
+<field name="NUM">23</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="*krZjq;Lv|QY93))mJD[">
+<field name="NUM">500</field>
+</shadow>
+</value>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_pwm_stop" id="{cUpC0,h~_k0`Wk3Y^pN">
+<value name="param15">
+<shadow type="math_number" id="{/z7DiPx+mfDo3{`-wL(">
+<field name="NUM">23</field>
+</shadow>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="(vTkH)__A5}@CIaEG99c">
+<value name="param96">
+<shadow type="math_number" id="*xT5pufPPA6hkX~U:5_s">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

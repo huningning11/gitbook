@@ -1,0 +1,55 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="{x9bB!e0i1dL^MS3/B_4">test1</variable>
+<variable id="aUmS0u0(AQRSFDhcy=Pr">test2</variable>
+</variables>
+<block type="variables_set" id="epz_2B_SZfv4U.+$3?,d" x="302" y="-109">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+<value name="VALUE">
+<block type="lists_create_with" id="6$X#xUpY[;@lft^?Y.[Z">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="math_number" id="=dB=Mp_d~ti@`NemZh|k">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="Kb8q%)V`SK*eB-K3N2bc">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="!OM{cEde7@Q(tj(f*3:O">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="b7{5~qr2h/tD-]f^D+o[">
+<field name="VAR" id="aUmS0u0(AQRSFDhcy=Pr">test2</field>
+<value name="VALUE">
+<block type="lists_isEmpty" id="ORF)NimbiUys3xtE$v(]">
+<value name="VALUE">
+<block type="variables_get" id="_[[JpoD;rT*:8,d=8Pi:">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="kaZKk06!P4GkL^U76M,E">
+<value name="param1">
+<shadow type="text" id="gsZu@[PxUgj@Yh({s_9l">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id=")gS=SSmva5Z3NTWPp`a`">
+<field name="VAR" id="aUmS0u0(AQRSFDhcy=Pr">test2</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

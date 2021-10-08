@@ -1,0 +1,102 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="gQrA%Y~tyF3ukRG;)!!z">拍照</variable>
+<variable id="KK/_PXHIS~eC(W#?TMbA">识别文字</variable>
+</variables>
+<block type="controls_whileUntil" id="kyz@Cy$e%a2Q|YI;PLDa" x="224" y="144">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="f$]{k4O4iT/5gn$wP1MW">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="Ha[},C9_w0Ia)?olTc_J">
+<value name="IF0">
+<block type="get_infrared_result" id="aTsYH%N=W%fE!PWsBg~~">
+<value name="param">
+<shadow type="math_number" id=":rqVH(x6TO5nqH{Na8y}">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="*d;Kl,Q1LZTSh#{(qx]6">
+<field name="VAR" id="gQrA%Y~tyF3ukRG;)!!z">拍照</field>
+<value name="VALUE">
+<block type="robot_get_camero_capture" id="`DmnQi#;y;Bt*-:wJ;!*"/>
+</value>
+<next>
+<block type="variables_set" id="s7sQoInCX8]Pv2.Bj)Pw">
+<field name="VAR" id="KK/_PXHIS~eC(W#?TMbA">识别文字</field>
+<value name="VALUE">
+<block type="robot_get_text_from_ai" id="6?vm|g+!LX_`V7gThA$H">
+<value name="param146">
+<block type="variables_get" id="M}%s1?m:||e86]j7/%2K">
+<field name="VAR" id="gQrA%Y~tyF3ukRG;)!!z">拍照</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="vWOwY?WCPsd!82iX.1X(">
+<value name="param1">
+<shadow type="text" id="hu_TbsSZu{1jD#;-4w7W">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="G,myN(%Q7?3fdB3FSR!^">
+<field name="VAR" id="KK/_PXHIS~eC(W#?TMbA">识别文字</field>
+</block>
+</value>
+<next>
+<block type="wzz_txt_2_mp3" id="fYJ`bwxxE}7}pNUiP)k|">
+<value name="param488">
+<shadow type="text" id="6y^.l985u.JPvsPG114@">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="variables_get" id="n=|SR!j2*l?uuLbL/xw{">
+<field name="VAR" id="KK/_PXHIS~eC(W#?TMbA">识别文字</field>
+</block>
+</value>
+<value name="param492">
+<shadow type="text" id="_i,gHn|6a1h*Cb6py[v?">
+<field name="TEXT">/home/pi/temp/1.mp3</field>
+</shadow>
+</value>
+<value name="param489">
+<shadow type="math_number" id="a%/HFx]FE._$|nHFKuFw">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param490">
+<shadow type="math_number" id="n:^[eUFnKR48R*]u+??@">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param491">
+<shadow type="math_number" id="j@{1lr)C;3(wW}=l?4cs">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id=";2#A=SlU6v^qUjW]Z+i^">
+<value name="param96">
+<shadow type="math_number" id="dQ*Jy|65dvU;ZWYS!rIG">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

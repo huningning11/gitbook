@@ -1,0 +1,80 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="Q-MccaP(%ud^o{r1(_#%">PWM</variable>
+</variables>
+<block type="variables_set" id="P;+fnE|aZn(mO/)LQcZ2" x="276" y="343">
+<field name="VAR" id="Q-MccaP(%ud^o{r1(_#%">PWM</field>
+<value name="VALUE">
+<block type="math_random_int" id="BjAxf4@iypb0BtK#odO:">
+<value name="FROM">
+<block type="math_number" id="!D+tf@c]R2vp[i1X:*DK">
+<field name="NUM">500</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="aaJO_(tXd)_!/XhNzY/:">
+<field name="NUM">2500</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="pwm_output" id="B#BWdXNHM=diaq+N2f]6">
+<value name="param7">
+<shadow type="math_number" id="W+C`5a-yL|+6Wh.69{Eb">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param8">
+<shadow type="math_number" id="N=[vER{4y?OgS^oC7@dV">
+<field name="NUM">2000</field>
+</shadow>
+<block type="variables_get" id="-GzwlwHs6#~v%:s(;{4g">
+<field name="VAR" id="Q-MccaP(%ud^o{r1(_#%">PWM</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="0+1ks%KXSooq?V:dMPjY">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="bA%OP5}Ttyp)CY3]O!8!">
+<field name="OP">GTE</field>
+<value name="A">
+<block type="variables_get" id="VAD8A84l:2YfM+WV!3Wa">
+<field name="VAR" id="Q-MccaP(%ud^o{r1(_#%">PWM</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="n;2U70g[!bp#u,v+O5M%">
+<field name="NUM">1500</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_led" id=".Emk#mwaB%Fx+lY$1+,g">
+<field name="param155">5</field>
+<field name="param156">1</field>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_GPIO_control_led" id="A(uck+|3z,*Kn4n,#~62">
+<field name="param155">5</field>
+<field name="param156">0</field>
+</block>
+</statement>
+<next>
+<block type="pwm_stop" id="/|dyvT[X6@x{!0;Mjx]P">
+<value name="param9">
+<shadow type="math_number" id="At2}%dTaZYdY7@*--6!7">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

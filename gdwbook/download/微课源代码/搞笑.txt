@@ -1,0 +1,227 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="T!{3UwsU1R~Q!`K?Dd8%">按钮2</variable>
+<variable id="PVWt4yKlOt8Wy=%e@)KG">按键</variable>
+<variable id="a:_q;-8Duixy`IyR!_2:">声音</variable>
+<variable id="pi(xD~DL#R[JSONbXsj6">语调</variable>
+<variable id="b,]NO~Zm{25f9B]GvDS.">语速</variable>
+</variables>
+<block type="controls_whileUntil" id="^`wNhTV}SDX6Cq`OV1D)" x="238" y="77">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="*)ju/4A=CI}pqJ*8Lrdu">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="$%SY!2qrOjn;C3grv$=3">
+<field name="VAR" id="T!{3UwsU1R~Q!`K?Dd8%">按钮2</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="juudYa!@F}Z2o2l;/:n~">
+<value name="param">
+<shadow type="math_number" id="`e$PPm^:9Pbw[7yk4#_J">
+<field name="NUM">24</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="|9FD0MPh_8#L224(nP.^">
+<field name="VAR" id="PVWt4yKlOt8Wy=%e@)KG">按键</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="$.oRCw5eCZa:LO:jk``z">
+<value name="param">
+<shadow type="math_number" id="oEN4M!Xq-]KZ[NO0-FR4">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="q5r0FJd9owQ;UfJ70xP;">
+<value name="IF0">
+<block type="logic_compare" id="UWSc.P/a1u,HuKudH~cj">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="oWfgvN}HwjF)ubP|CLd7">
+<field name="VAR" id="PVWt4yKlOt8Wy=%e@)KG">按键</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="C*eJzoiOy3G!XF|DA{)I">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="W+E5sQgl[9%DJF/y@5/W">
+<field name="VAR" id="a:_q;-8Duixy`IyR!_2:">声音</field>
+<value name="VALUE">
+<block type="math_random_int" id="uw5K0]A$W9HF:%[0043#">
+<value name="FROM">
+<block type="math_number" id="7ae13?LtOP9P;u_UsjB}">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="x~vNmLYb!urB)hPFOV9Q">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="]r!h$0*mODE/EG}P-azg">
+<mutation name="广播语音"/>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="14a8D!P@/,s@%uU@UT_B">
+<value name="IF0">
+<block type="logic_compare" id="d.NEylk^j@VG)Z*EWYBv">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="4@KHsw`YFTTs4v,y`b0c">
+<field name="VAR" id="T!{3UwsU1R~Q!`K?Dd8%">按钮2</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="[$HC2F%(1$qJSX-uZuxD">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="A`nExNNP38%@sQ^~|iit">
+<field name="VAR" id="a:_q;-8Duixy`IyR!_2:">声音</field>
+<value name="VALUE">
+<block type="math_random_int" id="L)g!@YBf1wzMsbXG@RK:">
+<value name="FROM">
+<block type="math_number" id="oO4Bhr_Qde~#;S^}YV9/">
+<field name="NUM">3</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="x-D1)CC)@_KVkv%q;Mr|">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="T1V{No4m%#wW1/ll9fS[">
+<mutation name="广播语音"/>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="kQN{`_Gx]ug=dP=tx*T,">
+<value name="param96">
+<shadow type="math_number" id="gQ%X/u[hnj(v+6UH]qTV">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id=")RP2n)AQf%$4qOWrC!Rd" x="782" y="109">
+<field name="NAME">广播语音</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="log_out_put" id="4ZrhC[9Xtx4?IbkUw#jM">
+<value name="param1">
+<shadow type="text" id="-3^NhmqDA?H4H6OHb5rr">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="N`{iCx`FG1hDgn[j;ZWZ">
+<field name="VAR" id="a:_q;-8Duixy`IyR!_2:">声音</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="yL74LXZz?gCg=Y#9Bj}6">
+<field name="VAR" id="pi(xD~DL#R[JSONbXsj6">语调</field>
+<value name="VALUE">
+<block type="math_random_int" id="JT2ZpAoa{38|RMc.@U1L">
+<value name="FROM">
+<block type="math_number" id="@t?d.GTA`CPw#/S#9Bfj">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="C)N#Aq8$5hZe6Q]CAFo)">
+<field name="NUM">15</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id=".pQ}V5%Bnvihw3z,ONH(">
+<field name="VAR" id="b,]NO~Zm{25f9B]GvDS.">语速</field>
+<value name="VALUE">
+<block type="math_random_int" id=":9awLs-!G_5najOfuEBY">
+<value name="FROM">
+<block type="math_number" id="KA_.~P@:%b+.$j}lZXBc">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="PgkykZAFT|=^pz[=SL%W">
+<field name="NUM">15</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_speak_with_parameter" id="MGnBrnzWs@.nvgwxl#f:">
+<value name="param289">
+<shadow type="text" id="j*|`i(GDXsrG,DByyk%C">
+<field name="TEXT">大家好，欢迎收听校园广播之声</field>
+</shadow>
+</value>
+<value name="param290">
+<shadow type="math_number" id=",a`YnS{hHx{oA7JbvEA]">
+<field name="NUM">0</field>
+</shadow>
+<block type="variables_get" id="v%Ao]x1iXS^FOKh+,.PF">
+<field name="VAR" id="a:_q;-8Duixy`IyR!_2:">声音</field>
+</block>
+</value>
+<value name="param291">
+<shadow type="math_number" id="Ky9,,nG2l*]X8e`;CXsK">
+<field name="NUM">5</field>
+</shadow>
+<block type="variables_get" id="=oJr(?TuEdd7.oEh^b@K">
+<field name="VAR" id="pi(xD~DL#R[JSONbXsj6">语调</field>
+</block>
+</value>
+<value name="param292">
+<shadow type="math_number" id="L=vj5~Y~/QT^S`467.Qm">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="emQ^*Nb}Ktxhf#PvR|%u">
+<field name="VAR" id="b,]NO~Zm{25f9B]GvDS.">语速</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

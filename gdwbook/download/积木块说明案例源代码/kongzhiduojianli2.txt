@@ -1,0 +1,128 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="1cHR{/g6zPpYp3s58nZY">滑杆</variable>
+<variable id="7@hw@W`hJ#5Pet;H6/Kp">舵机</variable>
+</variables>
+<block type="controls_whileUntil" id="*nJt|j_zc#PP)0*X?]Ub" x="194" y="246">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="eOZ^8VNsvKs!$XL3^d(t">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="1FrG[Mfv[fIQ[Dj]A@A~">
+<field name="VAR" id="1cHR{/g6zPpYp3s58nZY">滑杆</field>
+<value name="VALUE">
+<block type="get_analogy_feedback" id="r)F![|W/1p1?K}(:#l;a">
+<value name="param12">
+<shadow type="math_number" id="83s)GU#~C/N@;+JjV*E0">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="}@G!fWLOzdpQe*KdVc}8">
+<value name="param1">
+<shadow type="text" id="__qK172q)y;HoTYW^OhB">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_join" id="!xlqe~R!#@RwcI7e%gz{">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="text" id="a@*mop]d(P-%-D?G%:W~">
+<field name="TEXT">滑杆：</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="EB#MjWYvP}lk7zB,GeNF">
+<field name="VAR" id="1cHR{/g6zPpYp3s58nZY">滑杆</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="u#6S~B2%pqL=(S6P8+.I">
+<field name="VAR" id="7@hw@W`hJ#5Pet;H6/Kp">舵机</field>
+<value name="VALUE">
+<block type="math_arithmetic" id="@9$k/;WA2[t8w|5~)%$|">
+<field name="OP">ADD</field>
+<value name="A">
+<block type="math_arithmetic" id="?=?lb#L{n=#r8iZ?~1Xv">
+<field name="OP">DIVIDE</field>
+<value name="A">
+<block type="variables_get" id=".fa3|Dd=c;_*4BLU0F+b">
+<field name="VAR" id="1cHR{/g6zPpYp3s58nZY">滑杆</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="ss5,}jK*hjDR)QhU%/q{">
+<field name="NUM">106</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="J^V#vO]7V}PI(Wm@UoTR">
+<field name="NUM">1400</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="5NInCg@tu.B~U%4uw`H!">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_join" id="eUy3G-=b]f728VW.ql-T">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="text" id="M4l+Qei9G5G1-^GrS8;}">
+<field name="TEXT">舵机</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="WkGvNHb!`qvTJ+r{qUFc">
+<field name="VAR" id="7@hw@W`hJ#5Pet;H6/Kp">舵机</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_pwm_output" id="df*+NXR;h%{D-Q!|e#.0">
+<value name="param13">
+<shadow type="math_number" id="s!Q3fU-mBwP|ywLk0Z,5">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="3eZ%hB~t4E]kA=t[;W|k">
+<field name="NUM">1000</field>
+</shadow>
+<block type="variables_get" id="L`V^:p/b^TU2t,r%9Bo0">
+<field name="VAR" id="7@hw@W`hJ#5Pet;H6/Kp">舵机</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="cA./)^t_ry.I`tZqOCMC">
+<value name="param96">
+<shadow type="math_number" id="!.nc#%_gv~NWKR]-TK*a">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

@@ -1,0 +1,36 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="fS?V[,t)/^=vO7ws~Ezo">变量</variable>
+</variables>
+<block type="robot_exception_trycatch" id="l6m1XsI-VGQN|=U:ymY6" x="-249" y="66">
+<statement name="param329">
+<block type="wzz_add_data_dict" id="ROaPXm+`!%!]$h8Wl,fg">
+<value name="param603">
+<block type="variables_get" id="{CqGnX(4.qwpWB~U50ci">
+<field name="VAR" id="fS?V[,t)/^=vO7ws~Ezo">变量</field>
+</block>
+</value>
+<value name="param604">
+<shadow type="text" id="x##@U.VP2S/8:2=1R_73">
+<field name="TEXT">key</field>
+</shadow>
+</value>
+<value name="param605">
+<shadow type="text" id="f.mjawJvSB2BNR05:xoR">
+<field name="TEXT">abc123</field>
+</shadow>
+</value>
+</block>
+</statement>
+<statement name="param331">
+<block type="log_out_put" id="^fMS;)=X=B9,?E)kc8*b">
+<value name="param1">
+<shadow type="text" id="p$gYe~%@c23D}hbDbT_v">
+<field name="TEXT">FALSE</field>
+</shadow>
+<block type="wzz_exception" id="nht,DauQw=*N]Z@-w`b8"/>
+</value>
+</block>
+</statement>
+</block>
+</xml>

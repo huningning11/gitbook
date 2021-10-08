@@ -1,0 +1,126 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="*G_0kn`70wws6gu-vZuQ">图片</variable>
+</variables>
+<block type="wzz_stop_show_pic_to_screen" id="uI_z+X}qp5|wz`ovO|c?" x="-34" y="-409">
+<next>
+<block type="variables_set" id="rznRpAo*gk]ysFl,*erC">
+<field name="VAR" id="*G_0kn`70wws6gu-vZuQ">图片</field>
+<value name="VALUE">
+<block type="robot_get_new_image" id="K_cp])^h+yeylMU;xD}t">
+<value name="param274">
+<shadow type="text" id="oGeR*29)p$T99FAGx+K=">
+<field name="TEXT">RGB</field>
+</shadow>
+</value>
+<value name="param275">
+<shadow type="math_number" id="B@?m}pFQU_uW)5bD}uZl">
+<field name="NUM">128</field>
+</shadow>
+</value>
+<value name="param276">
+<shadow type="math_number" id="sm,F~1iWfTXB[lQdx9#|">
+<field name="NUM">64</field>
+</shadow>
+</value>
+<value name="param277">
+<block type="robot_color" id="p/0B,dvy$9?;Jl@4o%Ua">
+<value name="param247">
+<shadow type="math_number" id="Y;nGFos7(viVdK_f`^Ip">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="_$Nf2#2us%BsY-PANa*7">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="~JUnHGlaq7.Jcp;NW)T~">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_save_image_to_file" id=")vF*XEt8d[S}N*dkeihM">
+<value name="param279">
+<block type="variables_get" id="UkAHQF?G@:kes0Fx~/3/">
+<field name="VAR" id="*G_0kn`70wws6gu-vZuQ">图片</field>
+</block>
+</value>
+<value name="param280">
+<shadow type="text" id=";^zMH5Obno-%*_J:_,8n">
+<field name="TEXT">/home/pi/imageTemp/temp.jpg</field>
+</shadow>
+</value>
+<next>
+<block type="wzz_draw_text" id="_8^(o,=.Y[SBM5wZdi%,">
+<value name="param721">
+<block type="robot_open_image" id="29S[kGk)g=Pm`QzL_ucx">
+<value name="param285">
+<shadow type="text" id="#T{pRaR7@1.YWcXjr9+n">
+<field name="TEXT">/home/pi/imageTemp/tepm.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param722">
+<shadow type="text" id="wDFie2PqH:)~yEJS+$Y,">
+<field name="TEXT">图片</field>
+</shadow>
+</value>
+<value name="param723">
+<shadow type="math_number" id="HX5,[H{X7K:8_$A`%JjB">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param724">
+<shadow type="math_number" id="zF0If[1F|ykX?+?((PFb">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param725">
+<shadow type="math_number" id="%p^JiVHNww*3i%y[-)Sk">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param726">
+<block type="wzz_v2_color" id="9(Khhz;0%BW4oxj^F[-{">
+<field name="param401">#000000</field>
+</block>
+</value>
+<value name="param727">
+<block type="wzz_v2_color" id="88l}h#}A2KLr7OYj^]O=">
+<field name="param401">#ffffff</field>
+</block>
+</value>
+<next>
+<block type="wzz_show_pic_to_screen" id="kHyFp_E;@gLYX[7N}r8B">
+<value name="param684">
+<shadow type="text" id="Wzxs6h:[xnmhGPRS1^ky">
+<field name="TEXT">/home/pi/imageTemp/image.jpg</field>
+</shadow>
+</value>
+<value name="param685">
+<shadow type="math_number" id="sp!;{^MT3^Fl,[5OTt{1">
+<field name="NUM">640</field>
+</shadow>
+</value>
+<value name="param686">
+<shadow type="math_number" id="lv%r+AZ(*^Ki:%..3Y{(">
+<field name="NUM">480</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

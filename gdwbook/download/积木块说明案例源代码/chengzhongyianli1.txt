@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="_sywR:EzNRUb`EGKU)]:" x="28" y="0">
+<value name="param1">
+<shadow type="text" id="_%Ia]0gk16$VGz6XSLIx">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="robot_get_hx711_Init" id="zNMj:ZIy`DiHzk1[cfW@">
+<value name="param354">
+<shadow type="math_number" id="`St@7Ebxk0oMH7^F)25.">
+<field name="NUM">21</field>
+</shadow>
+</value>
+<value name="param355">
+<shadow type="math_number" id="cH(Dh,c91-G4U^k-~vxr">
+<field name="NUM">20</field>
+</shadow>
+</value>
+<value name="param356">
+<shadow type="math_number" id="mXI^STu}S@qg)X[Kf}R?">
+<field name="NUM">128</field>
+</shadow>
+</value>
+<next>
+<block type="robot_hx711_peel_off" id="#ao0zz=Gd^TTQsrqEwF?">
+<next>
+<block type="controls_repeat_ext" id="KaPZdiJH11W:7?THD8jI">
+<value name="TIMES">
+<block type="math_number" id="O-=8BcyXQ4DL8zj|:5g}">
+<field name="NUM">10</field>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id="Fu!S/P!D=Z9{Yn^xtW?Z">
+<value name="param1">
+<shadow type="text" id="$}vx#T@FfRA7{?~@7p-M">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_hx711get_Net_weight" id="~we*.0PF=/s#s$Z{@Flh"/>
+</value>
+<next>
+<block type="robot_time_wait" id="eB.Jrs;62_2A:MX}1SJs">
+<value name="param96">
+<shadow type="math_number" id="*?[6F?=81(KI{2X;TyC9">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_hx711_cleanAndExit" id="FLFrb;5V#sPE=icxO(qb"/>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

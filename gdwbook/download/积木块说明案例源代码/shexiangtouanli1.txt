@@ -1,0 +1,46 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_whileUntil" id="W}t{O0(9Hs;VF@m]!Ux!" x="146" y="153">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="Zqbe7LAJm#UyuzsM^y^q">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="ykN)5fS#VgoUE}*C;3og">
+<value name="IF0">
+<block type="get_infrared_result" id="5+KmHC@V[H{1!K3%.m|j">
+<value name="param">
+<shadow type="math_number" id="+K=4%[1]8W{yUvhyETnR">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="v1_2_wzz_robot_get_continue_usb_camera_capture" id="Oq}My-d(5#`t![m?]|^u">
+<value name="param411">
+<shadow type="math_number" id="wEyydy1nBg_,yzpSkYHK">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="parm411_1">
+<shadow type="text" id="(LHO=VlI!z_Ws)d=}+hr">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="?rqIw^h1$^/-m:=sMDVR">
+<value name="param96">
+<shadow type="math_number" id="[Lg;~o551_lpKo}!1Ss{">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

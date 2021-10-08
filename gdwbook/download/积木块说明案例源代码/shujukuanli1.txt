@@ -1,0 +1,109 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="0fyMR^mS(_X0l;^pTm{`" x="189" y="-55">
+<value name="param1">
+<shadow type="text" id="KJYv4DRH_=h~8*;RUkC[">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getAllTag" id="FDVkUjO{X%Mx|W%Jm~cI"/>
+</value>
+<next>
+<block type="insertTagValue" id="dBNq#m}b+;T,nGJOq#t:">
+<value name="param371">
+<shadow type="text" id="mX:}{a1u[7|C!d[g{SYm">
+<field name="TEXT">tag0</field>
+</shadow>
+</value>
+<value name="param372">
+<block type="math_number" id="lq^VgC%;em8RDhmS|j%C">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="insertTagValue" id="WZedl]Dt1li1Nafk;4^!">
+<value name="param371">
+<shadow type="text" id="(5aHu~=fi~5zckpcOt0U">
+<field name="TEXT">tag1</field>
+</shadow>
+</value>
+<value name="param372">
+<block type="math_number" id="^-hU`|f33XyjQ_En6MA)">
+<field name="NUM">1</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="!rWS!x9ED3iTlp!vG8c+">
+<value name="param1">
+<shadow type="text" id="|cS/lr}_W$G/x@p_yh{r">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getValueByTag" id="Macasd:%xM!m+1TTOTD)">
+<value name="param373">
+<shadow type="text" id="3b~1C~scRh`0ziWT(3+.">
+<field name="TEXT">tag0</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="deleteTagValueByTag" id=".uc99*%%kSI$Rt@Ih{uh">
+<value name="param375">
+<shadow type="text" id="~@kyKw{^,OxZ|ogmk-ck">
+<field name="TEXT">tag0</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="Vz]Ssz-F@%}Z*7#QWKHT">
+<value name="param1">
+<shadow type="text" id="7b![fa{-I_w=Oma^i_AV">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getValueByTag" id="Lf-aDIjCsr1Pt^uznKCH">
+<value name="param373">
+<shadow type="text" id="xQKP1y7_;2wA^AZk*ylE">
+<field name="TEXT">tag0</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=":5j_OZ$9_zckiUWfwbd_">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getValueByTag" id="F|hFdE8(ma^@t6T82JUV">
+<value name="param373">
+<shadow type="text" id="m+l+u.YD_;-juwpi@.Rs">
+<field name="TEXT">tag1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="deleteAllTagValue" id="HDvt=nf,;v7~3_h5a3hY">
+<next>
+<block type="log_out_put" id="/-@ZBHMAFc7wJ?M~qsU;">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getAllTag" id="fI%Mu_dD:*8U|$5bswVO"/>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

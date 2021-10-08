@@ -1,0 +1,629 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</variable>
+<variable id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</variable>
+<variable id="#(%bM.6/5X[^)dJ[{9HG">蜂鸣器端口</variable>
+<variable id="flH0PuSu_sG{efCsmHZa">指示方向</variable>
+<variable id="ae9?r,C]kNx(EZ[GdpXU">照片路径</variable>
+<variable id="4u~*X[.{vj[zd8g_;-{}">转换格式</variable>
+</variables>
+<block type="variables_set" id="_sNVIR7xe;20)k!_;VBp" x="296" y="337">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+<value name="VALUE">
+<block type="math_number" id="OzdeG$3=;wpVS~aL{^T7">
+<field name="NUM">23</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="(Q[JZsw?LcX4-zR.A^5Y">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+<value name="VALUE">
+<block type="math_number" id="asd7#}oqYM4/bQ-=Q1q=">
+<field name="NUM">18</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="c428DE,ns]%h7^Ae5_Lw">
+<field name="VAR" id="#(%bM.6/5X[^)dJ[{9HG">蜂鸣器端口</field>
+<value name="VALUE">
+<block type="math_number" id="zn)ikB[,*;RWk@ItE0tB">
+<field name="NUM">25</field>
+</block>
+</value>
+<next>
+<block type="robot_GPIO_control_by_input" id="s7+do|4}y^2ujacm8IgK">
+<value name="param143">
+<block type="variables_get" id="/:pjuy$poiqIH1S{)#@c">
+<field name="VAR" id="#(%bM.6/5X[^)dJ[{9HG">蜂鸣器端口</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="$T3bJJg{5nro4Uk34x:1">
+<field name="NUM">1</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="mQnm6zIL|)HJabPt_b-i">
+<value name="param1">
+<shadow type="text" id="XGnI4:[T7]`yErN1x3.^">
+<field name="TEXT">11</field>
+</shadow>
+</value>
+<next>
+<block type="v2_wzz_set_mqtt_server_port" id="nBh#se}wQy^Q|k$v6N(w">
+<value name="param402">
+<shadow type="text" id="E70?IOAOo1[YMcS0AO_S">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="}2yowq*Mzuu;mzh8qd2)">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="xpMJ{KEF,`JP;[;a=LXL">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="(~SGbr[=CFm(q6.V[]QF">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id="mUXeD(/|+$5RA+[ijM}9">
+<value name="param100">
+<shadow type="text" id="SJ=%^=t.lS?ewiXJuJv1">
+<field name="TEXT">方向</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="Q@Bc~OfP)r~M9[JJlz-|">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id="34qiO1JSF#=XagO87Xnc">
+<value name="param100">
+<shadow type="text" id="n$`!WAqme[W]1=g*,1pj">
+<field name="TEXT">拍照</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="fC/y6|~NBHco:|%o2OU0">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id="0hinLQAlWv.vNE}Y$R8V">
+<value name="TIMES">
+<block type="math_number" id="`D]EtdR],1,gYR_TNArd">
+<field name="NUM">1000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="rSwvIu5}2`-DL`N2J7cG">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id="N,bXdDfJ:#zK%26Ok|nT">
+<value name="param181">
+<shadow type="text" id="mYfbKdbq_~=V^$QcyG{!">
+<field name="TEXT">方向</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="=uq6mQh[f}m/z/2H)Zg*">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+<value name="VALUE">
+<block type="robot_get_topic_data" id=")=6h~7s2PA~0LucVvpY~">
+<value name="param102">
+<shadow type="text" id=",^o%N~myG?vyZlvOQ6gB">
+<field name="TEXT">方向</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="/qAdjEOS0Rm7snJWvELQ">
+<value name="param1">
+<shadow type="text" id="FwlEneqbQKdeSPb(giK{">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="jVAl*u:PmV`DMb:QTPU]">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="PB0F?bT?r3zH0F41Wsq+">
+<mutation elseif="3" else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="@n?n:uAOGWm++/W^PQv{">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="?s;|oDC8t(Vc_)(0;N3U">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="`iC/kV6VK2^c1D2r`?V5">
+<field name="TEXT">GO</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="procedures_callnoreturn" id="|[5;@zLxwHqG1G;n__E]">
+<mutation name="前进"/>
+<next>
+<block type="robot_time_wait" id="/_p6ro*K[7D#(O`1mAc@">
+<value name="param96">
+<shadow type="math_number" id="hgSihLR?-;H#;!hj{Z=@">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="Hc6y0={uD|nFx?%z?Bx2">
+<mutation name="停止"/>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="//WzXtV?@DF/RXS-Jy.6">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="BR:UVaVzw{d;7^:]t9oN">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="Y{jE{CMUYk*%(WFNm;/x">
+<field name="TEXT">BACK</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="procedures_callnoreturn" id="M/_yt(RdXq7shRdO);YI">
+<mutation name="后退"/>
+<next>
+<block type="robot_time_wait" id="R%/Z/uB$ni2Ll#r#tm|b">
+<value name="param96">
+<shadow type="math_number" id="o3Aa.XMiJgCVNQ_-$Eq|">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="9;A?zT%!-+EkU}=$KLB.">
+<mutation name="停止"/>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="m5EqkZsr0HJ9txp9P}2(">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="Q:is/1hODCulwmm2/Wg)">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="YJ9tq48+gHK6c$c+nYea">
+<field name="TEXT">LEFT</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="procedures_callnoreturn" id="S65=SK9sZ+~zwF2^9Yp#">
+<mutation name="原地左转"/>
+<next>
+<block type="robot_time_wait" id="I$+p=!-QAySv*8{}/Pp#">
+<value name="param96">
+<shadow type="math_number" id="PC.Fu{Sw2gXU`1U5W;Ot">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="tdgio#]^.T4d(DLQ_G(j">
+<mutation name="停止"/>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id="BY!rRd4zePnLb1(;U#Ql">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="fj._pN2q,JBC?V*:#H6N">
+<field name="VAR" id="flH0PuSu_sG{efCsmHZa">指示方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="vUONQkG,DI/0gnBe:Nu*">
+<field name="TEXT">RIGHT</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="procedures_callnoreturn" id="[DFl][3%_.|pqW?FLC`A">
+<mutation name="原地右转"/>
+<next>
+<block type="robot_time_wait" id="qS3/ibE)Xh2(ghedL=~l">
+<value name="param96">
+<shadow type="math_number" id="ECMD-%0Dl_TEq.+@/yL;">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="V|R)GdnDvRb]dQW#M37_">
+<mutation name="停止"/>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="procedures_callnoreturn" id="i([krtgQataZhth*EBK;">
+<mutation name="停止"/>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="v:AEV{ar;[Pm_qb#zQLQ">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id="Jm}Yx_~i_gM:QNlHU(*#">
+<value name="param181">
+<shadow type="text" id="z;U_eh6[Z_koC1=T]oJ%">
+<field name="TEXT">拍照</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="hIzMhev:hpIlCsv=m.B-">
+<value name="param1">
+<shadow type="text" id="o2^)_F25HV/B[2eo|`Dq">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="OZWk7s;B!Fs]GA+H@uVZ">
+<field name="VAR" id="ae9?r,C]kNx(EZ[GdpXU">照片路径</field>
+<value name="VALUE">
+<block type="robot_get_camero_capture" id="!d3L*?cA%4TbMZ!mQ(z`"/>
+</value>
+<next>
+<block type="robot_debug_image_out" id="0Lg!`];QCP%n/6jO;Qt[">
+<value name="param278">
+<block type="variables_get" id="TZ8SbJJbx_%[9GVn;$G|">
+<field name="VAR" id="ae9?r,C]kNx(EZ[GdpXU">照片路径</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="g|nt9Lh+-3REb}.v?Zhq">
+<field name="VAR" id="4u~*X[.{vj[zd8g_;-{}">转换格式</field>
+<value name="VALUE">
+<block type="robot_image_get_base64" id="2pZ:9fF**BGp7aW:Si07">
+<value name="param336">
+<shadow type="text" id="N6}MCV_EvH;YuyAKlBX8">
+<field name="TEXT">/home/pi/imageTemp/pi_logo.png</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_publish_data" id="BKGL$DG~Jtv,[nIz2jq3">
+<value name="param97">
+<block type="text" id="1*3EX]Q]dBw/t?G{$LOa">
+<field name="TEXT">kongzhiqi</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="L[Wlan4YXm|Hazoe`,A%">
+<field name="TEXT">picture</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="gV{:?SO{(zcXD7b04/IE">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id="}W--]2uBL0yOn%/rOy/V">
+<field name="VAR" id="4u~*X[.{vj[zd8g_;-{}">转换格式</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="7cnKov9HIa?]cP}z8r:{">
+<value name="IF0">
+<block type="robot_get_qmcresult" id="{/+!/~/HonP]FVFeXzF5"/>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="S$-_E7uGQ4TT-=h+_K5D">
+<value name="param1">
+<shadow type="text" id="%D9z2]1Z7;CnGFYt]KBm">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_by_input" id="z8HVQ_N359U}tau#Ri@]">
+<value name="param143">
+<block type="variables_get" id="^pHN)G;^v4NT6f]5P|GW">
+<field name="VAR" id="#(%bM.6/5X[^)dJ[{9HG">蜂鸣器端口</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="?ZD?lV|F4QoEK(lpv_Go">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="h)chblXqI}y#vIf`X-Mh">
+<value name="param96">
+<shadow type="math_number" id="K@5{#!o;x|rC8JnBm1OC">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_by_input" id="DiRPL6M_L[amw{Mx3Zfu">
+<value name="param143">
+<block type="variables_get" id="FH7u8zZu:3Es2`?ca]fN">
+<field name="VAR" id="#(%bM.6/5X[^)dJ[{9HG">蜂鸣器端口</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="w[7#GJEJn#-!*D?q|E@E">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="RcforExJCTE:_z4n,WT0">
+<value name="param96">
+<shadow type="math_number" id="Ogp-H?NJll[J7iZO1?Kk">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="procedures_callnoreturn" id="y!F(}jB6{F)$Z9oy0KoZ">
+<mutation name="停止"/>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+<block type="procedures_defnoreturn" id="=ALmSZSr|5*J^^M={5Rv" x="-87" y="360">
+<field name="NAME">前进</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="pwm_output" id="[:aM[D!,Ecm-GVD3q~dU">
+<value name="param7">
+<shadow type="math_number" id="57Do[]N0G2#yC$@vWY=g">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="u3Z1N5NE:4AIzZ@No+My">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="^sE!yXG+GIOF0s7f|9O7">
+<field name="NUM">1650</field>
+</shadow>
+</value>
+<next>
+<block type="pwm_output" id="M3:1h?W9^%jr9-K6ui%U">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="95Xyecqcql#Z:Jk$j9vH">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id=":6~ajGk+?r}`4A%=]!@V">
+<field name="NUM">1250</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="w@Zt7LWK6_?5KQ~1!tws" x="-91" y="492">
+<field name="NAME">停止</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="pwm_stop" id="n#TJF1yGw1FW(|(Rn*/P">
+<value name="param9">
+<shadow type="math_number" id="H]QVoN78J|2hn;z(n2YC">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="pF]~;8!D:~4d0:20J2%/">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+</block>
+</value>
+<next>
+<block type="pwm_stop" id="BTt8k`+?MXSO1kodeI)(">
+<value name="param9">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="{dGp+]@8dT,E8tb!Rx.J">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="jbk/~i{y+iFZ.jN+OPzF" x="-90" y="617">
+<field name="NAME">后退</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="pwm_output" id="7EaS6l2_I?rrgrh--G;T">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="I`K?nTYfVACc{N#[snVC">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="#{7#;{/Q=QdZ?Rou-Tus">
+<field name="NUM">1200</field>
+</shadow>
+</value>
+<next>
+<block type="pwm_output" id="EZYu`xELqkNV-|vwD}iF">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="]l%KpuF6/ou1wSZLC(Q5">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="2o~uA[CVK1Ol09I$-PO+">
+<field name="NUM">1600</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id=";Qr+dU9_kPkbvL2bYELi" x="-90" y="741">
+<field name="NAME">原地左转</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="pwm_output" id="X8n,Iwu(mFOSC;9q@(`j">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="`k%L$PnP~:D{G?z^G*1^">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="e5eiu6c~SV3lZ^ynNB//">
+<field name="NUM">1300</field>
+</shadow>
+</value>
+<next>
+<block type="pwm_output" id="ilvAHI2x7}U`99Uw{AZW">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="^VdOsTZh40U|Xnaq_O*n">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="Uy9LnHW3Q|qXtulJe%(5">
+<field name="NUM">1300</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="|%ruSp`~x@!JFZ%8XA9W" x="-89" y="869">
+<field name="NAME">原地右转</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="pwm_output" id="%TKQO;{crM$WLah`Pcq^">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="{oP]JDRaWicZNihz_C_U">
+<field name="VAR" id="6rO-kh@L6]0m}-XZu!aD">左侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="VE.InbnAn-3kl@[+h_5w">
+<field name="NUM">1600</field>
+</shadow>
+</value>
+<next>
+<block type="pwm_output" id="H?WaV|[Mj6Z..voAy265">
+<value name="param7">
+<shadow type="math_number">
+<field name="NUM">18</field>
+</shadow>
+<block type="variables_get" id="w,MGQqIxK91vjMf$}[%.">
+<field name="VAR" id=",L[JBe8hr]f0(*@(DOxi">右侧舵机</field>
+</block>
+</value>
+<value name="param8">
+<shadow type="math_number" id="}W_LR^cF^L#G{%W5kkVu">
+<field name="NUM">1600</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

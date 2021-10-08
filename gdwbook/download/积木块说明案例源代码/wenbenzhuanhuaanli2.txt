@@ -1,0 +1,26 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="YuTajTWg+h0PW`~)5v2F" x="245" y="65">
+<value name="param1">
+<shadow type="text" id="fUG%DA_DQw3qGA?Xo^|u">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="str_replace" id="up,fd{Kutt`dMT(Ga~.;">
+<value name="param710">
+<block type="text" id="^a-rL^m34DUG-yu)H1V#">
+<field name="TEXT">010</field>
+</block>
+</value>
+<value name="param711">
+<block type="text" id="950p?4~:IgR`=]uwE[H_">
+<field name="TEXT">1</field>
+</block>
+</value>
+<value name="param712">
+<block type="text" id="XFfuuk;uwdT9.pteWaFq">
+<field name="TEXT">0</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</xml>

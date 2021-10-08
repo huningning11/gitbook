@@ -1,0 +1,135 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_repeat_ext" id="r@](JH-fUfTrp-k)J{_O" x="520" y="75">
+<value name="TIMES">
+<block type="math_number" id="zhzs8=Ak2i97|;+Hp*83">
+<field name="NUM">10</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_GPIO_control_led" id="SOwf24q)G!Ky]P=?=k]J">
+<field name="param155">5</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_GPIO_control_led" id="0d0Ul{#an-#lBbg@H%LZ">
+<field name="param155">16</field>
+<field name="param156">0</field>
+<next>
+<block type="robot_time_wait" id="r.G0p8B+PP~RZ?bnu|wH">
+<value name="param96">
+<shadow type="math_number" id="LzAAPT!m+/E`LfC0OX5X">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="4H8rIh:|`)BkyG![T?!,">
+<value name="param96">
+<shadow type="math_number" id=".Cqg19Z27$uY6OsVK/:B">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_led" id="Gi5@-^)?g1(@j6SEwm)Y">
+<field name="param155">6</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_GPIO_control_led" id="1Nd+d{3eZsBG|1U9.s[j">
+<field name="param155">5</field>
+<field name="param156">0</field>
+<next>
+<block type="robot_time_wait" id="Y)wu*eK(/i$ZqUB;/fb?">
+<value name="param96">
+<shadow type="math_number" id="cfs~kI)T:_4(R_jWfu7g">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id=")v`f1Su]TT(_`e-FQ0$q">
+<value name="param96">
+<shadow type="math_number" id="FIF$Co?wXzr=%hO-ib1l">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_led" id="aI/*:7+AEzI(6YW%DjFy">
+<field name="param155">12</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_GPIO_control_led" id="/j[mDtHg77#Am7XRI4J;">
+<field name="param155">6</field>
+<field name="param156">0</field>
+<next>
+<block type="robot_time_wait" id="S]yi7`Or-*!P6Z~-*x`T">
+<value name="param96">
+<shadow type="math_number" id="4OWdPvQoAgZR@b$g5cnO">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="n@gS%W]IcJOtlRd;VL7b">
+<value name="param96">
+<shadow type="math_number" id="Evw2#N-p/dsJ_$K}HR9X">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_led" id="/DsE+!-]Uz=V^:wbJdhz">
+<field name="param155">16</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_GPIO_control_led" id="BDXiZEio:wpE=_J@V*Xv">
+<field name="param155">12</field>
+<field name="param156">0</field>
+<next>
+<block type="robot_time_wait" id="}|3oN9bpIyps=T$e8`A/">
+<value name="param96">
+<shadow type="math_number" id="(Xi.jIPjZ9quMw9hyzoV">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="}/{yG9T5n1mc#Y_k@=$q">
+<value name="param96">
+<shadow type="math_number" id="#gv{SRFVtQoRkC)}o2W.">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_GPIO_control_led" id="|%@dy!ot[.#x;Pu./yYj">
+<field name="param155">16</field>
+<field name="param156">0</field>
+</block>
+</next>
+</block>
+</xml>

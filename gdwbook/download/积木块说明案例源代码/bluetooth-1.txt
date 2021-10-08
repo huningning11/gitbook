@@ -1,0 +1,26 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="z=U[{i=05Vz[6+6$tf_0" x="415" y="-477">
+<value name="param1">
+<shadow type="text" id="V/l,*-{2JZ-/7:8VOR*-">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_bluetoothaddr" id="s+:YIk2ill4uqq,^JrMq">
+<value name="param776">
+<shadow type="text" id="1~;!gXGO!+Yx}rsQ4(XE">
+<field name="TEXT">Q3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_connectbluetooth" id="HZ!AtL1C6UY~S/{NG@,i">
+<field name="param778">1</field>
+<value name="param779">
+<shadow type="text" id="{BWNgpuK!b6g8O`ReaS1">
+<field name="TEXT">88:88:12:A2:CA:2B</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</xml>

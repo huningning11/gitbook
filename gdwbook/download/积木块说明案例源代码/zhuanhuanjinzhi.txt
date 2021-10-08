@@ -1,0 +1,51 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="llx=8ok`@VOUg=HVD/97" x="-128" y="-154">
+<value name="param1">
+<shadow type="text" id="~lqv`zg4bbdD}xHtjOq+">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_build_in_func" id="3W4)tXe=9D2c*QM)ojsW">
+<field name="param729">oct</field>
+<value name="param728">
+<block type="math_number" id="5TQbx)gj6M]4s?gb;`8/">
+<field name="NUM">123</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="qi-acrOzo,/`Z_j{x7Ec">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_build_in_func" id="s6/7I*sa_nQM(G[!^NAj">
+<field name="param729">hex</field>
+<value name="param728">
+<block type="math_number" id="W4_=4rgZLC1@}b]WnX,_">
+<field name="NUM">123</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="$C643rXkN_N!^UWFI#*m">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_build_in_func" id="g.T$axeKXzw(Q*?Un),L">
+<field name="param729">bin</field>
+<value name="param728">
+<block type="math_number" id="lrZtW%WmTS)|z1V8MVqj">
+<field name="NUM">123</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

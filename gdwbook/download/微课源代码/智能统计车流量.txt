@@ -1,0 +1,181 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</variable>
+<variable id="x)|_J.Vbv(|}x6m5sShs">记录时间</variable>
+<variable id="BlHu3dAz;y{eQf:DA@fB">现在时间</variable>
+</variables>
+<block type="v2_wzz_set_mqtt_server_port" id=":Pv|@%Ka+PO^eoNRJffq" x="346" y="279">
+<value name="param402">
+<shadow type="text" id="g+o9E0[0y`=TQ1[^eT7;">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="WbYGc~^]|]xgeARZ2lBO">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="Vg}#wcMs($Tl}Gmy,*8m">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="ey?o}93,N1`L*y;Z}Om/">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="/an#HZt_/.@qgynxU91d">
+<field name="VAR" id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</field>
+<value name="VALUE">
+<block type="math_number" id=",U4}~uXdDRZ%OFM7:B,9">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="N[YcIeWt#Kmt}F#6Pv:-">
+<field name="VAR" id="x)|_J.Vbv(|}x6m5sShs">记录时间</field>
+<value name="VALUE">
+<block type="robot_get_current_digital_time" id="BAiU^~(#_=[{YZ3,1u[$"/>
+</value>
+<next>
+<block type="controls_repeat_ext" id="*1.:*Da]2s8]7dD(s%io">
+<value name="TIMES">
+<block type="math_number" id="Vv1lB}jCXjFNU.*(F.*g">
+<field name="NUM">1000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="Mv8pPc{3S89t^%/$9BB?">
+<value name="IF0">
+<block type="logic_compare" id=",B^XW9Ohj/(:^K9lnap*">
+<field name="OP">LT</field>
+<value name="A">
+<block type="robot_distance_input" id="~k8%!Gt{t{U!gX(eCbbM"/>
+</value>
+<value name="B">
+<block type="math_number" id="yH{yYk.YKZY#6AV~O_@8">
+<field name="NUM">15</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="math_change" id="C4F-0*L39!J$Cz7P*sFO">
+<field name="VAR" id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</field>
+<value name="DELTA">
+<shadow type="math_number" id="dA!uE3Rz[eSeA(}UXK}0">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</statement>
+<next>
+<block type="variables_set" id="g*xI3OM(yOq-%H)vxBC2">
+<field name="VAR" id="BlHu3dAz;y{eQf:DA@fB">现在时间</field>
+<value name="VALUE">
+<block type="robot_get_current_digital_time" id="rDHz~+^4-GyJi-Bz95*o"/>
+</value>
+<next>
+<block type="controls_if" id="9lnv-AM_5Db/:nu{QIHT">
+<value name="IF0">
+<block type="logic_compare" id="vSnjmYmmLDP+YsoO?#z*">
+<field name="OP">GT</field>
+<value name="A">
+<block type="math_arithmetic" id="Po_*!g`gM0Q7wIkB%r;k">
+<field name="OP">MINUS</field>
+<value name="A">
+<block type="variables_get" id="|1},Ki#)QyiP@fM)*^b(">
+<field name="VAR" id="BlHu3dAz;y{eQf:DA@fB">现在时间</field>
+</block>
+</value>
+<value name="B">
+<block type="variables_get" id="ug,0b^_qu#b;GvN:{f4c">
+<field name="VAR" id="x)|_J.Vbv(|}x6m5sShs">记录时间</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="sDP}73vQ#gQ_z]O^x+hq">
+<field name="NUM">10</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="a%5)^.:+`rvwrP22,i4F">
+<value name="param1">
+<shadow type="text" id="/qUIZzVRan3|]#6hz@hq">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="S,nF+EF4k;5+B1X]id|s">
+<field name="VAR" id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</field>
+</block>
+</value>
+<next>
+<block type="robot_publish_data" id="u2ge2IZzZ~lTm-k`5lpF">
+<value name="param97">
+<block type="text" id="8[[/$#Ll){LH2.UD/2G!">
+<field name="TEXT">shujuzhongxin</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="9WB[L!XlimN*LF;1PP]n">
+<field name="TEXT">车流量</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="=Yo,RxE15B6QiJ*8:3v;">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id=",xC/yxj!(EU(Tx[k$?9)">
+<field name="VAR" id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="V`yfzF*V~R;EYK3Jy]GD">
+<field name="VAR" id="%5J*]y}GyC0Z,sx=7|Ux">车流统计数据</field>
+<value name="VALUE">
+<block type="math_number" id="P)ftoak3JItPOA0S39v?">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="2a51}/e*2{di?1INJUsW">
+<field name="VAR" id="x)|_J.Vbv(|}x6m5sShs">记录时间</field>
+<value name="VALUE">
+<block type="robot_get_current_digital_time" id="IHo[,tx4`H]f6+S}l+Nl"/>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="}QWgI`M59t6J_VfQpo_@">
+<value name="param96">
+<shadow type="math_number" id="bUzWlG)E;I@O?6q}qOf4">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

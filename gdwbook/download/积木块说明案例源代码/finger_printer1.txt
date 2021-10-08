@@ -1,0 +1,109 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</variable>
+</variables>
+<block type="variables_set" id="q05PG|jj(EgksrO`s|5E" x="-203" y="-98">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+<value name="VALUE">
+<block type="robot_fingerprint_getdevice" id="EQ(KT^:D:L@{sh5h[n,q"/>
+</value>
+<next>
+<block type="log_out_put" id="gl2::GV]Y5!]9zH)[/MN">
+<value name="param1">
+<shadow type="text" id="@^=[i=ja4fwRq`H6okT{">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="/cbiF0D[8@arE6!/1I*~">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="K87]!$(HN(rTJq=3vjT4">
+<value name="IF0">
+<block type="logic_negate" id="7Qg_Jq4iW7QsCU42$=x4">
+<value name="BOOL">
+<block type="lists_isEmpty" id="ufXA45[n|,C$ziWw4aig">
+<value name="VALUE">
+<block type="variables_get" id="!_l~l*N@2xzW$Soa%T7U">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_fingerprint_init" id="]3L`z]9PDP%KOu,{9c/P">
+<field name="param925">0</field>
+<next>
+<block type="controls_if" id="1rD]*?_ER?jQcUG3Lsbw">
+<value name="IF0">
+<block type="robot_fingerprint_getresult" id="G)lnkhENxqH[HW[kG`Ka"/>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="rhx@./^YGs_ZY*ram:K[">
+<value name="param1">
+<shadow type="text" id="$5hKBQ.Skb0j1b|qSp^W">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_fingerprint_enroll" id="IF`He~YBqoh?`)x.u?:?"/>
+</value>
+<next>
+<block type="log_out_put" id="(SSNZTd|{Fb0l9n#|EMA">
+<value name="param1">
+<shadow type="text" id="B+C)*0iwwI1TX+aNkmJZ">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_fingerprint_search" id="Z{8`IOl^[L/kqa/VJ$(f">
+<field name="param928">1</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="[$X,fw#2:-bJ$7]u;K.C">
+<value name="param1">
+<shadow type="text" id="O$DTFlzG~7]A|b01?tzg">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_fingerprint_saveImg" id="|#yQTIpk4)w,fo/mQSHg">
+<value name="param929">
+<shadow type="text" id="qP/UU8Nu/gU]uhdQ!=v@">
+<field name="TEXT">/home/pi/imageTemp/fingerprint.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="gOGV2_)p.QGW|0RT6BZ7">
+<value name="param1">
+<shadow type="text" id="Qbz}!PbdXG-mRuGsWG%I">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_fingerprint_getnum" id="Km)S#HP~YQsL=D(dvQ|I"/>
+</value>
+<next>
+<block type="robot_fingerprint_delete" id="Eig.}xfKICoWqR=7{5Xz">
+<value name="param926">
+<shadow type="math_number" id="N`ZH]u+$eRNu-u!_u1S.">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

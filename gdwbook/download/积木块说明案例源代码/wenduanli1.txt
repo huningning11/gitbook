@@ -1,0 +1,29 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_whileUntil" id="eNDCE8XG.^FUej},Qsg@" x="252" y="-255">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="D~@Gihue_mV65.:$3n2Q">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id="zYan2R^TT)q{dJmed?kk">
+<value name="param1">
+<shadow type="text" id="R`w5%T3*0Cl/@v]ts*8|">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_temperature" id="=vb`RIWtd%%G2+i7,Q)3"/>
+</value>
+<next>
+<block type="robot_time_wait" id="axP*weLLvkHH2|n06Rp+">
+<value name="param96">
+<shadow type="math_number" id="]^3#qFT)gEXPhq7AyK#W">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

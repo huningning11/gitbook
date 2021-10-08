@@ -1,0 +1,157 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="is:RxflUztl3|oMJwwNI">问题</variable>
+<variable id="XYM!96%5L6Ok;C`;Qz,!">回答</variable>
+</variables>
+<block type="v2_wzz_set_mqtt_server_port" id="bLE%zA5qQ~hPr-I~)@`8" inline="true" x="296" y="118">
+<value name="param402">
+<shadow type="text" id="+Ic?s4)V4m)e69mUvl*K">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="n0^i/~30d@uq!uz^V~`B">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="S50X.-XfXCx4d;J8?Ymc">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="543)`XdBKm:nL`lyx61P">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id="JU.c8EukCt_m0g+}qQ${">
+<value name="param100">
+<shadow type="text" id="cZRgx0FLr5#~IK(UhM(u">
+<field name="TEXT">客服</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="U^Eb(jo1r/FT/E;PfKVJ">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="CuNmS^yy/N@l?K+D6%@7">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="9ANSpwzI0EAWPECoaonU">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="ZfMT@B^/E~Er(U37=Fce">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id="DaI5g^vwoy!kIRuX#dv[">
+<value name="param181">
+<shadow type="text" id=";2DH1Vb}oB_EQo084hvQ">
+<field name="TEXT">客服</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="0DrKeJ~L4rK=W,,nqL7_">
+<field name="VAR" id="is:RxflUztl3|oMJwwNI">问题</field>
+<value name="VALUE">
+<block type="robot_get_topic_data" id="8pk;#W13*owFY;rv1.Hk">
+<value name="param102">
+<shadow type="text" id="Gs$LV2!FxJH]tTqgfjKN">
+<field name="TEXT">客服</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="0/{q4iFkcwjgWpG,ea0,">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="KB!JHZh?m=}c7$zS}z%1">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id=";ZOhU#4itRLR!Yz3GE0/">
+<field name="VAR" id="is:RxflUztl3|oMJwwNI">问题</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="k:akqG6/./UMmn/aKvdT">
+<field name="TEXT">你几岁了</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="}Eq!27zW2~Fs#{2Vs{`U">
+<field name="VAR" id="XYM!96%5L6Ok;C`;Qz,!">回答</field>
+<value name="VALUE">
+<block type="text" id="aNP_3N*04zS.yFC{-35:">
+<field name="TEXT">这是一个秘密，我可不能告诉你哦。</field>
+</block>
+</value>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="variables_set" id="Yr}Wx_:Z;J4pDi!$P4}:">
+<field name="VAR" id="XYM!96%5L6Ok;C`;Qz,!">回答</field>
+<value name="VALUE">
+<block type="robot_get_talk_result" id="Yyy9*!VGaL;K{WE.XU0Z">
+<value name="param91">
+<shadow type="text" id="-/8YilxPK:a#%q,LT+gs">
+<field name="TEXT">你真帅</field>
+</shadow>
+<block type="variables_get" id="MgfI{/K0KJ^g9Hq7wu-b">
+<field name="VAR" id="is:RxflUztl3|oMJwwNI">问题</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_publish_data" id="5z{8e[ih!OQgPv/VnrmK">
+<value name="param97">
+<block type="text" id="2Ad4.+rbTtk5X4!}vsHd">
+<field name="TEXT">chengmingliang02</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="SFru`JpXjS$aT=%Em1~[">
+<field name="TEXT">回答</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="}Pc}nb[.9b|rqG1*Aery">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id="W=QL86lI;8LJIGhpRlYV">
+<field name="VAR" id="XYM!96%5L6Ok;C`;Qz,!">回答</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="bdXigvSu0zJw{+;V)-P^">
+<value name="param96">
+<shadow type="math_number" id="1|Uqq]+6$$J_8Ga*Z/Qa">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

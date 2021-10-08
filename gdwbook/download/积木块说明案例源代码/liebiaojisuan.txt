@@ -1,0 +1,304 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="ukmor_s_fUd~e~VKw6#f" x="-183" y="-181">
+<value name="param1">
+<shadow type="text" id="8`$z8]WcTdT)WJ|$nEYH">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="Rg88G^!7e;ui9XblMGvF">
+<mutation op="SUM"/>
+<field name="OP">SUM</field>
+<value name="LIST">
+<block type="lists_create_with" id="}!?GeE5aP@%-sVEqHI2b" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="VdX172=B?zre1~i]Xow~">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="sYWCS7z@P)vPIAg##CSk">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="7Y^_#hX]oC+WQLG;c,C,">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="!lTz1JH.QC`)*AkkEL%E">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="9T5QR8=w(o~F-g{(lzQC">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="OEed+edC-@?(D[h,GJ{J">
+<mutation op="MIN"/>
+<field name="OP">MIN</field>
+<value name="LIST">
+<block type="lists_create_with" id="C|I4U7c8gYN2~2{m3TA|" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="tJlxndRYLuz,.r)u9;2(">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="!h+WxA[{|=fnay.pTS_b">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="oy[1zpyXSLcTdfGwSL=?">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="*g:gc68^D7Cug0{j^kW]">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="Wn6zo,2U0Jp?|*k(As[G">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="{C+NG(9Ona$]1P/t:^=1">
+<mutation op="MAX"/>
+<field name="OP">MAX</field>
+<value name="LIST">
+<block type="lists_create_with" id="-0OuMTzC+82uUWN=CcI." inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="0;~C|6)[KZD-w-c]qO.-">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="^vN1}-ee2dTwlUhK8xu.">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="Z]aM6Nct;S[l8**r+qy.">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="%MbcRA^v?P)6}o0OD1hT">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="db1$gl^n56E.%5m~iJxo">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="Wjr~vAp5B=MSgQ;94O-}">
+<mutation op="AVERAGE"/>
+<field name="OP">AVERAGE</field>
+<value name="LIST">
+<block type="lists_create_with" id="nK8AK|@@c]H.XIc0O;1J" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="WCDg%QZ7ub)!CobDc-o:">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="|vY%i6y:L*un~{xT/p.r">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="qjQ15FpCqoF@0qlVU,zT">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="ZGf?T6qlKQ^?$T/EaZT;">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="0|5uBr%9V.=evp?T_Vuv">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="JHf;W90Icis0lUzkLDKj">
+<mutation op="MEDIAN"/>
+<field name="OP">MEDIAN</field>
+<value name="LIST">
+<block type="lists_create_with" id="rnc5y%~n*ty-%f}9iQ1l" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="Umq6OoU2~0G,oj#G+`po">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="gV=WEV2Z=RQ[erl)Ftbf">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="s!]sYab@4/1F-6tP{T4;">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="M}qO=_jKsXJ`RrT`tWN;">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="ci-N$7`?d;)df:@kmdh3">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="Mp|Yi@O!bIQN~9nQ1yAM">
+<mutation op="MODE"/>
+<field name="OP">MODE</field>
+<value name="LIST">
+<block type="lists_create_with" id=".r^S)V{bYMVGzwFrYCQj" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="G|y:b1l3x}itP8Tr8D7W">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="Z*U,b`5l3|snYIi,:idd">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="JmoFCoTNN@]qHLNLNpki">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="xu/M`OOWbyjbjT/?9/fY">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="zC[6Xs.vWApKPdIT6(57">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="*tM4?/BQm5aV{YU0X,ZR">
+<mutation op="STD_DEV"/>
+<field name="OP">STD_DEV</field>
+<value name="LIST">
+<block type="lists_create_with" id="olhsjM$$vW@8BiXx}(e]" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="z)y2zu}pv{J9.;o6W)ra">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="NQYUJUVgb}B3}Ed6|kao">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="%Lc7yi5T)~*J5[j@6*d,">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="A9X1eYmQRP0*HfaEhCpN">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="lK}DTxj_yG#S/L-h$pGt">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_on_list" id="1=nR80`O6gE#74Iux@99">
+<mutation op="RANDOM"/>
+<field name="OP">RANDOM</field>
+<value name="LIST">
+<block type="lists_create_with" id="/6![u#q*[yQ5xTH1bA7T" inline="true">
+<mutation items="4"/>
+<value name="ADD0">
+<block type="math_number" id="O*4!1.o0s2V5!%=?M=3O">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="8,r5$H(fuJ$|hd#s|#3R">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="?B2Nd,GY[PzAx]KA+:qs">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="math_number" id="CpKG))3-)g$DZ^7ZkZ!V">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

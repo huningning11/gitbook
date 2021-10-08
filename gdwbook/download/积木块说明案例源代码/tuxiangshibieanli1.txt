@@ -1,0 +1,48 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="7#Dc%G!%:)ae]VF/$_](" x="-32" y="-123">
+<value name="param1">
+<shadow type="text" id="mXQ9QljmM*,%gCxtPx+p">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_classify_ingredient" id="}b;@c}fDt;}-2v6~X[NU">
+<value name="param799">
+<shadow type="text" id="{wY7X;,EB=3HeB~pP$q3">
+<field name="TEXT">/home/pi/imageTemp/苹果.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="(pepL_nB=)_#@)94b)E[">
+<value name="param1">
+<shadow type="text" id="f%DJ/M#PX-EEDuutkh]s">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_classify_animal" id="JCm_Iak5;B^vi!hH^@~@">
+<value name="param780">
+<shadow type="text" id="09/+gT8Sh6R49K%Qn*PM">
+<field name="TEXT">/home/pi/imageTemp/dog.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="/Cxt^a5tA(b_/tw0gZxE">
+<value name="param1">
+<shadow type="text" id="g[pQ6+:wXJJ|el3OW4|%">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_classify_plant" id="JS%+(00v(IlUVnT:ZKl^">
+<value name="param781">
+<shadow type="text" id=":)z*.X6DGJ/%n5mXyDAS">
+<field name="TEXT">/home/pi/imageTemp/绿萝.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

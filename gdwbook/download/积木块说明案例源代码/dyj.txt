@@ -1,0 +1,31 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="O[g^5IT0a:IN@daiyQyQ" x="111" y="127">
+<value name="param1">
+<shadow type="text" id="[`s0)lzBy(i!eo5bsm75">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="robot_printer_connect" id="kqCNb0J6D(=zA{lGP@Ct">
+<next>
+<block type="robot_printer_chinese_text" id="icnN#[}ZOjTAQ1_TJFR1">
+<value name="param236">
+<shadow type="text" id="/1h)[UltmI?.aC,a:)a;">
+<field name="TEXT">“歲月本長，而忙者自促。</field>
+</shadow>
+</value>
+<next>
+<block type="robot_printer_chinese_text" id="X/8H9Db2d#%@8ulCJ^];">
+<value name="param236">
+<shadow type="text" id="mtDOaq[s$S]%EQ)+6Z|Y">
+<field name="TEXT">風花雪月本閒，而擾攘者自冗。”</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

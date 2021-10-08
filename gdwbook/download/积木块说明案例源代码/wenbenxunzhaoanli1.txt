@@ -1,0 +1,87 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="c#!N[bE5a2$|vz_]t*i{">变量</variable>
+</variables>
+<block type="variables_set" id="M@szI~vAS|/=z`q,M*Yv" x="305" y="-7">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="text" id="mIM.W]=irZxFNBPUon}T">
+<field name="TEXT">010</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="b2f,tvnaS?}MsYpJ}3.*">
+<value name="param1">
+<shadow type="text" id="^?gG3ULVd-j-xZ-/X(%G">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_indexOf" id="VPy)YX.TL1|})OeuB:Al">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="_%oT9m*?w7r9aN0R(GU0">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="!;dM^R7tqprIMgZBAu2H">
+<field name="TEXT">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="VC)tl_H5FNOz]|#z5QBn">
+<value name="param1">
+<shadow type="text" id="sG:q4SQthMVk{rl[?ZKL">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_charAt" id="X}dlD@!Mp|jEunEV[%K|">
+<mutation at="true"/>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="$:X%3V]*,3QAob22.*1K">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id="!PuU-xi$Bb,2UkAgS8/R">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="!osSueP3Pq*ufm)QRbZ[">
+<value name="param1">
+<shadow type="text" id="sZl(P5T:7CgAwx*Oe[P7">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_getSubstring" id=",N=F`Oo*S9FK/Jq=Z4*q">
+<mutation at1="true" at2="true"/>
+<field name="WHERE1">FROM_START</field>
+<field name="WHERE2">FROM_START</field>
+<value name="STRING">
+<block type="variables_get" id="+Nz;nIZ+e2[M%PsY(#|y">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<value name="AT1">
+<block type="math_number" id="5VNGq$]q.(|l0J[gT2E!">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="AT2">
+<block type="math_number" id="d,@3}0FOBDGCUy0*:UsI">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

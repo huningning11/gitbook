@@ -1,0 +1,133 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="?Rdl*17B.Vd2ACgo6a,B">接收数据</variable>
+</variables>
+<block type="v2_wzz_set_mqtt_server_port" id="$Sq@B+gK|,u_@Nd1YYIw" x="374" y="55">
+<value name="param402">
+<shadow type="text" id="FSe22h]f9wN46!$lCHRm">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="oNB_n)eS{=e|]p!I6]1r">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="Uq]cClr0@8_zH/*e#Lnd">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id=":6OhPG|Pm}6yf?twWopD">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id="*MWgpd9fU#_10~Y9/I8y">
+<value name="param100">
+<shadow type="text" id="%OsTP9jHgn82lDtY]:qQ">
+<field name="TEXT">光线</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="xoE2yw[$|9`TVixXJE~_">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id=";IrCJPYz{.kBt#KFkBCB">
+<value name="TIMES">
+<block type="math_number" id="ORBiPh,o@ps/#gi7z|Q~">
+<field name="NUM">1000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="S(Y%YJ!V{c5R.U-b=XK7">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id=".KdejOK|P/r;LJOJtzd8">
+<value name="param181">
+<shadow type="text" id="JlTzWf[IpK3JiD}=-4|K">
+<field name="TEXT">光线</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="vd00u%fYq6q(zcw3pomd">
+<field name="VAR" id="?Rdl*17B.Vd2ACgo6a,B">接收数据</field>
+<value name="VALUE">
+<block type="robot_get_topic_data" id="`v[HhS:(X?=@WIpgof#s">
+<value name="param102">
+<shadow type="text" id="s2WMwl#@:Vk~+S,X-E:E">
+<field name="TEXT">光线</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="(;XwR]Axdr4s[#Fs.j#e">
+<mutation elseif="1"/>
+<value name="IF0">
+<block type="logic_compare" id="=z5xw9{Yj4hrx5#B9jN$">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="V*pS/.$36Ee7c6=??QRO">
+<field name="VAR" id="?Rdl*17B.Vd2ACgo6a,B">接收数据</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="ZCksJf@2UqF4/:vcQ9]-">
+<field name="TEXT">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_led" id="v7uaH{cj;n~ZZ}kfmUM(">
+<field name="param155">6</field>
+<field name="param156">1</field>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="UH~)9^*r~kjWQEDt_?QS">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="$3$}n9fx+pOM]E=qp?f7">
+<field name="VAR" id="?Rdl*17B.Vd2ACgo6a,B">接收数据</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id=".cf.S5O8I~y0cO/]yGLX">
+<field name="TEXT">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_GPIO_control_led" id="X72Jyvg;A0rJIrydF!rt">
+<field name="param155">6</field>
+<field name="param156">0</field>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="!R4r1[eSq;u$$fx}IiO}">
+<value name="param96">
+<shadow type="math_number" id="}Oy^J1=(F#d;/G=EB|qw">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

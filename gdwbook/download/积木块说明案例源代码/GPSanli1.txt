@@ -1,0 +1,50 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="dRrY3k_}$2(YZhuE8sKz">位置信息</variable>
+</variables>
+<block type="robot_gps_connect" id="m0L=$qc4$k3GV|EKy#;v" x="114" y="-522">
+<next>
+<block type="variables_set" id="h2170g8c[w;#Yl%%jRhd">
+<field name="VAR" id="dRrY3k_}$2(YZhuE8sKz">位置信息</field>
+<value name="VALUE">
+<block type="robot_get_gps_data" id="Ri^IF@vKp3_x5W.@NV,4"/>
+</value>
+<next>
+<block type="log_out_put" id="$W[wU5xD=$OFUAhbQQUT">
+<value name="param1">
+<shadow type="text" id="EK$s,{djg;~wO+soLd~s">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_position_by_gps" id="ZiaO5qK?+E(S5NNY60aR">
+<value name="param271">
+<block type="lists_getIndex" id="#a)-_-zV!AB})O@TN-n$">
+<mutation statement="false" at="false"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="(H^IWMd#,{t3E,OCP#P#">
+<field name="VAR" id="dRrY3k_}$2(YZhuE8sKz">位置信息</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param272">
+<block type="lists_getIndex" id="ldntYLke,7uz(%p(kh3V">
+<mutation statement="false" at="false"/>
+<field name="MODE">GET</field>
+<field name="WHERE">LAST</field>
+<value name="VALUE">
+<block type="variables_get" id="u!.ZWKgsAJ(;.:94$^O`">
+<field name="VAR" id="dRrY3k_}$2(YZhuE8sKz">位置信息</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

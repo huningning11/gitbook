@@ -1,0 +1,48 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="x)-#(mETrm,p$_bzKdGw">返回结果</variable>
+</variables>
+<block type="controls_whileUntil" id="!eG[a(}+T4%?PnP9=4SD" x="310" y="266">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="i%b{ylo@+.paz!(_g@}t">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="724cA$KEN;z:1Kcb93md">
+<field name="VAR" id="x)-#(mETrm,p$_bzKdGw">返回结果</field>
+<value name="VALUE">
+<block type="get_from_uppin" id="J[1kldBQ*#y=^r=1@:iz">
+<value name="param452">
+<shadow type="math_number" id="XHkuu[+F+^0$-O9w#eO-">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="RsA5%0t|}|WM.9pXtdUY">
+<value name="param1">
+<shadow type="text" id="_Sxj#%BmZ~WczqcYo]4h">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id=")I6S?onKI-*86|E+|X3]">
+<field name="VAR" id="x)-#(mETrm,p$_bzKdGw">返回结果</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="[!D[@,3N6QevF^.cz^`.">
+<value name="param96">
+<shadow type="math_number" id="ugU)^Z;zi+yA?BMxx(li">
+<field name="NUM">0.3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

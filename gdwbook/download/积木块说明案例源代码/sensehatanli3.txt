@@ -1,0 +1,1111 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="I5+IbbGsY]OgW.kBR4s#">运动方向</variable>
+<variable id="^Rvv$nJP,I;l0E10k+1o">i</variable>
+<variable id="3k^D!gD7AZ4[9YoLPlmB">蛇长</variable>
+<variable id="VzKf;v#D|cHCUQ4O{J4!">坐标</variable>
+<variable id="Az_,MP6-;(.|CP:7y5E+">x0</variable>
+<variable id="wAEYpVy-D.GLzm=-g:AZ">y0</variable>
+<variable id="8jDs$uM7TMK+NGOUL#~$">蛇身</variable>
+<variable id="+}BHWe1e3q{!Ed{I1yGm">x</variable>
+<variable id="q5VWstE,d$Zla;6cj=`|">y</variable>
+<variable id="I;m_tZgV6P!|m-eDxj#k">蛇头位置</variable>
+<variable id="Nh[RPG2%ipFl(v_.,RJR">食物位置</variable>
+</variables>
+<block type="procedures_defnoreturn" id="N3gm,Yjyn]nOrbB;Dq-|" x="0" y="0">
+<field name="NAME">初始化</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="robot_sense_screen_clear" id="uI:n%}SBp0X0GW$|=_hW">
+<next>
+<block type="robot_sense_screen_set_pixel" id="G6o}Ai![nUySh`-la~Yh">
+<value name="param171">
+<block type="robot_color" id="BKuhOMqVJ7N]om[-tWD]">
+<value name="param247">
+<shadow type="math_number" id=";h-bBCRCOed2#*-*yn[X">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="9^8?%hY%O}6T]Rr%3Lsg">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="*4@w|J9_T8{{i?lo9Soh">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number" id="-eC`#+T{[RV9^59N1#2X">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<value name="param173">
+<shadow type="math_number" id="qME1UoI)%YX!1o))qNWh">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="r-tX%md+!I,f$)yt2}^(">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+<value name="VALUE">
+<block type="math_number" id="byni.uZO;oT-~nbELgzt">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="{;v7+yk_u27Iuy[tlF$X">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+<value name="VALUE">
+<block type="math_number" id="dZ0C=E^{RMu=D#a0c~qF">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="9HB6!(u@w@aY|ORv]/O#">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+<value name="VALUE">
+<block type="math_number" id="lTFS~ea*B[A`NDe_ki`%">
+<field name="NUM">3</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="L{`xhZYN#lK+?[y_Bx,~">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+<value name="VALUE">
+<block type="math_number" id="T32+7p=pt7{#2kHbzoF8">
+<field name="NUM">3</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="Hmn2oaZ/,Q(xp?]e[C?/">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+<value name="VALUE">
+<block type="lists_create_with" id="FDI5|1QhDWO`-c4VC?O^">
+<mutation items="1"/>
+<value name="ADD0">
+<block type="lists_create_with" id="}Z];*VwYbO%9qZuL$jyu">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="variables_get" id="/`_c{;xuzWqEKJYn-(yW">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="_ZO(dkgggZ,b$yTVoTMq">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="=aGKyJI^K)bk!nw~cbWs">
+<field name="VAR" id="I;m_tZgV6P!|m-eDxj#k">蛇头位置</field>
+<value name="VALUE">
+<block type="lists_create_with" id="35*i[vEV-sc6SK)l]Qbi">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="variables_get" id="/CT:8`D:TJJB|GZmyT0I">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id=";4vmq(aBuE:0Rc5lZc]/">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="$2zlSxO-Ku.^]SNAi,Bk">
+<field name="VAR" id="Nh[RPG2%ipFl(v_.,RJR">食物位置</field>
+<value name="VALUE">
+<block type="lists_create_with" id="18_h[mp8X.UBl8KwM-MY">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="variables_get" id="6PK}I:RLx47!3eyM($/8">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="@K/=9LBUnFR4)vk~VGR_">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="/g+OAdcxB1HIXuSNevv9">
+<field name="VAR" id="3k^D!gD7AZ4[9YoLPlmB">蛇长</field>
+<value name="VALUE">
+<block type="math_number" id="1rSDA$8YYEi@e|YSIq5q">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="?s_,u+!uV(tFmw?$NK)f" x="217" y="444">
+<field name="NAME">显示蛇身</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_for" id="!Y+_9Vg3|0lPy0hwl!jQ">
+<field name="VAR" id="^Rvv$nJP,I;l0E10k+1o">i</field>
+<value name="FROM">
+<block type="math_number" id="#yGXa!olbEDtTzXu[J]F">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="variables_get" id="Qf=#CROlX~em+GWl4)_Q">
+<field name="VAR" id="3k^D!gD7AZ4[9YoLPlmB">蛇长</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="_;@d`t]$:NvOVF3PM$l)">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="OWruOAfrA%?f3f#A7+Il">
+<field name="VAR" id="VzKf;v#D|cHCUQ4O{J4!">坐标</field>
+<value name="VALUE">
+<block type="lists_getIndex" id="pjv?.qLf$go7/IeV?{|`">
+<mutation statement="false" at="true"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="ni)E,-8#mE0{aG+x{)T4">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<value name="AT">
+<block type="variables_get" id="I6SC=x]mV!2Ne@!rgvy4">
+<field name="VAR" id="^Rvv$nJP,I;l0E10k+1o">i</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_sense_screen_set_pixel" id="bSCSn}=BICCT2PjMkpvZ">
+<value name="param171">
+<block type="robot_color" id="Ev25}HYvAK=0OE!]u1)L">
+<value name="param247">
+<shadow type="math_number" id="gfgF%(+NhMQ(w6B%t1Z-">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="t|4/%L{T{0M%:vd)0gUy">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="+RK(1NIP+^}Jfbe6W-Q[">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number" id="o6qO$zBX4m][^;l~p#u5">
+<field name="NUM">3</field>
+</shadow>
+<block type="lists_getIndex" id="kX_=R2RtTW+4Oq4RZZ6?">
+<mutation statement="false" at="false"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="zLdr8[eRuowco0Q6,|Tt">
+<field name="VAR" id="VzKf;v#D|cHCUQ4O{J4!">坐标</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number" id="f.~B@`2F)l+*0Wzxs(6:">
+<field name="NUM">3</field>
+</shadow>
+<block type="lists_getIndex" id="[X=WZID||FsrQix1tO]*">
+<mutation statement="false" at="false"/>
+<field name="MODE">GET</field>
+<field name="WHERE">LAST</field>
+<value name="VALUE">
+<block type="variables_get" id="Vc8NGq4r;E`uJL(x2#9h">
+<field name="VAR" id="VzKf;v#D|cHCUQ4O{J4!">坐标</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+</block>
+<block type="procedures_callnoreturn" id="{CHqp#7OSD$RK`pSf4gP" x="0" y="467">
+<mutation name="初始化"/>
+<next>
+<block type="robot_sense_screen_set_rotation" id="gb70-1)m-nF//$}YnwUj">
+<value name="param174">
+<shadow type="math_number" id="xC+/|2tA]B]NdLEUF?vt">
+<field name="NUM">180</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="GPDjH`k1w|5?,1FlIP[R">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="`DB(ra7hlXYa}zqBbD%#">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="procedures_callnoreturn" id="aa^A3RR]B:+.1MYJU(9$">
+<mutation name="方向"/>
+<next>
+<block type="procedures_callnoreturn" id="g}mSYo)]F.m{Np70kdEs">
+<mutation name="吃到食物"/>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+<block type="procedures_defnoreturn" id="!MDBJv::5lrs5v{m.u6S" x="0" y="647">
+<field name="NAME">方向</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="variables_set" id="`NuL!MhD~x1r$53b]A?2">
+<field name="VAR" id="I5+IbbGsY]OgW.kBR4s#">运动方向</field>
+<value name="VALUE">
+<block type="robot_sense_get_stick_attribute" id="ehmC:=J?KiBDgp*v)4{t">
+<field name="param178">'direction'</field>
+<value name="param177">
+<block type="robot_sense_wait_stick_event" id="Fp9faYtN?NXaFZkv(DX/"/>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id=".3rI=6bD[R~Uu8FJ$I6]">
+<mutation elseif="3"/>
+<value name="IF0">
+<block type="logic_compare" id="gsUJ0H/ZVSE=[11LbO61">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="|-/T1oexzc(Gy2E~Oz=u">
+<field name="VAR" id="I5+IbbGsY]OgW.kBR4s#">运动方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="wj6xb3GUL2U`~H-Wwgv_">
+<field name="TEXT">up</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_sense_screen_clear" id="UL8/))]Vx8]dsO^}n3$A">
+<next>
+<block type="robot_sense_screen_set_pixel" id="igJ6-{Ns6}Kri:E?W!J7">
+<value name="param171">
+<block type="robot_color" id="s3]T9u8gfWn@+V/KhnN+">
+<value name="param247">
+<shadow type="math_number" id="(X4VkO#qa8Z?14+pg=(_">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="^1sVR#q-YFmb0YLyFb_8">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="J:FpCd@=zQaHy5LW1F6=">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="`~lAu?OtJ^Swe%p@e3dV">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="1-W/Iig`e.bxPPT7e$bI">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+<next>
+<block type="math_change" id="QU;k6w^nK.Fhte33j$h4">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+<value name="DELTA">
+<shadow type="math_number" id="S;_]t(1BT[YwH6~:w~aW">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="oQLs~.Cc6`Z~H=s8wi:k">
+<value name="IF0">
+<block type="logic_compare" id="(Ku~6Y2.*Y_`9?4H)/GZ">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="GM)ODDC~E%S:8I-O:i65">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="|UJWR-D|T8)XDmmlpe?r">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="_a]~.,,BGB)ZRyc:Qcm_">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+<value name="VALUE">
+<block type="math_number" id="#3RMFu=~Cu;oV{(7gm|}">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_sense_screen_set_pixel" id="xq_Fy@]d4oR)CZQS_~m?">
+<value name="param171">
+<block type="robot_color" id="K1QP|S11JO^^nU!MPUEC">
+<value name="param247">
+<shadow type="math_number" id="AZ;rKmDkzjrFw[1L[5)!">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="JD#B-2pjc0vxqFH`{k0.">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="H0dbf5Jc/8l_Uu[Ftg%e">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="nBa,.XelEk)zpS6sM?Fi">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="bm@SgT(ff?!|+0(3{t]/">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="u+LCQ/cBSNGKK)E2[N/0">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="n3.K3*t0br$P(!O5l0Wg">
+<field name="VAR" id="I5+IbbGsY]OgW.kBR4s#">运动方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="]mZEdcj+RDa!p0Zs;0D)">
+<field name="TEXT">down</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_sense_screen_clear" id="/{Nw2VF+7Hyb8@C4{tFb">
+<next>
+<block type="robot_sense_screen_set_pixel" id="Q-3g;JoJrGOYTDCdVdEF">
+<value name="param171">
+<block type="robot_color" id="8z+/k^J;txQ}p5dvs?7E">
+<value name="param247">
+<shadow type="math_number" id="Ls+2sfcbP(f,J-4E.lK#">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="Xa~!yF0)z*3YHRqzPD!l">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="4zeH.Lrb|6xS{l/[5uM[">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id=";B~GkX=DuE26rtK@iV^N">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="P3qm3rj{MrW3g=l}L)1-">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+<next>
+<block type="math_change" id="i$#BE6Qi9h`J$)OHwK]f">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+<value name="DELTA">
+<shadow type="math_number" id="yeDU}r81z_A$#lX2x=fB">
+<field name="NUM">-1</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="8$68/U(Wn]a}@K}IA8S0">
+<value name="IF0">
+<block type="logic_compare" id="v]l/ME@~h!+C6i-PWd6+">
+<field name="OP">LT</field>
+<value name="A">
+<block type="variables_get" id="5]CXz)1KO_nuUX06m/pz">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="z1%W)wN5k_VRk2smb/gi">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id=".USKL3G9ib,4*9.W0i(Q">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+<value name="VALUE">
+<block type="math_number" id="%JmLUQ$;A^DqBxshH`IL">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_sense_screen_set_pixel" id="fQ``h54eNZ(F^qstjSw^">
+<value name="param171">
+<block type="robot_color" id="BmpK;DzHXrpwFap.GryT">
+<value name="param247">
+<shadow type="math_number" id="2bzS):x9%S_n6W9NA)6a">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="Ks{|cZk9[~W?wu`B@o]#">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="C}/_3tGtzy1Iq2+S:~y~">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="#c@=-]_ndUzz{2s1)i]n">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="j]Z?!]~ulx?24Eb29wPq">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="-oAPf.{!j/~WxF+:|;DA">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="8]1*`K*I@xzfKuimDG0x">
+<field name="VAR" id="I5+IbbGsY]OgW.kBR4s#">运动方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id=",}lgG0x?ajjTdM[R?ioQ">
+<field name="TEXT">right</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_sense_screen_clear" id="mIa|g[~pg|AY1,VJeA6Z">
+<next>
+<block type="robot_sense_screen_set_pixel" id="l}a__d/k-ok.=k:Jb?ee">
+<value name="param171">
+<block type="robot_color" id="K42TmcM#ssM3lZKL;GB)">
+<value name="param247">
+<shadow type="math_number" id="(ZxMZ@.Mr*ie#y6:$G5D">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="xIOPZ7{@Z:r(dXqBUmr/">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="bM~l,AD1R`q{h|98bc)t">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="TX!`mLNNh|ooRc$7j4|}">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="J`{wloj;x/1p@4[]$}{]">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+<next>
+<block type="math_change" id="/)JUu!)G){)zni#Aa|9[">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+<value name="DELTA">
+<shadow type="math_number" id="2.UWmd#oYuAEY=rN(@qH">
+<field name="NUM">-1</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="S+]Gw*$C4qjp=II^1A{1">
+<value name="IF0">
+<block type="logic_compare" id="1tDT:CPQl+$hk?IRBsr:">
+<field name="OP">LT</field>
+<value name="A">
+<block type="variables_get" id="WG8Sx.+fv5zne[yZVLyH">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="VdSUr)ZYb3#*2F;gYF(A">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="C.?PpUwK%yXV%2tXn6KJ">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+<value name="VALUE">
+<block type="math_number" id="V2vo)G$w+0CiLc4MlMVD">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_sense_screen_set_pixel" id="Wox2Cr9R*j~WJi9,V^+,">
+<value name="param171">
+<block type="robot_color" id="K.urzkl5-i$PCF`/)KTM">
+<value name="param247">
+<shadow type="math_number" id="IE];aScC%Y6rV=eRNFB,">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="9Rr%e}b$}KyE1VQv=LPp">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id=")ih1qsN^+xP@ET]G381~">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id=".SXV~hh%B5.]B;KCM80]">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="E7}(]@k{l^/PY5bTPC85">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id=";L*TEWo^7O{|IR052P?O">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="KC4aFSfDK,+V!qt)[gc7">
+<field name="VAR" id="I5+IbbGsY]OgW.kBR4s#">运动方向</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="yNr[Hp#w;vE_ZB~)ctVT">
+<field name="TEXT">left</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="robot_sense_screen_clear" id="xwLYcQ5eqC0Jl7$,*f;,">
+<next>
+<block type="robot_sense_screen_set_pixel" id="~,R.8V9Er9)qvv`JI?ai">
+<value name="param171">
+<block type="robot_color" id="#:xFOWQB-OH8:,|@YQNO">
+<value name="param247">
+<shadow type="math_number" id="rGP.;,S]Um[2U|s%}Z0n">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="9Y6/=L;Qj0zmtJ-i/Y5U">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="=lv#6_gV%#G$vSI)Na2o">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="eZ`p#1?@|i|(jwomQ7~[">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="tpT66%pr@gWzWs8z,UlD">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+<next>
+<block type="math_change" id="/.[65@O*Nd_S9bFPj_2#">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+<value name="DELTA">
+<shadow type="math_number" id="M#Oe%w{7K)KzX$w=l,79">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="^S`w|LwIZe=;bodQ_5YX">
+<value name="IF0">
+<block type="logic_compare" id="vT~~W_$Xn3a9w!dXs3##">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="{PN@Lj[nY=!C+$Z`rY6B">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="#Va`kvu4X:B%Yomckq8`">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="|@`y@Xg-BP|Y3b7EpO(4">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+<value name="VALUE">
+<block type="math_number" id="W6ssjQIb^ho0CDx|sDkw">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_sense_screen_set_pixel" id="U0X/=oJ-/l!g*)7IPlx;">
+<value name="param171">
+<block type="robot_color" id="6GEB@M@z(.fK~vIy)ouT">
+<value name="param247">
+<shadow type="math_number" id=")@R8yz1CZ;rL)0(.%=2e">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="LNSXm~H}36/ZpvLT{rek">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="/Gc;(w[(fM7`E1B@_|d]">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="C=^y)4zvG0s,Hp$(_M?C">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="4]sJ{c@$ZJ!T|{u#Crdn">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="lists_setIndex" id="anUL`P5xs54@m=UP,ZYD">
+<mutation at="false"/>
+<field name="MODE">INSERT</field>
+<field name="WHERE">FIRST</field>
+<value name="LIST">
+<block type="variables_get" id="Q7]{JZRp0AV%M{w]0p2(">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<value name="TO">
+<block type="lists_create_with" id="Pd$HVgdCiqpjG}Rs$dq:">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="variables_get" id="),aZpcG_htt]T_[GVjY;">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="oA+3Bl{p[g-][Lp(0U6#">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="lists_getIndex" id="rj[^=K_$rG}oseGUm99R">
+<mutation statement="true" at="false"/>
+<field name="MODE">REMOVE</field>
+<field name="WHERE">LAST</field>
+<value name="VALUE">
+<block type="variables_get" id="!RB+vXOh/jBuf/hl:?cX">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="yP(Z4CMri9#Xh3ic5Uai">
+<value name="param1">
+<shadow type="text" id="Sm[w$vq)ekS8y6^QW,;;">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="n5)viR:{tl`HgMVEbV:+">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<next>
+<block type="procedures_callnoreturn" id="MHI}{PNLjh):VD[mAy{q">
+<mutation name="显示蛇身"/>
+<next>
+<block type="robot_time_wait" id="4aDf*J/B=3$-`S-`-eog">
+<value name="param96">
+<shadow type="math_number" id="Pg!G?|f7lj@:/$xC(%C0">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="RS81?bW2%ab5vW1G^)w2" x="0" y="2318">
+<field name="NAME">吃到食物</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_if" id="$a$|/y9rIJH8gSmnXG/c">
+<value name="IF0">
+<block type="logic_operation" id="LryRdVc@:QY$^$3PO)ma">
+<field name="OP">AND</field>
+<value name="A">
+<block type="logic_compare" id="KyLHd`Vak{67TAy_]-0j">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="ij]!-`ePqI=)n?0c74v[">
+<field name="VAR" id="+}BHWe1e3q{!Ed{I1yGm">x</field>
+</block>
+</value>
+<value name="B">
+<block type="variables_get" id="pm,^it)pEi72Nq/M3nQ`">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="logic_compare" id="BShjuk,+{Ne;ycuDxr_,">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="^FTTpB-Q#uc).Z:rizDv">
+<field name="VAR" id="q5VWstE,d$Zla;6cj=`|">y</field>
+</block>
+</value>
+<value name="B">
+<block type="variables_get" id="(zRYEdm1tq^sT9A(Cv}x">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="math_change" id="?(y/L]TG=HJXD`}2k8oD">
+<field name="VAR" id="3k^D!gD7AZ4[9YoLPlmB">蛇长</field>
+<value name="DELTA">
+<shadow type="math_number" id="J!RADL6lHQ[BXwb`.aDY">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="lists_setIndex" id="`czVP6B|1t80?h$Q,1CK">
+<mutation at="false"/>
+<field name="MODE">INSERT</field>
+<field name="WHERE">LAST</field>
+<value name="LIST">
+<block type="variables_get" id="2auB?,?R1Ix,^o+(lWnY">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<value name="TO">
+<block type="lists_getIndex" id="U$=t^!WYCQPb][r=Ff4c">
+<mutation statement="false" at="false"/>
+<field name="MODE">GET</field>
+<field name="WHERE">LAST</field>
+<value name="VALUE">
+<block type="variables_get" id="mJ4]=2(`.dv?BfaM_:U2">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=";X:=6~Mg$D]zMXq;m$~j">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">吃到食物</field>
+</shadow>
+<block type="variables_get" id="K|:XNki1F.Z?{Fshv_s?">
+<field name="VAR" id="8jDs$uM7TMK+NGOUL#~$">蛇身</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="DL-a276?Du2gR|a)hRIz">
+<value name="param1">
+<shadow type="text" id="HcPpois3@KOh61XQK?(F">
+<field name="TEXT">吃到食物</field>
+</shadow>
+<block type="variables_get" id="sfA1xYjTEUtY9si5}Uls">
+<field name="VAR" id="3k^D!gD7AZ4[9YoLPlmB">蛇长</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="v^e2q#,??f3/E],r7S]8">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+<value name="VALUE">
+<block type="math_random_int" id="#Rb,vk+7s7Zr|lDdQ5OL">
+<value name="FROM">
+<block type="math_number" id="7T}uI}^Z|Ov*`}w%=B4/">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="=Q:R$ag0sQhs_$=c#q5_">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="UTQO^.dx4FU!X%hsW$5c">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+<value name="VALUE">
+<block type="math_random_int" id="Hzt`@8aBaul@4yovN*t9">
+<value name="FROM">
+<block type="math_number" id="qtwctT)Q+{@z~vE2=N^|">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="k$mum)kr/r62/ide#nq:">
+<field name="NUM">7</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_sense_screen_set_pixel" id="Q]8}k*LiFy3)6QkBMF}Z">
+<value name="param171">
+<block type="robot_color" id="VeU,Hu#u/J1JBGqSQ79y">
+<value name="param247">
+<shadow type="math_number" id="e9=EfgYUA{%Ruc}yU8PQ">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="[aR5T/Ogs09VYxo$e+1?">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="KLrQVoyoD6Ec?jr[q8on">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param172">
+<shadow type="math_number" id="Fyr1Sz5*MR7O2jgQyAG6">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="}3wI1NYG$E7s7mYrZN]*">
+<field name="VAR" id="Az_,MP6-;(.|CP:7y5E+">x0</field>
+</block>
+</value>
+<value name="param173">
+<shadow type="math_number" id="T.Jq+#Kh:5oL]~JFY;8:">
+<field name="NUM">3</field>
+</shadow>
+<block type="variables_get" id="[A/kE_^C2gV/_VbWaacE">
+<field name="VAR" id="wAEYpVy-D.GLzm=-g:AZ">y0</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+</block>
+</xml>

@@ -1,0 +1,26 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="E9MLgC%iu,S;Z^^8nCJV" x="603" y="-125">
+<value name="param1">
+<shadow type="text" id="P1kSQ0vf:SL??a6`ueWa">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_color" id="9kx-b=257fHZ1hiWExQ^">
+<value name="param247">
+<shadow type="math_number" id="aLfb![~%yWD0uAU|C8f%">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="9Jjs=xMb/VPjiD-XB!)P">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="n*]FRuefF|0TXxV4]mcp">
+<field name="NUM">50</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</xml>

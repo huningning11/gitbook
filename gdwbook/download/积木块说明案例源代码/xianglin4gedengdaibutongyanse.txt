@@ -1,0 +1,326 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="B=!+(:SZR.RxFeuDh#`n">i</variable>
+</variables>
+<block type="robot_ledstrip_init" id="BE-MHTXBhOF)J]SH/$Ed" x="-270" y="233">
+<value name="param259">
+<shadow type="math_number" id="+D^gUVYlcFF#,g*u5jg0">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param260">
+<shadow type="math_number" id="xA@3Cm6-50Cvz]~@y~W8">
+<field name="NUM">120</field>
+</shadow>
+</value>
+<value name="param261">
+<shadow type="math_number" id="0LzL|}c3M:Al|4AEiPRB">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<next>
+<block type="controls_for" id="f%P%:*]xErubrxx#a!P(">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+<value name="FROM">
+<block type="math_number" id="pe+]x,wsPY=m%YbmpUO2">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="pV~})}hwS8UEVY8D%JbS">
+<field name="NUM">120</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="hK~+E=]-YdL7=9mABsf6">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="#T{ZcwRA;9XBMzv%*x,G">
+<value name="IF0">
+<block type="logic_compare" id="i3cPqo^@`f!!wD(0!}zT">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="}70=)Z4lHSbTJxuX1/Xe">
+<value name="DIVIDEND">
+<block type="variables_get" id="(LQ`2ZwkV64yMe=17Q45">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="|om@;lk[5$W63?``n^1r">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="1pVx4L^rHS5z9*]wH!e1">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="NN,WQ#/2qt/Ny?;BtCPT">
+<value name="param262">
+<shadow type="math_number" id="XpXfE:L]bUk1UO-sHJdl">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id=":L5CM!.3qj?r?asyq5xl">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="robot_color" id="Fse!e,|?fEq}h@+e[-J/">
+<value name="param247">
+<shadow type="math_number" id="Y4yFF4g2qML6A;wh)u;X">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="kTvx+8ho`9gzMsQ39)Gp">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="%^,vmda^/f]{NH-7[(kQ">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="1y5UH4%ij][S96,GcED9">
+<value name="param96">
+<shadow type="math_number" id="qlXKHMPXvBtp-(y~_Sn=">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="MQ0~gFy}hB?vMDees%lc"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="4L^]g:-+`:rOJVb!P^Eo">
+<value name="IF0">
+<block type="logic_compare" id="P?b.VsFVsjAfXE16ovXE">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="Y`i]r~Xjkm4,ndtx`zm8">
+<value name="DIVIDEND">
+<block type="variables_get" id="7i9OY9Wcs%6]]ytKV-@@">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="$XBM)EQe:yL}IyZXn9@b">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="AVR|FZBg(~-psBQnUt|L">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="TyWWu!%W@4V2R{Ym+]tD">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="$P(Q78SfJ-h7DrQBgYIa">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="robot_color" id="}/Z#%grIeoev^)c=+=~v">
+<value name="param247">
+<shadow type="math_number" id="@e|6yzB5iRx{v?F=r:}X">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="]=c]{dr[(9d#y#Tfi6Z5">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="lqTn]Q6c`@3A%9esy:@:">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="D2(F_Z41#3o[wV#H]S[T">
+<value name="param96">
+<shadow type="math_number" id="NaFF~OD41Vt}`WlOmiF1">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="Du6Gr,fZX5MyEHb$Wo4l"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="~9ahBtpS53DDPk/RP!sH">
+<value name="IF0">
+<block type="logic_compare" id="!u`07va;ZYQS.hE^#Dau">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id="SA;UQX:wM)|460.p^7n!">
+<value name="DIVIDEND">
+<block type="variables_get" id="E4=}DHA:#2_5L:r[H6`4">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="Yws|O0K}8.-e{2Nvg3f^">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="us0CMG$(3Qm7MJCZYgG(">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="B*+4Mo94)*C@C6P.xm^y">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="Xm(+6KZM9mg`2`={`fRo">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="robot_color" id="di#[BBzUSM~%m/1|)|J1">
+<value name="param247">
+<shadow type="math_number" id="40[;u.gH5;I.@!`JaFAL">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="]Rlc}`[6%@Zz:1hZt!GH">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="Rpp]K7hfRAzi!R,4_z=`">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="Bs0b$vh{caxKJEfgUMPK">
+<value name="param96">
+<shadow type="math_number" id="8pU.@a)s2i/|by#=?8xx">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="6I^6DHOn0oL?W[2^JZa,"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="5kx_d}8Ku%NEUx4r(z((">
+<value name="IF0">
+<block type="logic_compare" id="F91]w1G;YCj^[3zZ4!Hw">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_modulo" id=";GbL/iX+vTPz:d4=chbw">
+<value name="DIVIDEND">
+<block type="variables_get" id="ymL6^]zclxEiJl^XX9m0">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="U%~w90;p.x;KfWKRPWOg">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="^),)/I,QT,o!@C2Ybz.P">
+<field name="NUM">3</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_ledstrip_setpixelcolor" id="s**zjjvtJbg(hA,z_KaR">
+<value name="param262">
+<shadow type="math_number">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="]==%Y-VNN:%R)u|#roIP">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="robot_color" id="5Pqvgj3z9l]Imvp,!81G">
+<value name="param247">
+<shadow type="math_number" id="shMzKeK.f]t?9}6`9xQy">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="Hl.~V4v-1vFmLe_pTzf*">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="U*rfBGAJhXfRpw|$yeu4">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="tZ@q=(.[%L)+cznze,]A">
+<value name="param96">
+<shadow type="math_number" id="Af)V-).`^89uKwA;9QK*">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="LlOA_X1_l9[Tn(rcQe*|"/>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

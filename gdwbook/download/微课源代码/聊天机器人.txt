@@ -1,0 +1,108 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="P}5CL7Q[SEoY1[}F}/ky">语音输入</variable>
+<variable id="03ybL76WgY|RF4j#Vhh#">语音转文字</variable>
+</variables>
+<block type="robot_respeaker_start" id="]Z?K./JG~uj^-$1U0Q.H" x="280" y="18"/>
+<block type="procedures_defnoreturn" id="w#ji]zKER~l9p0xUP9KZ" x="278" y="94">
+<field name="NAME">Wakeup</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="robot_play_local_voice" id="Uxw%|oxHq9y4-V[S}YF#">
+<value name="param200">
+<shadow type="text" id="}_]r?@*hUU=sB5?!BV[{">
+<field name="TEXT">/home/pi/temp/ding.mp3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="Ixb#R5/4^=T3}C.vzR=(">
+<value name="param96">
+<shadow type="math_number" id="D)2ZNBhYaYJ2]zK{[$U;">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="XBJ%;YMEB1*ooH08T)A`">
+<field name="VAR" id="P}5CL7Q[SEoY1[}F}/ky">语音输入</field>
+<value name="VALUE">
+<block type="robot_respeaker_voice_to_file" id="HLB=IaK(0?FBs{73GGTe">
+<value name="param448">
+<shadow type="math_number" id="oJAm5cHVTC,Mkr[423Qn">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<value name="param449">
+<shadow type="text" id="v3;|39f[g{,k-3c9U)AU">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="p6G%T(a-9^,#tq1tU9@x">
+<field name="VAR" id="03ybL76WgY|RF4j#Vhh#">语音转文字</field>
+<value name="VALUE">
+<block type="robot_audio_to_text" id="t/3y+]5JgV)jZ(}gP+|v">
+<value name="param250">
+<shadow type="text" id="I$9N_RMrjSYqePHC!hJY">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+<block type="variables_get" id="K~X/az@]oDpm[g0j){.*">
+<field name="VAR" id="P}5CL7Q[SEoY1[}F}/ky">语音输入</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="C3{A7ptC8qNGj0$o!Q@r">
+<value name="param1">
+<shadow type="text" id="9CR7[KzN6iOwPR#tr9ks">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="gjvWz6Q%mV,GzgJ$`xLd">
+<field name="VAR" id="03ybL76WgY|RF4j#Vhh#">语音转文字</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="6W*}Dq?]]3$l!O8AKu.Y">
+<value name="param1">
+<shadow type="text" id="`D[Wf`?I:x*?TXw9}.HY">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_talk_result" id="}*z?f1:]A,2IIx7kMyMA">
+<value name="param91">
+<shadow type="text" id="HV/}yNa2zo|B^9FEh{Cn">
+<field name="TEXT">你真帅</field>
+</shadow>
+<block type="variables_get" id="hdOII-/s*Qhm]_SYd0+v">
+<field name="VAR" id="03ybL76WgY|RF4j#Vhh#">语音转文字</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_talk_start" id="(5GHN@68pe|i_Yu-MNJa">
+<value name="param6">
+<shadow type="text" id="sKte4)=A`V^%fslBXsc}">
+<field name="TEXT">杭州天气怎么样？</field>
+</shadow>
+<block type="variables_get" id="?MDdvQDY)|X?TZBlJ6D`">
+<field name="VAR" id="03ybL76WgY|RF4j#Vhh#">语音转文字</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

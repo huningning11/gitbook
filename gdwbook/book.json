@@ -1,0 +1,74 @@
+{
+    "title": "古德微机器人教案 v2",
+    "description": "古德微机器人编程培训教案，标准化体系，版本 2。由古德微于 2019 年 4 月开始构建。",
+    "author": "catking",
+    "language": "zh-hans",
+    "links": {
+        "sidebar": {
+            "古德微编程平台": "http://www.gdwrobot.com/robot_system/"
+        }
+    },
+    "pdf": {
+        "toc": true,
+        "pageNumbers": true,
+        "fontSize": 14,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        }
+    },
+    "plugins": [
+        "theme-comscore",
+        "expandable-chapters-small",
+        "todo",
+        "-sharing",
+        "-lunr",
+        "-search",
+        "search-plus",
+        "sharing-plus",
+        "simple-page-toc",
+        "tbfed-pagefooter",
+        "pageview-count",
+        "code",
+        "highlight",
+        "back-to-top-button"
+    ],
+    "pluginsConfig": {
+        "expandable-chapters-small": {},
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy <a href=http://www.gdwrobot.com>古德微</a> 2020",
+            "modify_label": "本课修订时间：",
+            "modify_format": "YYYY-MM-DD"
+        },
+        "sharing": {
+            "douban": false,
+            "facebook": false,
+            "google": false,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": false,
+            "qzone": false,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "weibo",
+                "qq"
+            ]
+        }
+    }
+}

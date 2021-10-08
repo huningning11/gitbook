@@ -1,0 +1,118 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="/6vt}{3vUEp.0v#NQBIo">随机数</variable>
+</variables>
+<block type="controls_repeat_ext" id="9GWF[U?FYF_t1_YtF,Xl" x="253" y="118">
+<value name="TIMES">
+<block type="math_number" id="ZaL,jbYm.U1yZg!dRFdM">
+<field name="NUM">10</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id=",[K/EiNIl#Yy$^BmG$OC">
+<field name="VAR" id="/6vt}{3vUEp.0v#NQBIo">随机数</field>
+<value name="VALUE">
+<block type="math_random_int" id="LKBOGIWK/|hI;[*ApY2c">
+<value name="FROM">
+<block type="math_number" id="Rz?2Va/=Hld}6trDcG!v">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="kT^0}IM*5[$S#1,Qn[RM">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_whileUntil" id="?vDNA,V:Zti^Tkir]2/A">
+<field name="MODE">UNTIL</field>
+<value name="BOOL">
+<block type="logic_compare" id="vvh1$;Z;JoGvfx!8%8G-">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="variables_get" id="tJ6+8XUiQiyJpHSpppd*">
+<field name="VAR" id="/6vt}{3vUEp.0v#NQBIo">随机数</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="2gxlBoW1Byr$=wmH3-#=">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="?NIp_vYh@9~Qk}2AWA;3">
+<field name="VAR" id="/6vt}{3vUEp.0v#NQBIo">随机数</field>
+<value name="VALUE">
+<block type="math_random_int" id="x#{6Sm,i.JR*DZ^qJ9!!">
+<value name="FROM">
+<block type="math_number" id=".Xs/UTP`+D$iYl7r;sov">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="M+zq)YaFvcwq-V5KYpKk">
+<field name="NUM">4</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="log_out_put" id="UtnfnPE}SX53}Xl?qAu#">
+<value name="param1">
+<shadow type="text" id="m5QM2E~UN2kX2O)e[og+">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="q$ai1.0cLX`o[?[ojr|e">
+<field name="VAR" id="/6vt}{3vUEp.0v#NQBIo">随机数</field>
+</block>
+</value>
+<next>
+<block type="robot_speak_with_parameter" id="]`ZX;J*_904o.ItM0ngu">
+<value name="param289">
+<shadow type="text" id=":HwqV~!EbE6E~dkGaUn6">
+<field name="TEXT">你好，我是古德微机器人</field>
+</shadow>
+</value>
+<value name="param290">
+<shadow type="math_number" id="WoozW0QBDg7bU1x!eGkx">
+<field name="NUM">0</field>
+</shadow>
+<block type="variables_get" id="D|ISn%yM989RN54ySR9=">
+<field name="VAR" id="/6vt}{3vUEp.0v#NQBIo">随机数</field>
+</block>
+</value>
+<value name="param291">
+<shadow type="math_number" id="pqf4{^n6%jaJ@$LM`KL%">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="`].k?j_yLTTijr2|s;#o">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="$3{|H.5mhj6`~RV9t|^g">
+<value name="param96">
+<shadow type="math_number" id="S:,Koc/.S|i_4$TPs6p$">
+<field name="NUM">2.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

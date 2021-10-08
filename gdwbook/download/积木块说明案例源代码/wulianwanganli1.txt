@@ -1,0 +1,152 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="E=k.55`%VfPQW]?Xyx^Q">照片</variable>
+<variable id="Gjx2$,]pf.J!:j%[5#W#">照片数据</variable>
+</variables>
+<block type="log_out_put" id="+R=H^Zmh!g,Rd7.h,c%n" x="233" y="-56">
+<value name="param1">
+<shadow type="text" id=";?P80t*Cid{+Aun+}ZDX">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="get_gdw_device_id" id="NTWwAf]:]Z`4Q)iBh-hl"/>
+</value>
+<next>
+<block type="v2_wzz_set_mqtt_server_port" id="OKU9FcMO1,3[O5zLno5}">
+<value name="param402">
+<shadow type="text" id="i#~R-3o}RmwbOP2O+@Cu">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="Mp.2R.awIwESCf5cwzZ,">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="T;=wltSIBXA)DjD9tAaT">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="=Q_^uxI+nH|~vmXcS0P~">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id="Uz7YIlz@]AS;m%{P+usB">
+<value name="param100">
+<shadow type="text" id="$J{Jz8drx/jKQxa.eBXW">
+<field name="TEXT">zp</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="|)E_p3T`hDE+DhSU6e?4">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="UV.taUqxe8pP1:^pzfFY">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="+~[O.LE9v0r%SbC4)Be0">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="b$Q9FnQ[c2dVd2zMNw:;">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id="u}NAFkHosbxekwh1$vuk">
+<value name="param181">
+<shadow type="text" id="uXhNj7!~d2I6g=u}WHnn">
+<field name="TEXT">zp</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="DnU52`vgjX@klndp*v!Z">
+<value name="param1">
+<shadow type="text" id="$JWXk:,eBLkm4TNs-krw">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="2)P,siYtqr*6.k;/=l]@">
+<field name="VAR" id="E=k.55`%VfPQW]?Xyx^Q">照片</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id=".@=y%QGnJfNA(Nz2TGYz">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="]mI3{O~(t@c#oJUkVU4B">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="5A9tUN|XA}EdNm7V_fd,">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="V+s_gt5$ZFlx}=.^Ggt2">
+<field name="VAR" id="Gjx2$,]pf.J!:j%[5#W#">照片数据</field>
+<value name="VALUE">
+<block type="robot_image_get_base64" id="2adp23.Fh-4{1W)RRtC5">
+<value name="param336">
+<shadow type="text" id="hsK~?Mfby+Xiq#WCA~bH">
+<field name="TEXT">/home/pi/imageTemp/pi_logo.png</field>
+</shadow>
+<block type="variables_get" id="3`PW]!Zc7B%+jeBWVVK2">
+<field name="VAR" id="E=k.55`%VfPQW]?Xyx^Q">照片</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_publish_data" id="pU#XIxlsYn_ns[Pah;K-">
+<value name="param97">
+<block type="text" id="1H!,2mFMn-bqZ[2;Sgcd">
+<field name="TEXT">gdwzp023</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="`ZfU4)$qf;A)zXRhGW,(">
+<field name="TEXT">pz</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id=")n~XW/$$^%HX(CsFvQk:">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id="qHX4aQzD8-mMb?:X7t*.">
+<field name="VAR" id="Gjx2$,]pf.J!:j%[5#W#">照片数据</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="PB5oINP3eT9Ld^AdUm,X">
+<value name="param96">
+<shadow type="math_number" id="^UKElE~Nx.Oa?P39$7F%">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

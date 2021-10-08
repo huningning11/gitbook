@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="/e?0/V5![I}+9+GBB|{`">x</variable>
+</variables>
+<block type="log_out_put" id="Es9w$S^r$I6;MK=cyU:L" x="0" y="0">
+<value name="param1">
+<shadow type="text" id="VO}/*%tk:CX|Lpa,yl;d">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="procedures_callreturn" id="_FWA|5FyrO#Vl,cJetF5">
+<mutation name="test1"/>
+</block>
+</value>
+</block>
+<block type="procedures_defreturn" id="x]BqRQ**?,Jg^^v$uC{!" x="0" y="65">
+<field name="NAME">test1</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="variables_set" id="nwU|p1_?]w^bQyox45(%">
+<field name="VAR" id="/e?0/V5![I}+9+GBB|{`">x</field>
+<value name="VALUE">
+<block type="math_number" id="NBRwrg%(}`Y9k=Cu}bC6">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="math_change" id="I;1`[MA5pp,C[:.pt=2:">
+<field name="VAR" id="/e?0/V5![I}+9+GBB|{`">x</field>
+<value name="DELTA">
+<shadow type="math_number" id="v+s#]5nGNB1q4Q1C{072">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<value name="RETURN">
+<block type="variables_get" id="a7)4jpXvIX5Y0tn-XVxG">
+<field name="VAR" id="/e?0/V5![I}+9+GBB|{`">x</field>
+</block>
+</value>
+</block>
+</xml>

@@ -1,0 +1,59 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="1Wvn)a:B#~)Yl_RQCOHo">模型</variable>
+<variable id="+37wLl373%0Bc.aQDph0">识别结果</variable>
+</variables>
+<block type="variables_set" id="?zxerWN5#i:]JWWW!I8A" x="19" y="88">
+<field name="VAR" id="1Wvn)a:B#~)Yl_RQCOHo">模型</field>
+<value name="VALUE">
+<block type="robot_ai_load_mobilenet_model" id="*t*~vS/6tG+(c2er?4fx">
+<value name="param965">
+<shadow type="text" id="q*7ki{NuJX7Q!EujOu]p">
+<field name="TEXT">/home/pi/model/image_classification/model.tflite</field>
+</shadow>
+</value>
+<value name="param966">
+<shadow type="text" id="Z6m4,0hy9LNjr+8aE/P7">
+<field name="TEXT">/home/pi/model/image_classification/labels.txt</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="=cZ!F*%uQ3wSpB~oen_l">
+<field name="VAR" id="+37wLl373%0Bc.aQDph0">识别结果</field>
+<value name="VALUE">
+<block type="robot_ai_predict_mobilenet" id="Fic^=A{]P$O0Ubt?.`(-">
+<value name="param967">
+<block type="variables_get" id="s[^f7$|Vu?y/$G3mLwAi">
+<field name="VAR" id="1Wvn)a:B#~)Yl_RQCOHo">模型</field>
+</block>
+</value>
+<value name="param968">
+<shadow type="text" id="tLOjzzTKtOjiY.GoGMkW">
+<field name="TEXT">/home/pi/imageTemp/image.jpg</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="FLk{M(~iP7V}al0R|_.c">
+<value name="param1">
+<shadow type="text" id="aJ=,+5LVyl6_omf^rltc">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_ai_get_highest_result" id="40l*?CKx/@n;Z`u}3iN7">
+<field name="param973">'name'</field>
+<value name="param972">
+<block type="variables_get" id="-@pr}vqEGESZt*;A2MPj">
+<field name="VAR" id="+37wLl373%0Bc.aQDph0">识别结果</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

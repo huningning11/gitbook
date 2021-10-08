@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="robot_PS2_init" id="^mErY`0,[|6`|gVtx{cC" x="374" y="334">
+<value name="param932">
+<shadow type="math_number" id="KJG#ydVx9C[vJs$|7}#+">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<value name="param933">
+<shadow type="math_number" id="|ZAQEy)pI{2Uvv+`RTtw">
+<field name="NUM">12</field>
+</shadow>
+</value>
+<value name="param934">
+<shadow type="math_number" id="7:IeLog.U%T)#qa$A.a5">
+<field name="NUM">13</field>
+</shadow>
+</value>
+<value name="param935">
+<shadow type="math_number" id="|R/9nW1XhBFWne6$@:1S">
+<field name="NUM">19</field>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id="Yi67T:3-yQ$;oBDxldBr">
+<value name="TIMES">
+<block type="math_number" id="6PP18}2@hhzNZLCZY?s;">
+<field name="NUM">10000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id="Hi*CE_xZEXkAGZw@itM`">
+<value name="param1">
+<shadow type="text" id="sx!7rc*RPQq;^wKS,j_t">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_PS2_getkey" id="GVi{V.`yr%8f/lpg)(:l"/>
+</value>
+<next>
+<block type="robot_time_wait" id="_7lpH`:f5kOqTR$NS]NM">
+<value name="param96">
+<shadow type="math_number" id="Dqw]kx5_`i:[d_#Z%/f^">
+<field name="NUM">0.2</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

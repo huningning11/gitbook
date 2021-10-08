@@ -1,0 +1,34 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="{x9bB!e0i1dL^MS3/B_4">test1</variable>
+</variables>
+<block type="variables_set" id="K^9;E78!=+p@5yDPI|6T" x="0" y="0">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+<value name="VALUE">
+<block type="lists_repeat" id="sQ-LG]QSWrfN!C9ss*}M">
+<value name="ITEM">
+<block type="text" id="abdno3?]oo73/Dx%[N;h">
+<field name="TEXT">111</field>
+</block>
+</value>
+<value name="NUM">
+<block type="math_number" id="wSe{-kX;h]Kj9Y?!^j/l">
+<field name="NUM">5</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="Y@E{y:SX$-roa?Q:GJm3">
+<value name="param1">
+<shadow type="text" id="nQzx!!z!.CgcSdL*=Q?C">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="AxTN%VM_W0!u`-v8Al4h">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

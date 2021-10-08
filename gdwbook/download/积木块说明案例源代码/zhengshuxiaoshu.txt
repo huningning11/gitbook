@@ -1,0 +1,32 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="l)X=VTElwig3lnP84jgl" x="474" y="-223">
+<value name="param1">
+<shadow type="text" id="Xs:8Jei*Jhe.lrRkgSXK">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_int" id="~K80{^ph;C`!/$JCyM?F">
+<value name="param31">
+<block type="math_number" id="G?eJ$)}H6N)bwdxYC31*">
+<field name="NUM">20.21</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=".x2Tq7CaNUL|Iyv~=4MP">
+<value name="param1">
+<shadow type="text" id="C_EGL8j|[2`Jsyp0W2D.">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_float" id="x[o|0GsVT5wecBtaqBJv">
+<value name="param145">
+<block type="math_number" id="@vq~l1Gnjtnx1=G37g!@">
+<field name="NUM">20</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

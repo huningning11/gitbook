@@ -1,0 +1,49 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="Rc$VGGntFrZ=|z8EZ|@0" x="-37" y="-93">
+<value name="param1">
+<shadow type="text" id="WcXYm=T)-U)!PVhcw9k4">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_talk_result" id="@%W|jV!y)ztU3M;e+3b/">
+<value name="param91">
+<shadow type="text" id="@Z[#Uef6s{T4JKU67^NB">
+<field name="TEXT">你真帅</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="S:jgv4LK~/%yi97ow_*v">
+<value name="param1">
+<shadow type="text" id="1cd:^eajoEB~;,6C;W36">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_get_weather_report" id="rV)VL5NnAs7|*AbM3Mob">
+<value name="param467">
+<shadow type="text" id="FkvH[Dk]RSQ{+z@8LFDZ">
+<field name="TEXT">hangzhou</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="XvVUp%[?M~3.Ro*:,jow">
+<value name="param1">
+<shadow type="text" id="?s8c`wq.Qh2J?.zPgcF}">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_translate" id="hhxCUE`QX;;x3Dz$_@ET">
+<field name="param611">'en'</field>
+<value name="param610">
+<shadow type="text" id="(fXU{6H:M+ZT`g1Ep{ks">
+<field name="TEXT">好好学习，天天向上！</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

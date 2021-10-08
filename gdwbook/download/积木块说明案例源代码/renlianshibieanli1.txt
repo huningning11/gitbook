@@ -1,0 +1,230 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</variable>
+</variables>
+<block type="variables_set" id="/.5ZsR|15s)/VqwzwY}A" x="103" y="-291">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="4}sj)sIwU`3rJvUVV+uH" collapsed="true">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="{D266iwslD]$.!p$t1,Z">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id=",3c-iB{Og(BFCx!YvL{B">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="1UshSQ=Jb)R*/(iX_Lat">
+<value name="param1">
+<shadow type="text" id="BorM`Y+IXJ)?V6J7*.;Z">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_analyze_face_from_ai" id="DxaEG=$N4$LkF?].]`dA">
+<value name="param150">
+<block type="variables_get" id="XJ-rObmIumV4XxsQ+0=P">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="9:vB]x$MF.6WuC/hx%(k">
+<value name="param1">
+<shadow type="text" id="/[`kfNT$Ue;^vK1bXj`D">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_face_num_from_ai" id="8aSZ%I:-;[rsspd8PC*r"/>
+</value>
+<next>
+<block type="log_out_put" id="/4zV*=u`x5qjw1YG}:~Q">
+<value name="param1">
+<shadow type="text" id="[Z)+GdV7lt.T#jB7J.o2">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_face_age_from_ai" id="QUx~?%CPKc(H1%v`[viC">
+<value name="param152">
+<block type="math_number" id="!WL#5pWJ)Xhz]?ykzHp,">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="`{Vha]3qb=3eMY}zLOb@">
+<value name="param1">
+<shadow type="text" id="^CBl8M+;9Pz/7Hi(pEN%">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_face_gender_from_ai" id="Z`m/!OmGp@Y?@fx-)v|8">
+<value name="param153">
+<block type="math_number" id="R,@XQ}A1H4=i6Bl#*d*/">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="$txV!az2@%b=i6M33~)U">
+<value name="param1">
+<shadow type="text" id="M7Gb@KrC.LmZJ=}ZN]3p">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_face_glass_from_ai" id="U/vW;Ns-#vrL{tUt$LSd">
+<value name="param154">
+<block type="math_number" id="m5-zO$=3RvjHNJK%5Nfa">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="v1_2_wzz_dobodyanalysis" id="rmn:auj@rqCLA@`)LGpC">
+<value name="param416">
+<shadow type="text" id="UVKW8_CA3x@l14rc5D_@">
+<field name="TEXT">/home/pi/imageTemp/body.jpg</field>
+</shadow>
+<block type="variables_get" id="S5ZR9I+7~IV(IB+q]%bc">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="s-M2aRk_uoMqF-*3MY}Z">
+<value name="param1">
+<shadow type="text" id="7Y9QC-f[(0-G+s55l$;.">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v1_2_wzz_getpeoplenum" id="k2O.ljoQ(BieL1K%Iu)Y"/>
+</value>
+<next>
+<block type="log_out_put" id="L5FJFY1!Fp_Yoi)AvYs;">
+<value name="param1">
+<shadow type="text" id=".!q@ir7Rn:!%NLgg({;$">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v1_2_wzz_getbodyinfo" id="w;o|(:lY~luRgl]Pj{65">
+<field name="param419">'top_head'</field>
+<value name="param418">
+<shadow type="math_number" id="Z[?3W[8/_X+Y$MIy1m%Z">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="4[E(LO8)^f@u418ep-1S">
+<value name="param1">
+<shadow type="text" id="7OsS]Nri-yYrm4-w@Yy+">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v1_2_wzz_getgesture" id="pSL=(QsQ38U]V45:hYug">
+<value name="param421">
+<shadow type="text" id="A}6ve8~=EPAm9[bJV-pu">
+<field name="TEXT">/home/pi/imageTemp/gesture/ok.png</field>
+</shadow>
+<block type="variables_get" id="BEd1%;..aA+x!V3khSRQ">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="2F[?2B9xHES*CbW6x6#_">
+<value name="param1">
+<shadow type="text" id="]{3OTp$$L|SEemv7zZKJ">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_get_emotion" id="w.s^GoKFUoXf[6D.SUA)">
+<field name="pa586">emotion</field>
+<value name="param586">
+<block type="math_number" id="^Q_nJJ9K}bT`$0HlZ?_H">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="Tv.hsFnTINZF%YN0S=jF">
+<value name="param1">
+<shadow type="text" id="1)U^83g.|4Xwm.#9vt+E">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_get_facemask" id="GF*~7}I-CJB3ILs#5-3)">
+<value name="param587">
+<shadow type="text" id="xKMphVKG6%6W:X(K}`5t">
+<field name="TEXT">/home/pi/imageTemp/facemask.jpg</field>
+</shadow>
+<block type="variables_get" id="i0#H48GDv(oZFDC4M82J">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="v1_2_wzz_dobodyAttranalysis" id="LTr-]n`V96NdOhR7jC6I">
+<value name="param750">
+<shadow type="text" id="Jd3b.@EmLCYA38D~,dnt">
+<field name="TEXT">/home/pi/imageTemp/body.jpg</field>
+</shadow>
+<block type="variables_get" id="L]%t6E)1yq4NMOm(jC].">
+<field name="VAR" id="Nj}VPE]uIr]U)XNFQS%C">人脸信息</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=".LqDG0U{~Ro%O[28yUm0">
+<value name="param1">
+<shadow type="text" id="c?)~PC#b4.dnZdzE=BDp">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v1_2_wzz_getAttrBodyNum" id="]n=C3z4Sm@=*}P26Kk|%"/>
+</value>
+<next>
+<block type="log_out_put" id="6P%$e=T6WJ|+Dp.qS.d[">
+<value name="param1">
+<shadow type="text" id="jybAzFpi|.}-/en~G4Os">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v1_2_wzz_getBodyAttrInfo" id="atIf(9+9(J?jv9hx}(%t">
+<field name="param753">'location'</field>
+<value name="param752">
+<shadow type="math_number" id="-}N(SuJ}MLbpHZg^NzI.">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

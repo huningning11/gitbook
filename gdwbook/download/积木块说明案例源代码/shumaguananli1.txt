@@ -1,0 +1,109 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="=XNN)+g}bZTN,~t%%]*-">i</variable>
+</variables>
+<block type="robot_digitaltube_bright" id="=)iKzFDd1k?iXWycX.]G" x="41" y="-94">
+<value name="param24">
+<shadow type="math_number" id="dBzJn;v@`IL?;W06obMO">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param25">
+<shadow type="math_number" id=")XZ|H|T!iWF+~GeH~CbV">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="controls_for" id="R`/u@4RsF,q!xMi#y)AU">
+<field name="VAR" id="=XNN)+g}bZTN,~t%%]*-">i</field>
+<value name="FROM">
+<block type="math_number" id=":+0t0T[=8O*}-:NVp_~g">
+<field name="NUM">99</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="sx71ygzRb):})VAS6yj-">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="ViQ]K_gA(pXa(xy39b!T">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_digitaltube_setdata" id="*OZl4*VaD[)yR~$|YcQS">
+<value name="param26">
+<shadow type="math_number" id="Z)C?T;sJEKIxK:R(8s,=">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param27">
+<shadow type="math_number" id="S}:NB3C]^lLW08]?r:E[">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_arithmetic" id="2DpQ7CT7?qY3IO`tZ;w/">
+<field name="OP">DIVIDE</field>
+<value name="A">
+<block type="variables_get" id="cMN}![NS[E3B$B]X:$z!">
+<field name="VAR" id="=XNN)+g}bZTN,~t%%]*-">i</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="ZJvUzrj$qXM:*en=JW~2">
+<field name="NUM">10</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param28">
+<shadow type="math_number" id="LboUAu_N5%/cI!hEeLOg">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="robot_digitaltube_setdata" id="$/(:xK.b,=7q]/#VLI#6">
+<value name="param26">
+<shadow type="math_number" id="UjfQ6qFh[p,99ZU[N=(0">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="param27">
+<shadow type="math_number" id="c]G6RHDmJM6?2oB{*l;e">
+<field name="NUM">1</field>
+</shadow>
+<block type="math_modulo" id="5ILr.q20@5-hkYseVt]}">
+<value name="DIVIDEND">
+<block type="variables_get" id="dUJ_2Ym$v,(gFYOo~S1M">
+<field name="VAR" id="=XNN)+g}bZTN,~t%%]*-">i</field>
+</block>
+</value>
+<value name="DIVISOR">
+<block type="math_number" id="#@BY}!38M#%Njq#QeD:R">
+<field name="NUM">10</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param28">
+<shadow type="math_number" id="H/t~z}BHUgz[@je#X9f`">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="cUY*NsKm@0F.~Eecey@R">
+<value name="param96">
+<shadow type="math_number" id="xdOVKsBwOi,e3^Q2_42#">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

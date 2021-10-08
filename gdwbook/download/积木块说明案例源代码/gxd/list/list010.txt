@@ -1,0 +1,51 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="(p7.{_;DO%LSA)w3nex{">变量</variable>
+</variables>
+<block type="variables_set" id="Rdi#9VV%Hc/R~mbG2jx?" x="274" y="-137">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+<value name="VALUE">
+<block type="wzz_create_empty_dict" id="hP`hQ)08~1vEgcMmls9^"/>
+</value>
+<next>
+<block type="wzz_add_data_dict" id="Nhjo@[kavh@zdaPc.+l5">
+<value name="param603">
+<block type="variables_get" id="!h`I}qpcF:I05fEo4Hy!">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+</block>
+</value>
+<value name="param604">
+<shadow type="text" id="d9eXvgBr%pxQ$zRM#lwu">
+<field name="TEXT">key</field>
+</shadow>
+</value>
+<value name="param605">
+<shadow type="text" id="Sc_7n4-.6kWuf{b3CMzc">
+<field name="TEXT">abc123</field>
+</shadow>
+</value>
+<next>
+<block type="wzz_dict_clear" id="CtK#De@x2x[):/ZRCdry">
+<value name="param606">
+<block type="variables_get" id="v6kGhOA#[p9$:$rls?]2">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="E9MLgC%iu,S;Z^^8nCJV">
+<value name="param1">
+<shadow type="text" id="P1kSQ0vf:SL??a6`ueWa">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="1/m6uFh`MA(R-rD~vf1t">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

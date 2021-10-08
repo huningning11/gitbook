@@ -1,0 +1,141 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="yA(_@TcnGOaeF6?lCI~H">1</variable>
+</variables>
+<block type="variables_set" id="?Ub6oC0d(R}FY!Npi_B[" x="200" y="56">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+<value name="VALUE">
+<block type="text" id="WMo-b|n*Qo#qV]Y07zq5">
+<field name="TEXT">中文</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="y8j-Ek7!;I3@_|1#%gM6">
+<value name="param1">
+<shadow type="text" id="5qtDdWJAHblbi^+{wsQd">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="{{4pw8s~xRA+r0%i2tR%">
+<value name="param937">
+<block type="variables_get" id="pjKpX)Oq`%/$AxkIH:zT">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="FXF55=]4jp%UkwOE(qzs">
+<value name="param1">
+<shadow type="text" id="_PFXHxrGaHhrMc5H$y_x">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_length" id="vTNO(neI$6XsrTz9~N/l">
+<value name="VALUE">
+<shadow type="text" id="iwNV]|_aqr?CPd#;]%H*">
+<field name="TEXT">abc</field>
+</shadow>
+<block type="variables_get" id="-fE:|Q8n=pF%i)!s$,}D">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="dX,mnykha#dJpn%~!{+n">
+<value name="param1">
+<shadow type="text" id="J{gm6[,`JPJvus7Sd4XT">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_charAt" id="GW]j!lgbZ`$vXejG8mEK">
+<mutation at="true"/>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="/RM7EXz@{(:V^;xf2jw$">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id=",sB5@2K/dD0Ee]s5:CQZ">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=";2QdQ{5S1AX6)l~xFT12">
+<value name="param1">
+<shadow type="text" id="PCwqd!?aE-?vmWR785I^">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="c(@y-DT#|oTH}uPv6j,6">
+<value name="param937">
+<block type="str_to_unicode" id="Bxu~sd1y?3-aHxap-h@_">
+<value name="param477">
+<block type="variables_get" id="!-Z-]hyT:N0Wa%aoL@=~">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="X1saFRUhB*UMiJ+V#yRv">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_length" id="br1`Xj~HOGh?/3O5{@~o">
+<value name="VALUE">
+<shadow type="text" id="trzOE_tsdlpBY$Lp$`Y!">
+<field name="TEXT">abc</field>
+</shadow>
+<block type="str_to_unicode" id="*S;[zh+(J6i6*hHnKjj.">
+<value name="param477">
+<block type="variables_get" id="BY_~+U,3inn][XMA$37q">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="fugKxYZ`}ar{K8@Ly;KO">
+<value name="param1">
+<shadow type="text" id="rM-V(ryTYj3J;X#HC4-`">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_charAt" id="T)KcLfp|YW9sW71~HKvk">
+<mutation at="true"/>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="str_to_unicode" id="7zV-D=pGGR*7ej/!wKsc">
+<value name="param477">
+<block type="variables_get" id="q`FcKX5k2Mx2VGu`b0t3">
+<field name="VAR" id="yA(_@TcnGOaeF6?lCI~H">1</field>
+</block>
+</value>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id=";]EmkLFfeGuvF;{~-?$_">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

@@ -1,0 +1,48 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id=":]pqk%Za{!|qs(a~kJp3" x="537" y="-9">
+<value name="param1">
+<shadow type="text" id="FMXzl5(UH,p[*:e*Ez1(">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_length" id="xa.:_+x@`n..bg{-mo[g">
+<value name="VALUE">
+<shadow type="text" id="UWpXxccF^@_zthoL$K=N">
+<field name="TEXT">abc</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="q:Q6v+4;h.O`?wp.;B?G">
+<value name="param1">
+<shadow type="text" id="R8r{t|B:,l{kXKVt$hts">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_isEmpty" id="PgLJZ7Stj:@Dq,vHoz8V">
+<value name="VALUE">
+<shadow type="text" id="q,hQWE(0ml`N!St@[msd">
+<field name="TEXT"/>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=",x_x=0Dn{lXDL)@yH~X3">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_isEmpty" id="#Ai6b-dW$He04DzM@({@">
+<value name="VALUE">
+<shadow type="text" id="pVp:{7(#=6lIaoyjE9gL">
+<field name="TEXT">1</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

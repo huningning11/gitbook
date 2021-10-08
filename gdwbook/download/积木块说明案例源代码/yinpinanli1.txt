@@ -1,0 +1,87 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="robot_set_audio_device" id="y[DZxSTFRe:^~uu:DG_0" x="-2" y="-55">
+<value name="param319">
+<shadow type="text" id="`[y}0o=,tB@JLMjHs]sU">
+<field name="TEXT">hw:2,0</field>
+</shadow>
+</value>
+<next>
+<block type="robot_lewstrip_setbrightness" id="IMk=#ml36n2S4qN4vv3i">
+<value name="param265">
+<shadow type="math_number" id="_^6?2ZfDkhIKN,]D(|;7">
+<field name="NUM">60</field>
+</shadow>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="~6}=rwzxiluh(7sOcAWB">
+<value name="param262">
+<shadow type="math_number" id="h4YN%vWJln)s@M:$]XCU">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="param263">
+<block type="robot_color" id="2f1|[6TM:e#[AC+(Tgr)">
+<value name="param247">
+<shadow type="math_number" id="2*2PCM@PV9Vhume($Pi{">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="RZfw1B[dP7K?$hES_u-T">
+<field name="NUM">30</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="|_?Oj@Gg,/h|HmDTP=D)">
+<field name="NUM">10</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_play_local_voice" id="1}ce{y=?Gga=@`Csf+Ul">
+<value name="param200">
+<shadow type="text" id="tUz;;][r]osEB4bq+0[f">
+<field name="TEXT">/home/pi/temp/ding.mp3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_set_volume" id="3h|@GnFE2v=7RgTwzO]b">
+<value name="param210">
+<shadow type="math_number" id="j4?W2AQMXG/gyc2}tKVa">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="kC/dmltqTnvMM~[L-PRl">
+<value name="param1">
+<shadow type="text" id="9O)8_sFil?68twc(*{+q">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_volume" id="zaQV`%tDds@uBk_3(rY("/>
+</value>
+<next>
+<block type="log_out_put" id="vX9cG(8/Ccuo4pyXkytd">
+<value name="param1">
+<shadow type="text" id="VlJIVqZf/VnsKI!SAnfE">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_audio_play_status" id="0*-0j71e9M?XHA}$9L7t"/>
+</value>
+<next>
+<block type="robot_stopplay_local_voice" id="tl;[$W/NT)qmsMq[~z4V"/>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

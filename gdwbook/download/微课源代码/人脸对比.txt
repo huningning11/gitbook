@@ -1,0 +1,132 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="ZY|PEd^XjJ_}H__8ACj9">照片</variable>
+<variable id="Hx+e?:vQF!7K$2zFte()">照片2</variable>
+<variable id="3b$8Rsz1b/vOZAZX,,PQ">相似度</variable>
+</variables>
+<block type="variables_set" id="E=~^D0[xoKr?ldEO(5z+" x="24" y="-151">
+<field name="VAR" id="ZY|PEd^XjJ_}H__8ACj9">照片</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="6T7rgfYnLN-u*mF9N)ro">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="y()|ENk1=fGMkHx2E)ac">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="Dk/C(y55+[Ud6a`lT:%A">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_debug_image_out" id="s-9mo43@#nb-2|l@,bv!">
+<value name="param278">
+<block type="variables_get" id="3;*4mqEZw]zeZ2bffba$">
+<field name="VAR" id="ZY|PEd^XjJ_}H__8ACj9">照片</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="AU9mRiVi`@p;69{On-L8">
+<value name="param1">
+<shadow type="text" id=":MWJ+tymhqG8[EN[GF.R">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="E~W}s0/,9|Xy+hHEJuf.">
+<field name="VAR" id="ZY|PEd^XjJ_}H__8ACj9">照片</field>
+</block>
+</value>
+<next>
+<block type="robot_save_image_to_file" id="SglvT8B(/lPY{~tuG^PU">
+<value name="param279">
+<block type="variables_get" id="=FTH@[BXI0i|V]]DK(#K">
+<field name="VAR" id="ZY|PEd^XjJ_}H__8ACj9">照片</field>
+</block>
+</value>
+<value name="param280">
+<shadow type="text" id="i*6PgSEtn7GGbC4[Q^+f">
+<field name="TEXT">/home/pi/imageTemp/temp.jpg</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="YswPo$R2OT/`+Jyg.SKR">
+<value name="param1">
+<shadow type="text" id="rs$3JOyzF!eiS9oX%%4h">
+<field name="TEXT">照片已保存好</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="A*1W#R!Yj]JlnlT4T6zY">
+<field name="VAR" id="Hx+e?:vQF!7K$2zFte()">照片2</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="U1HRD|B:=cikzV8O91+}">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="yK^0*L#Ot@XahlQ`]a^j">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="NAhV_F9kcoiivEsSL:X7">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="r~21+g,)px$s{VGiUPC|">
+<value name="param1">
+<shadow type="text" id="Mzp_CZ~HXTI%zvHdx`@T">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="y0ftbOGK[==ua24c;PD^">
+<field name="VAR" id="Hx+e?:vQF!7K$2zFte()">照片2</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="Eh@quM?4=Dd;~_AmmCe{">
+<field name="VAR" id="3b$8Rsz1b/vOZAZX,,PQ">相似度</field>
+<value name="VALUE">
+<block type="robot_face_compare_2" id="3bR,sR`RRMp|!:d)N[b=">
+<value name="param503">
+<block type="text" id="U.GC=lZa:@@nUp%+9Mas">
+<field name="TEXT">/home/pi/imageTemp/temp.jpg</field>
+</block>
+</value>
+<value name="param504">
+<block type="variables_get" id="Q31)(:6%*.XH,*FF{jNI">
+<field name="VAR" id="Hx+e?:vQF!7K$2zFte()">照片2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="}lFt/`U@^x8%(A+/N=Q)">
+<value name="param1">
+<shadow type="text" id=":h#u=L;F01yHgR=v{lE,">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="$sJVb]gRE0bgCz/5cSU{">
+<field name="VAR" id="3b$8Rsz1b/vOZAZX,,PQ">相似度</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

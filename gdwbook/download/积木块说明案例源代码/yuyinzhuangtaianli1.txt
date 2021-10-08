@@ -1,0 +1,67 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_whileUntil" id="@.p-gv!e-,27Ay0|OC3I" x="-294" y="-60">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="1x1K8@2Z|?|rm*y@so5v">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_speak_out" id="ti^O*@A/ej/vQ?W_0-=K">
+<value name="param4">
+<shadow type="text" id="@kJs%l0i(}4we+7W-V~;">
+<field name="TEXT">你好啊小朋友</field>
+</shadow>
+</value>
+<next>
+<block type="controls_if" id="xb0ajWRHH30*/%D_)^P,">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="oHO!b$6b}1U1F-DF{8;E">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="robot_get_audioresult" id="+V?O5%z,KOd/2A5h0j~("/>
+</value>
+<value name="B">
+<block type="text" id="%0[N:-`K})(8N{`vl_?|">
+<field name="TEXT">PLAYING</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="S3VEbmZ^J)#;Ko54zv3:">
+<value name="param1">
+<shadow type="text" id="dVb)On}yLK!0S~+rl9NX">
+<field name="TEXT">正在播放</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_led" id="%NW[@@N423[3A,K_7H;k">
+<field name="param155">5</field>
+<field name="param156">1</field>
+</block>
+</next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="log_out_put" id="K0YEw+,39b*F|BQ4{Sl`">
+<value name="param1">
+<shadow type="text" id="?4lRfdUz547f4M[5ez.,">
+<field name="TEXT">播放完毕</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control_led" id="d!B;ihBneRxB6eRYbc~F">
+<field name="param155">5</field>
+<field name="param156">0</field>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

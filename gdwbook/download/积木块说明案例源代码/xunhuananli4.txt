@@ -1,0 +1,49 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id=".zEchRcQ#;irIaYL9G5{">i</variable>
+</variables>
+<block type="controls_forEach" id="/_+h5CpiWT(*]JBbxlh?" x="-225" y="-174">
+<field name="VAR" id=".zEchRcQ#;irIaYL9G5{">i</field>
+<value name="LIST">
+<block type="lists_create_with" id="uti$zB5cUFtERm(6Ud+*">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="text" id="PM;(]Wxg1d_HU7Mw{1}l">
+<field name="TEXT">a</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="text" id="U7D`@,.}E)=EqNyXt3`D">
+<field name="TEXT">b</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="OgWVE=FX~n.P]C#655iv">
+<field name="TEXT">c</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id="QD%K,Z#rE~eNBBMjrunJ">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="qJf-+8raFTwSuxESUk)y">
+<field name="VAR" id=".zEchRcQ#;irIaYL9G5{">i</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="bw1@xe/YK~+5)V@$skXG">
+<value name="param96">
+<shadow type="math_number" id="1sT]MeY3_J6t67+$e71~">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

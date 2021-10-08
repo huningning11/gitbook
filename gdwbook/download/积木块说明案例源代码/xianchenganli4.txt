@@ -1,0 +1,122 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="qN,8lsO?!.m6@1!*JDDj">25号按钮</variable>
+<variable id="oAiJ,Zq6ANcW?6bP1dId">24号按钮</variable>
+</variables>
+<block type="controls_whileUntil" id="zD[0t,021=~SG%GA_EBH" x="-50" y="67">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="uVtPE+rP4av/0X0TyZGp">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="w3CQyapsZO5x[nFehPy|">
+<field name="VAR" id="qN,8lsO?!.m6@1!*JDDj">25号按钮</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="A-3m49Lo!HjFol5Vhb^:">
+<value name="param">
+<shadow type="math_number" id="!hS$[32d_#:h/xytIs!r">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="DH#0aZ_+4iM$%_fz+MNa">
+<value name="IF0">
+<block type="logic_compare" id="8ETuP)g8x:3MXK9$1:Wb">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="=tVuj`T?j,0ya:]OEYqU">
+<field name="VAR" id="qN,8lsO?!.m6@1!*JDDj">25号按钮</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="l/~Dx:FP,ue7$xun#Dlc">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_led" id="-52U9bfU.j)cs.iSZI{?">
+<field name="param155">16</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_time_wait" id="L.M|POy)CCk=]p-W@2xm">
+<value name="param96">
+<shadow type="math_number" id="@q1oiO1Ga~ed$$6{T*.u">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_GPIO_control_led" id="T_?YOI_!iBF5R`_0@*g_">
+<field name="param155">16</field>
+<field name="param156">0</field>
+<next>
+<block type="variables_set" id="U,f0Gy#B:}7][|C=|h~V">
+<field name="VAR" id="oAiJ,Zq6ANcW?6bP1dId">24号按钮</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="+Pf!`,*C*_-CYa;c9Npb">
+<value name="param">
+<shadow type="math_number" id="v)2[lzFVvOpx4v)k$RQP">
+<field name="NUM">24</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="._Gue%a:~5ApKiT`a7_o">
+<value name="IF0">
+<block type="logic_compare" id="7I{i2EzV|Jbt%:AC9Ud(">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="!jKS.Sjz5~/#S:BA#*H:">
+<field name="VAR" id="oAiJ,Zq6ANcW?6bP1dId">24号按钮</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="(UWVqs%ywc^V4(/sBY]/">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_led" id="|.VXlVC87n5qZr,jO;wz">
+<field name="param155">12</field>
+<field name="param156">1</field>
+<next>
+<block type="robot_time_wait" id="eKSyo04w^/`SIc0)V~N6">
+<value name="param96">
+<shadow type="math_number" id="3]l8}+1c#0Z~_yiHA%W9">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_GPIO_control_led" id="e7z1~HJID9vIOi!,0LI[">
+<field name="param155">12</field>
+<field name="param156">0</field>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

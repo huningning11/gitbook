@@ -1,0 +1,33 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="robot_create_index" id="Jy^GC~v^a|]EYv:)!0[]" x="196" y="58">
+<value name="param349">
+<shadow type="text" id="Cg/]D%z%~yEFr}E6-.#h">
+<field name="TEXT">index0</field>
+</shadow>
+</value>
+<next>
+<block type="robot_save_picinfo_to_db" id="jGmUUyz:RS?,_jjrNTUj">
+<value name="param347">
+<block type="text" id="phAsE3#/bD1*2sp;Lntp">
+<field name="TEXT">/home/pi/imageTemp/苹果.jpg</field>
+</block>
+</value>
+<value name="param348">
+<shadow type="text" id="c0J2Bj11I7OBdcbCG_AM">
+<field name="TEXT">index0</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="vfp%%ajj[#AKCh))Ei]*">
+<value name="param1">
+<shadow type="text" id=";VAj.j[X!a:$XAduHacv">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="getAllIndexList" id="`/;1I:nbjKm%BL}j6wg4"/>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

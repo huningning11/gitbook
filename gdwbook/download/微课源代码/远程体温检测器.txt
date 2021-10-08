@@ -1,0 +1,165 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="1Q$g=h@3h4K?yBS`rEpo">体温</variable>
+</variables>
+<block type="v2_wzz_set_mqtt_server_port" id="^8k/{o:uP!rhr]QZEZ9/" inline="true" x="0" y="112">
+<value name="param402">
+<shadow type="text" id="ygCLFn4a@5~px%y7isSc">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="pe,[vt-pCrLAGk^ZcV1S">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="c_Sy~:QNh{)a`3e;G^yJ">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="e:5Lz*p#0?R(f4l}#Xjo">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id="SjYB=)sWQg=tIP]!Zh7f">
+<value name="TIMES">
+<block type="math_number" id="5DW6_+v`Q^Ssh-pNBgZ~">
+<field name="NUM">1000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="~iI3z$@cRyTd^%|O1SkM">
+<field name="VAR" id="1Q$g=h@3h4K?yBS`rEpo">体温</field>
+<value name="VALUE">
+<block type="robot_get_mlx90624_temp" id="@S:@S=*vR.=mK,Lle8s("/>
+</value>
+<next>
+<block type="controls_if" id="*2F+AeyG$nme-i%S2joi">
+<value name="IF0">
+<block type="logic_operation" id="NUoN:/J8][jJh6Fq)Pwk">
+<field name="OP">OR</field>
+<value name="A">
+<block type="logic_compare" id="hZO3HuHg8K1fL=v00)4s">
+<field name="OP">GTE</field>
+<value name="A">
+<block type="variables_get" id="H4.PjM1!1$zr-9O-M)D]">
+<field name="VAR" id="1Q$g=h@3h4K?yBS`rEpo">体温</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="-!KjpT,:Uc5#(VHt2HFd">
+<field name="NUM">37</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="logic_compare" id="wcws/ppC#St{(X]/sf:=">
+<field name="OP">LTE</field>
+<value name="A">
+<block type="variables_get" id="!CAB=:=Ts6U.@wv+n/^[">
+<field name="VAR" id="1Q$g=h@3h4K?yBS`rEpo">体温</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id=")`=G6,Nf`@)-1$N1Z$^-">
+<field name="NUM">35.5</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_publish_data" id="t%d{U)/}hP%oEZ`RmO!h">
+<value name="param97">
+<block type="text" id="5M8L]=2zihhTj=fy)jUQ">
+<field name="TEXT">xxxx</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="PgK/UQ}Ww!I6MOa,i(hU">
+<field name="TEXT">体温</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="^kCO)5u6oV{Y{`m?@K3-">
+<field name="TEXT">1</field>
+</shadow>
+<block type="text" id="*L`tG{o{_VI!aFzkK6~Y">
+<field name="TEXT">请注意，体温异常</field>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_publish_data" id="r]e}iY5/ZPc|E9ha(Bqx">
+<value name="param97">
+<block type="text" id="P;ew%m/qEk8CT|tMo^j0">
+<field name="TEXT">xxxx</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="~B{.Vf~%cDC4!L5SXP.F">
+<field name="TEXT">体温</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="Fx3sdfqKU7QW_4XG^l*G">
+<field name="TEXT">1</field>
+</shadow>
+<block type="text_join" id="GyBE|6=e~YY@SslR[llb">
+<mutation items="7"/>
+<value name="ADD0">
+<block type="text" id="K#C=bSVWW2[OeIAR]}ug">
+<field name="TEXT">时间：</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="robot_get_current_hour" id="_|u={Td)#/T1u}oXE]Sj"/>
+</value>
+<value name="ADD2">
+<block type="text" id="};hBS*)ykR[x`d8oRwZS">
+<field name="TEXT">：</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="robot_get_current_Minute" id="xHvVdcxpNtZ=w+EN1o}E"/>
+</value>
+<value name="ADD4">
+<block type="text" id="CZFKZUGROA!g0*$*:{N]">
+<field name="TEXT">    温度：</field>
+</block>
+</value>
+<value name="ADD5">
+<block type="robot_get_mlx90624_temp" id="_Q%fRze.r24F`-]_{B/["/>
+</value>
+<value name="ADD6">
+<block type="text" id="tC1GoMsBNLsFw2QBHQ6f">
+<field name="TEXT">℃</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="NMEE{(Pehhf=Q-L^m*_d">
+<value name="param96">
+<shadow type="math_number" id=",NctG.S`?zt6i7cK@[5z">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

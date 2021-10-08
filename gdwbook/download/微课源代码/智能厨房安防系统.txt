@@ -1,0 +1,293 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id=".)@zl!*)1:O7^dkP4+=9">蜂鸣器</variable>
+<variable id="=g=41+n2f+anRViNUQQN">温度</variable>
+<variable id="%{G?o`8hrFkNL3[e[-=P">指令</variable>
+<variable id="rKJCd3GLdcjT6Zp@fnag">照片路径</variable>
+<variable id="h6P`KNjh12ajazF,3CZ*">照片转换格式</variable>
+</variables>
+<block type="log_out_put" id=")}Kg^`Y2qMV,`NB%dB7;" x="321" y="34">
+<value name="param1">
+<shadow type="text" id="adG4n`^X=~jcb?*H9hl2">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="fKztrK(Yr!6#y(0(?A9*">
+<field name="VAR" id=".)@zl!*)1:O7^dkP4+=9">蜂鸣器</field>
+<value name="VALUE">
+<block type="math_number" id="X6b0E(wEY0Vqh)kQnu$L">
+<field name="NUM">24</field>
+</block>
+</value>
+<next>
+<block type="robot_GPIO_control_by_input" id="CNgQR?T%rV;qF!i45-#f">
+<value name="param143">
+<block type="variables_get" id="N7#*cvvh2d3P96b)|n2=">
+<field name="VAR" id=".)@zl!*)1:O7^dkP4+=9">蜂鸣器</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="Yv0PB+s8ud.kNponxPrj">
+<field name="NUM">1</field>
+</block>
+</value>
+<next>
+<block type="v2_wzz_set_mqtt_server_port" id="I||K#cm5cPy-Q?t0DssR">
+<value name="param402">
+<shadow type="text" id="vlJYa[~XrB;Ocr|AOfvr">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="||.D[:P4=UR*#fWcnYI2">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="+i6TX:t,7#Nu.H$/V8x~">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="xSS,]@j=D1UpurIctRv3">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="robot_listen_topic" id=";~WbZ78@}|:Du1)9.R)6">
+<value name="param100">
+<shadow type="text" id="c:YH0VXinr{O2U!oG0zR">
+<field name="TEXT">照片</field>
+</shadow>
+</value>
+<value name="param101">
+<shadow type="math_number" id="^/cVuY1UiZ!Pkm{[}?x)">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="Zr:8_*EZ0fkTX[tO65(E">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="@ZM#C73m$6:9ihjnB!Z$">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="7tkY_.xC-Nz_BRb}ayeT">
+<field name="VAR" id="=g=41+n2f+anRViNUQQN">温度</field>
+<value name="VALUE">
+<block type="robot_get_mlx90624_temp" id="%(_FBKb#}vIx-WoAIU(A"/>
+</value>
+<next>
+<block type="log_out_put" id=":,zJq3q|AtL}Q%zpbvA/">
+<value name="param1">
+<shadow type="text" id="S+*m.]kupou}Buui=vj(">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="7RB9n(UUdsdzKTt?BAuY">
+<field name="VAR" id="=g=41+n2f+anRViNUQQN">温度</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="%wULzyrSNM,~F-pc:`4.">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="cXvm*JA_tw:mLW1@giTl">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="/vt(dQJ@}Cez0oFd-Y7e">
+<field name="VAR" id="=g=41+n2f+anRViNUQQN">温度</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="P_rWHe/q,o*-;W=cAeh~">
+<field name="NUM">35</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_by_input" id="xFP)/SP,F=f43hwFL,f:">
+<value name="param143">
+<block type="variables_get" id="6Mz3x9qf2dsi)HXrr8Ox">
+<field name="VAR" id=".)@zl!*)1:O7^dkP4+=9">蜂鸣器</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="4*tnguFcv;Z_bl5(|}P5">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="robot_pwm_output" id="dWN2/sR/A5+S~w}8N66)">
+<value name="param13">
+<shadow type="math_number" id="lJKiidDl^Dd4FFY@mDSy">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param14">
+<shadow type="math_number" id="O+/KBiyB468m:lhKEE}k">
+<field name="NUM">3000</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_GPIO_control_by_input" id="`mOG`kGOml|~xGaSgOJT">
+<value name="param143">
+<block type="variables_get" id="oEz/0q{d#qdCR}2lv:vz">
+<field name="VAR" id=".)@zl!*)1:O7^dkP4+=9">蜂鸣器</field>
+</block>
+</value>
+<value name="param144">
+<block type="math_number" id="B4G[8^U$3_r+D{wv:4Z}">
+<field name="NUM">1</field>
+</block>
+</value>
+<next>
+<block type="robot_pwm_stop" id="0!UZP4evh*:e{Mqtaj0F">
+<value name="param15">
+<shadow type="math_number" id="R*/4=Y10}4?pBR8-]:X%">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="2#+|CFZTP7i[?8(*I:Jd">
+<value name="IF0">
+<block type="robot_is_topic_data_updated" id="D5s_G=4(`/}n*.v-[!?u">
+<value name="param181">
+<shadow type="text" id="VZ(1.)#S)q{N`bIh$J!*">
+<field name="TEXT">照片</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="+ZzWYq$LzG[di)#J0OuT">
+<field name="VAR" id="%{G?o`8hrFkNL3[e[-=P">指令</field>
+<value name="VALUE">
+<block type="robot_get_topic_data" id="POBL=-2p4~p:@bhvo?Z5">
+<value name="param102">
+<shadow type="text" id="V1P`JO.6UH(@~ad9=sUz">
+<field name="TEXT">照片</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="S-~j[WB)fm;]=ckBI/])">
+<value name="IF0">
+<block type="logic_compare" id="aq.vtj1Z79ffzZ!}$85M">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="[o6hYdq+`L@]jQIyQHeJ">
+<field name="VAR" id="%{G?o`8hrFkNL3[e[-=P">指令</field>
+</block>
+</value>
+<value name="B">
+<block type="text" id="p8KT!V:?re)voh@+M.20">
+<field name="TEXT">查看</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="aOb$[!=E`b3hq1{s=mXL">
+<field name="VAR" id="rKJCd3GLdcjT6Zp@fnag">照片路径</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="7L6p9`4?|,{lm#EIt:)r">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="Iog:Uyez*_3kIZ4W23?x">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="JGlTzD,^5I9mbd+(k-if">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="JDRUsFbi18o9yTOV6q1h">
+<field name="VAR" id="h6P`KNjh12ajazF,3CZ*">照片转换格式</field>
+<value name="VALUE">
+<block type="robot_image_get_base64" id="l(:Mh%sk,_liX5zRhks|">
+<value name="param336">
+<shadow type="text" id="YC,{ms,HM(qvj7l(70/4">
+<field name="TEXT">/home/pi/imageTemp/pi_logo.png</field>
+</shadow>
+<block type="variables_get" id="bD#L9Ey?7hK;Sa0(^AGs">
+<field name="VAR" id="rKJCd3GLdcjT6Zp@fnag">照片路径</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_publish_data" id="M$(.#2ieF46.$m);;7eo">
+<value name="param97">
+<block type="text" id="f/ku4~.;WTnjdSAYVgx%">
+<field name="TEXT">gonglingli</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id=":s3,gj!Ym=],`[V+h@5@">
+<field name="TEXT">拍照</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="mAs%eK]lQAR3zz6MYhb1">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id="d-D[8r?r09Z,HB,QwxA!">
+<field name="VAR" id="h6P`KNjh12ajazF,3CZ*">照片转换格式</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="hz]Qyi9.:jf~|+~1hCvp">
+<value name="param96">
+<shadow type="math_number" id="ic3%D3udIetbyG:ZFs20">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

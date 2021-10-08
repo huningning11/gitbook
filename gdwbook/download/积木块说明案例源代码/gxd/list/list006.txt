@@ -1,0 +1,12 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="E9MLgC%iu,S;Z^^8nCJV" x="654" y="-133">
+<value name="param1">
+<shadow type="text" id="P1kSQ0vf:SL??a6`ueWa">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_v2_color" id="m2U+J~hVCP{bsRAD,^~A">
+<field name="param401">#333300</field>
+</block>
+</value>
+</block>
+</xml>

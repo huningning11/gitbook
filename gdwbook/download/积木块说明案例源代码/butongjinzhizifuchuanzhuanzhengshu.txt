@@ -1,0 +1,63 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="/fHdU_Y~~X1wxyJ;^WBO" x="-104" y="-181">
+<value name="param1">
+<shadow type="text" id="57##Eq`5I*II%iTJm$mF">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_conv_str_to_int" id="21BabCMRnq2|l*6;%x[1">
+<value name="param730">
+<block type="math_number" id="KBMD/D,@5A?eEJVF{PQw">
+<field name="NUM">2</field>
+</block>
+</value>
+<value name="param731">
+<block type="text" id="tttGS6O.Xnf}8;43B3LE">
+<field name="TEXT">111</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="8dws;0hfY,:_{Uh(m3yh">
+<value name="param1">
+<shadow type="text" id="CK$|f~]2MPaK+B+%_;Am">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_conv_str_to_int" id="!wAwBl8@;mCfefEQU=Q]">
+<value name="param730">
+<block type="math_number" id="IOPg#i.Syu`.(Wb;X02V">
+<field name="NUM">8</field>
+</block>
+</value>
+<value name="param731">
+<block type="text" id="Ph-I+hQMIrB@e_NCNMgR">
+<field name="TEXT">111</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="Q[J$Y-:;SbdU4id-O2?d">
+<value name="param1">
+<shadow type="text" id=":p(#aB)+`Y84$*gC#V4U">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_conv_str_to_int" id="*!O=7?lVntJ9!qH-uLng">
+<value name="param730">
+<block type="math_number" id="Z8Hi:b#+skObf#w4r3He">
+<field name="NUM">16</field>
+</block>
+</value>
+<value name="param731">
+<block type="text" id="Y~audFdTS4%PZp;Ku$QZ">
+<field name="TEXT">111</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

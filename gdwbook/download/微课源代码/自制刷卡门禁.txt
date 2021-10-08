@@ -1,0 +1,379 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="{[*c+}v+F2WJ0|RyQ5Nf">业主信息名单</variable>
+<variable id="C@6jUnC=!Xgw:O2,~?-1">识别信息</variable>
+<variable id="75x[WbGgO2zpfY.B/?7~">识别姓名</variable>
+<variable id="3IQ=#l;Z1w:5eb(fW*C]">是否找到</variable>
+<variable id=".]?Ve/m7SKCD(;5O4jg(">i</variable>
+</variables>
+<block type="robot_mfrc_init" id="pM=uUJ/yGC@]P@A}X31?" x="7" y="266">
+<value name="param301">
+<shadow type="math_number" id="my.,${Kd[^+K|6Ygp9,^">
+<field name="NUM">25</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="gPoy:_5{Xor6CyVDD5(~">
+<field name="VAR" id="{[*c+}v+F2WJ0|RyQ5Nf">业主信息名单</field>
+<value name="VALUE">
+<block type="lists_create_with" id="$?.KMx67uL!oqOd$/W);">
+<mutation items="5"/>
+<value name="ADD0">
+<block type="text" id="X}PCck=Y{BdR4U4ln`C`">
+<field name="TEXT">赵小明</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="text" id="L}8HP6.uW{X}j$Ut*k})">
+<field name="TEXT">钱小红</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id=".C=xtJ%ykJ_sK0HgIPu2">
+<field name="TEXT">古德微机器人</field>
+</block>
+</value>
+<value name="ADD3">
+<block type="text" id="c(,Tu~)i#L31fG@Nzl:D">
+<field name="TEXT">孙小亮</field>
+</block>
+</value>
+<value name="ADD4">
+<block type="text" id="oVgc*k4`d]TgXwYnO_tk">
+<field name="TEXT">李小平</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="servo_pwm_output" id="eRa_Ztj5L5xifRQYJHzM">
+<value name="param755">
+<shadow type="math_number" id="EG~/udKq%t[D|+gcC^u@">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="!4obFlzf|+R|+Yy)|sm1">
+<field name="NUM">500</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="dN!MU^J8%Dp#mX4b%5oS">
+<value name="param96">
+<shadow type="math_number" id="H|(Y?(1m7$ZuXPgLd@$(">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="robot_pwm_stop" id="iun[IbLy3588t^n4s16^">
+<value name="param15">
+<shadow type="math_number" id="IE!1v.u@X[bj/U6_*TV(">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="h6$o[Gs{IhvY{0Mg[YND">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="Jtk]GlAvXtUE-fFHGaTq">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="kGUEp1D}_%=Q:/_49cJy">
+<field name="VAR" id="C@6jUnC=!Xgw:O2,~?-1">识别信息</field>
+<value name="VALUE">
+<block type="robot_mfrc_read_no_block" id="u-Nc@*L3f`Dc-pqGS}__"/>
+</value>
+<next>
+<block type="variables_set" id="9{W6xr[6Jp)nZ|xofwxj">
+<field name="VAR" id="75x[WbGgO2zpfY.B/?7~">识别姓名</field>
+<value name="VALUE">
+<block type="lists_getIndex" id="O.IO6T}L4J$p]9Sozk._">
+<mutation statement="false" at="true"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="2=pXX#gP|W;?S./ojFFV">
+<field name="VAR" id="C@6jUnC=!Xgw:O2,~?-1">识别信息</field>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id="~gQD5ul(Ymm3CdXkrvBi">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="9pL*HpRiMn45JXCr[.X)">
+<value name="IF0">
+<block type="logic_compare" id="zNiW6~T=Oww{/823TKe_">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="variables_get" id="fCJ_uAmes-Xfotvkp%g*">
+<field name="VAR" id="75x[WbGgO2zpfY.B/?7~">识别姓名</field>
+</block>
+</value>
+<value name="B">
+<block type="logic_null" id="kHDH?S~l=F0Du?_j{?_-"/>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="xBEUE@!`Hf}pU?WlJcJY">
+<value name="param1">
+<shadow type="text" id="ek/Ci4W4|4%8w()7$oz#">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="qruhZM9P8]em|dc*)$4G">
+<field name="VAR" id="75x[WbGgO2zpfY.B/?7~">识别姓名</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="U25i$WhI`A#SyxHu~{Ur">
+<field name="VAR" id="3IQ=#l;Z1w:5eb(fW*C]">是否找到</field>
+<value name="VALUE">
+<block type="logic_boolean" id="bEHVrx8vHk_5Uo9ffEBF">
+<field name="BOOL">FALSE</field>
+</block>
+</value>
+<next>
+<block type="controls_for" id="-K+G{`AGugaRvm,,Hpp8">
+<field name="VAR" id=".]?Ve/m7SKCD(;5O4jg(">i</field>
+<value name="FROM">
+<block type="math_number" id="|G_rg[;cIRrt];,O.GIv">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="lists_length" id="9^,J9wHAoW*.UgaW0qBk">
+<value name="VALUE">
+<block type="variables_get" id="kC!I78iFDx/$d5:F}O|l">
+<field name="VAR" id="{[*c+}v+F2WJ0|RyQ5Nf">业主信息名单</field>
+</block>
+</value>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id=".AJn?RON^mS#{1*Y+^2V">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="de^2GO]V#J^/B6Yhf5e*">
+<value name="IF0">
+<block type="logic_compare" id="e7$6mO0/@GUWs)x@Wmi[">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="Y5c!h%)]Orj[NsJQ.Qoa">
+<field name="VAR" id="75x[WbGgO2zpfY.B/?7~">识别姓名</field>
+</block>
+</value>
+<value name="B">
+<block type="lists_getIndex" id="nn082MVk6m_qigzHr$Uf">
+<mutation statement="false" at="true"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="XSvG1U4_N$sA`P/zDiN|">
+<field name="VAR" id="{[*c+}v+F2WJ0|RyQ5Nf">业主信息名单</field>
+</block>
+</value>
+<value name="AT">
+<block type="variables_get" id="vAl*(fk;2@,LH/21nd1l">
+<field name="VAR" id=".]?Ve/m7SKCD(;5O4jg(">i</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id=".4fO.8I2%#,Ayc6*{q0M">
+<field name="VAR" id="3IQ=#l;Z1w:5eb(fW*C]">是否找到</field>
+<value name="VALUE">
+<block type="logic_boolean" id="A=fI[,VXwdA46KXj*Af|">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<next>
+<block type="controls_flow_statements" id="LAP?$GX.`{+a;7LwVsNi">
+<field name="FLOW">BREAK</field>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="V-};XcwBYQ^Ahbn{J:ht">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="#bc3zMx.wmO#+G8e1Nj4">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="ioUM$;N|2djz2v_|v[=m">
+<field name="VAR" id="3IQ=#l;Z1w:5eb(fW*C]">是否找到</field>
+</block>
+</value>
+<value name="B">
+<block type="logic_boolean" id="`8be8=zrZ%*z-vVDrrlG">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_with_parameter" id="xUt:P6)8R9^isUBW,yta" inline="true">
+<value name="param289">
+<shadow type="text" id="C?O=hncN#onbDx7^~s#r">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="text" id="*2[G}}0$_:,QV=s9ks$0">
+<field name="TEXT">你好，请进入</field>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id="HA(`xkFT=C}fgm%GB`X;">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="gQdq@VK_Ipqp!,kgrl?o">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="![;]*RgHLV*^B@$A!`^P">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<next>
+<block type="servo_pwm_output" id="rywvv]Q0$BVsUm@#s;[A">
+<value name="param755">
+<shadow type="math_number" id=",g6u[p/Vx`]Y/7%%@tQx">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="CI@[|MIqsg/]2YG!]E7N">
+<field name="NUM">1500</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="vd/P05VDL@PX9-(!`($}">
+<value name="param96">
+<shadow type="math_number" id="0x|_`O*39V!3s~vpj/O(">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="servo_pwm_output" id="la};oJGXxVr1UEl;G:$2">
+<value name="param755">
+<shadow type="math_number" id="6xanMAEEhY#reft/(;_E">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="$(+~;[9%;ViTf/}NW|-1">
+<field name="NUM">500</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="|s|W!p!Dy7b8eRAH_,*r">
+<value name="param96">
+<shadow type="math_number" id="c!MtJICFY|3_5I`QZh+%">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="robot_pwm_stop" id="Y0gAxn8otLn(Dozq_tXn">
+<value name="param15">
+<shadow type="math_number" id="wqb{aCi(*tfi/(%NFV)@">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_speak_with_parameter" id="c]l`C5o$Oq)Vq={_|nh!" inline="true">
+<value name="param289">
+<shadow type="text" id="u9U*~(j7?KFf]|A!AS%m">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="text" id="$U/Ae6fo#S*3?VzfPL}e">
+<field name="TEXT">对不起，你不是本小区业主，禁止进入</field>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id="I?U*lSi,(FIP:qs@XLAt">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="gv4o/km[[0^mOTZgdYI1">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="T3=5h]2vms%?(c0H$gTH">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="h36}zn/pHqz8qscL,p`Y">
+<value name="param96">
+<shadow type="math_number" id="Xyh,(k:.g*Ly~nq;=DYU">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="3nh`#BgX).c/6g984$t5">
+<value name="param96">
+<shadow type="math_number" id="Y3-6M!*=4{oBe8MY(SQz">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

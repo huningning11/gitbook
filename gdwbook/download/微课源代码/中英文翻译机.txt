@@ -1,0 +1,293 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="bm)C30-IBb@T~?DDUV%x">语音输入</variable>
+<variable id="i4YC[UscqdQlp|KNvT{:">识别文字</variable>
+<variable id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</variable>
+</variables>
+<block type="controls_whileUntil" id="XHij?KI4sWR[4w:K=Tu(" x="12" y="29">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="@2r/rtmsvna9(3qrElz4">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="wk}bW7N*B%xB[sHGo#yj">
+<value name="IF0">
+<block type="logic_compare" id="32o6])ltOR#/=v?rW${T">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="get_infrared_result" id="/Xz(2CxyO6Rc.5En|ner">
+<value name="param">
+<shadow type="math_number" id="jF:+vdhPC_M?[*t=_7$x">
+<field name="NUM">23</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="i~dx{nS-wVG5G(eK^os?">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="LnG4%{t2bb_+8%h%uF9I">
+<value name="param1">
+<shadow type="text" id="}f4Pbp@ce,oO$!faH]}K">
+<field name="TEXT">请对着麦克风说3秒中文</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="QDGA7VXINL}1yA-,,D|O">
+<field name="VAR" id="bm)C30-IBb@T~?DDUV%x">语音输入</field>
+<value name="VALUE">
+<block type="robot_respeaker_voice_to_file" id="|HhF1O,FYo[AH(G?@RhJ">
+<value name="param448">
+<shadow type="math_number" id="DU8!nqn%0=O82c$I$tQu">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<value name="param449">
+<shadow type="text" id="P0dB5}UXHihfl/hv*?{0">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="Q3i76uPv4pFUQIIaBIiK">
+<field name="VAR" id="i4YC[UscqdQlp|KNvT{:">识别文字</field>
+<value name="VALUE">
+<block type="robot_audio_to_text" id="1V0W:gJvmH7G9)jr5R_(">
+<value name="param250">
+<shadow type="text" id="UuhAA$:kD^`QFoTx(t~%">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+<block type="variables_get" id="_~PIcA;FcT1n6@FQfyav">
+<field name="VAR" id="bm)C30-IBb@T~?DDUV%x">语音输入</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="T.b7)#jk;exwSdi?6w;?">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+<value name="VALUE">
+<block type="wzz_translate" id="K7xf;Nm6:M#:=`2=Hh!4">
+<field name="param611">'en'</field>
+<value name="param610">
+<shadow type="text" id="ES0l.yT4sma*E(V|q2kb">
+<field name="TEXT">好好学习，天天向上！</field>
+</shadow>
+<block type="variables_get" id="A]i;QtD)6[%jsEN5%zoz">
+<field name="VAR" id="i4YC[UscqdQlp|KNvT{:">识别文字</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="s3Z4Uk_FwUo2,tpf,nAr">
+<value name="param1">
+<shadow type="text" id="hhIM71JevhcwjmRI$r6V">
+<field name="TEXT">请对着麦克风说3秒中文</field>
+</shadow>
+<block type="variables_get" id="R6I0Pi_oNRz~s[k|BkpE">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+</block>
+</value>
+<next>
+<block type="robot_speak_with_parameter" id="]58Yq)_tjdRJ4UqavoCf">
+<value name="param289">
+<shadow type="text" id="s)8QXcC[CC}GSM(/4R%[">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="variables_get" id="*a5D27v6y}Z3+tdWd[JD">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id="|KU`HEp,W2}6}v}..81V">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="qIl^=T#V2i:tp!ykA0(4">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="sUE[EjE6;Fgv-wUPzNI6">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="@hE[kEZ-iH9+IdUt/;hY">
+<value name="param96">
+<shadow type="math_number" id="uUC8[ou@q;70-b;EplVh">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="8)?h|b(~I~x^ks4`O{Ko">
+<value name="IF0">
+<block type="logic_compare" id="+Ob{!e8k]+},YoHKeP17">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="get_infrared_result" id="sC,-qDrvG[V%mu.QTV++">
+<value name="param">
+<shadow type="math_number" id=")^WHw6^!qKt`^d`V@m)a">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="F/Q?Rc,l,VEiTe$xDQn^">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="!|fQV#qtXl3lyl1`8X.r">
+<value name="param1">
+<shadow type="text" id="WuV-;(h{Pm@j3|(jDb?:">
+<field name="TEXT">请对着麦克风说3秒英文</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="iBnJCZnYoG^?t2h02cC~">
+<field name="VAR" id="bm)C30-IBb@T~?DDUV%x">语音输入</field>
+<value name="VALUE">
+<block type="robot_respeaker_voice_to_file" id="_`6e7=9ujvZIeNI.5zEd">
+<value name="param448">
+<shadow type="math_number" id="^5L]MT)4@|+~ZhHx^ciA">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<value name="param449">
+<shadow type="text" id="qf(n|qe[5P]6`pZ$)LI`">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="J9J~8b6Hb4(,397-LQUu">
+<field name="VAR" id="i4YC[UscqdQlp|KNvT{:">识别文字</field>
+<value name="VALUE">
+<block type="robot_audio_to_text_en" id="K]~G}QUlfztGJXRUP}yE">
+<field name="param747">1737</field>
+<value name="param746">
+<shadow type="text" id="9-@3bix{)SdVD4zDL!Az">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+<block type="variables_get" id="Zfo=71_najIHZmX;eY2X">
+<field name="VAR" id="bm)C30-IBb@T~?DDUV%x">语音输入</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="?^YS]h13[=*.5;=avF14">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+<value name="VALUE">
+<block type="wzz_translate" id=";+J,JrSViA6)IXq[SkQl">
+<field name="param611">'zh'</field>
+<value name="param610">
+<shadow type="text" id="|W`ML0Q%@=FC6$eApJw_">
+<field name="TEXT">好好学习，天天向上！</field>
+</shadow>
+<block type="variables_get" id=")}3}*e%._Oe:Fz9Mfg73">
+<field name="VAR" id="i4YC[UscqdQlp|KNvT{:">识别文字</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="!YJXLSXvVO1-*s_^wG8w">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">请对着麦克风说3秒中文</field>
+</shadow>
+<block type="variables_get" id="6$7zGERLZgZX!ggDiZ.?">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+</block>
+</value>
+<next>
+<block type="robot_speak_with_parameter" id="_ZN5]3k)UGWhBmmZt)Q9">
+<value name="param289">
+<shadow type="text">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="variables_get" id="`fQvvKnWK9{26]BKz?sN">
+<field name="VAR" id="Qcj/uTaBT.:.4_WA#)9~">翻译文字</field>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id="8YE}B5myPAm?ydY]j%RZ">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="8FTuy3*/*t/$z`I92*Ac">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="kzJQ@6C[w+?eGNrn}?l|">
+<field name="NUM">3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="y}l6HEpsBP3Dm6~Q(/{/">
+<value name="param96">
+<shadow type="math_number" id="]@P[/[45!%%Z0:0fek%C">
+<field name="NUM">3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="@{rJ[mkQ!xpc/Sf$Hr64">
+<value name="param96">
+<shadow type="math_number" id="%QZn9CxeGoCrDt^vB@dU">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

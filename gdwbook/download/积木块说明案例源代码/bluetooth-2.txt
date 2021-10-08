@@ -1,0 +1,107 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id=")?((O3HghnzywcbNAofV">蓝牙地址</variable>
+</variables>
+<block type="variables_set" id="*?q3$;`df@S55x3aFH%+" x="284" y="-600">
+<field name="VAR" id=")?((O3HghnzywcbNAofV">蓝牙地址</field>
+<value name="VALUE">
+<block type="robot_get_bluetoothaddr" id="s+:YIk2ill4uqq,^JrMq">
+<value name="param776">
+<shadow type="text" id="1~;!gXGO!+Yx}rsQ4(XE">
+<field name="TEXT">Q3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_whileUntil" id="ub|t1fDV6-gSIzzA1VF(">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_compare" id="_Q-0)b??d*~:P^JgY;+g">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id=":EBRHzFT+MtJf~q{Tt=5">
+<field name="VAR" id=")?((O3HghnzywcbNAofV">蓝牙地址</field>
+</block>
+</value>
+<value name="B">
+<block type="logic_null" id="%-R[D41Ne*GX]km@fBTg"/>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="DiEDr/GU8.6@iQ[V@Zwy">
+<field name="VAR" id=")?((O3HghnzywcbNAofV">蓝牙地址</field>
+<value name="VALUE">
+<block type="robot_get_bluetoothaddr" id="KkUM7TP~Cw,Cqvh#wNle">
+<value name="param776">
+<shadow type="text" id="KH9A?9RmMF}e{$g}FQEQ">
+<field name="TEXT">Q3</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_connectbluetooth" id="HZ!AtL1C6UY~S/{NG@,i">
+<field name="param778">1</field>
+<value name="param779">
+<shadow type="text" id="{BWNgpuK!b6g8O`ReaS1">
+<field name="TEXT">88:88:12:A2:CA:2B</field>
+</shadow>
+<block type="variables_get" id="U7%jzbXIml26CcQAuqSr">
+<field name="VAR" id=")?((O3HghnzywcbNAofV">蓝牙地址</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="}A;s!t`clo3LUeo3[u_z">
+<value name="param1">
+<shadow type="text" id="_d]=9;cO#UrPe]?GA.{-">
+<field name="TEXT">蓝牙音箱连接成功</field>
+</shadow>
+</value>
+<next>
+<block type="robot_set_audio_device" id="1?6zYVegMFeEH1WEQSal">
+<value name="param319">
+<shadow type="text" id="_-8#_yiE+{xfVVyj~MVf">
+<field name="TEXT">bluealsa:DEV=88:88:6C:CA:9D:0A,PROFILE=a2dp</field>
+</shadow>
+<block type="text_join" id="GW34=_~-W;_:a9GCD^~O">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="text" id="ExW]Hf{`5TKfmAThoi.$">
+<field name="TEXT">bluealsa:DEV=</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="variables_get" id="X4V[siYCJwRR4:fUxn3@">
+<field name="VAR" id=")?((O3HghnzywcbNAofV">蓝牙地址</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="=2Jv}N=AZN)%?@]xO1tA">
+<field name="TEXT">,PROFILE=a2dp</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_talk_start" id=";6%|YH0[x=anYLpTuge{">
+<value name="param6">
+<shadow type="text" id="9Y`KC~]~^|xVuv|}jN^G">
+<field name="TEXT">使用蓝牙音箱播放音频</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

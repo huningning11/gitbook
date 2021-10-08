@@ -1,0 +1,47 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="c#!N[bE5a2$|vz_]t*i{">变量</variable>
+</variables>
+<block type="variables_set" id="WtMU+4dn[ud*f6K$c9D1" x="33" y="2">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="text" id="bkNI@njw/p%D*V8=f?r]">
+<field name="TEXT">1#2#3</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="3|e;h/g`wEhP#39)Y75O">
+<value name="param1">
+<shadow type="text" id="Z[!w7Zq!d?F5/6@{Gvd[">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="v2_wzz_list_string_split" id="wf+s^)~k@$L.y.y%{11@">
+<field name="param398">str</field>
+<value name="param396">
+<shadow type="text" id="f;Gr`P4xmf#D96Z.Ob45">
+<field name="TEXT">1#2#3</field>
+</shadow>
+<block type="robot_string_add" id="X9qU!r]fV/};3k/iSJez">
+<value name="param131">
+<block type="variables_get" id="k=cmH9:gF:/H!uwCi$C{">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<value name="param132">
+<block type="text" id="Kd(6bY3E~,)daDS$w/8#">
+<field name="TEXT">#4</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param397">
+<shadow type="text" id="Nw4BF,?E*c%[LGXjO)S8">
+<field name="TEXT">#</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

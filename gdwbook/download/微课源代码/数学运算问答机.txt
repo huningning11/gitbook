@@ -1,0 +1,135 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="{r7vaz(8IUU[++pl.gMX">按钮状态</variable>
+<variable id="/dCkalj`gBxna_xqqu,k">照片</variable>
+<variable id="bb;[dkjSQQ`u,wW(Al6N">文字</variable>
+<variable id="#EIwLT|u$A4nwovWhMcP">回答</variable>
+</variables>
+<block type="variables_set" id="Oh2HtCa0-*mVmKWlCd,(" x="-598" y="-448">
+<field name="VAR" id="{r7vaz(8IUU[++pl.gMX">按钮状态</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="caz6481m6ehm+BdcgzFy">
+<value name="param">
+<shadow type="math_number" id="42vGW[e|3VYpa=JlS]ps">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="WwcM-7*u:YM,`981Ky8e">
+<value name="IF0">
+<block type="logic_compare" id="JV~cA],(k1yhw4/ft:Nu">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id=":J[JFa5!8b2jARD?Yg0c">
+<field name="VAR" id="{r7vaz(8IUU[++pl.gMX">按钮状态</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="zU2+zWe!%gV]@Y`3;*D|">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id=",bY/W%ABNS/_$)CS.XFt">
+<field name="VAR" id="/dCkalj`gBxna_xqqu,k">照片</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="37(!qQ_Ym`.,o32gKSE;">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="[dAU)p#Qxp]=w7;]wakd">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="|85bi7d6s%g]{S$D}{o@">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="+)@l0Kn9qM0~7RL9q,23">
+<value name="param1">
+<shadow type="text" id="9jCzLx:z$O@9PR2?tj:j">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="~L!nNU!Cz-PWNXuRXV4Z">
+<field name="VAR" id="/dCkalj`gBxna_xqqu,k">照片</field>
+</block>
+</value>
+<next>
+<block type="robot_debug_image_out" id="w@c7(spVnG}ZD$pl_Lxj">
+<value name="param278">
+<block type="variables_get" id="ix=CjU1BKWjo6MPszolo">
+<field name="VAR" id="/dCkalj`gBxna_xqqu,k">照片</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="a{ZMZhjl40+I{_fX$)l0">
+<field name="VAR" id="bb;[dkjSQQ`u,wW(Al6N">文字</field>
+<value name="VALUE">
+<block type="robot_get_handwriter_text_from_ai" id="t1!iVw7iMXH?)taoM9F)">
+<value name="param255">
+<block type="variables_get" id="{5,WC$1yUr?|E$@wrMLB">
+<field name="VAR" id="/dCkalj`gBxna_xqqu,k">照片</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="z*b_alwX~.nT4Ka+2^lY">
+<value name="param1">
+<shadow type="text" id="|W]$%8jl`Ga-Z#2LFqEW">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="=]l*DBg]OCi9k!GfY6;m">
+<field name="VAR" id="bb;[dkjSQQ`u,wW(Al6N">文字</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="n1$y#~aOjcjoRK~#s8a;">
+<field name="VAR" id="#EIwLT|u$A4nwovWhMcP">回答</field>
+<value name="VALUE">
+<block type="robot_get_talk_result" id="P0wwUNs,w(NLT[;vi[Om">
+<value name="param91">
+<shadow type="text" id="TY*B2MZ!WN`;wwk)We$u">
+<field name="TEXT">你真帅</field>
+</shadow>
+<block type="variables_get" id="=57ZXf=b8FPy;x0[kxLm">
+<field name="VAR" id="bb;[dkjSQQ`u,wW(Al6N">文字</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="#%A+pJl{F!-co!%Ep-pl">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="/wMz`NRstsypQW}#)_hC">
+<field name="VAR" id="#EIwLT|u$A4nwovWhMcP">回答</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

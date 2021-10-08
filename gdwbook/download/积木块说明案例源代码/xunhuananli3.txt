@@ -1,0 +1,44 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="3Mp9{Q}?VGRO4FVs2MhO">i</variable>
+</variables>
+<block type="controls_for" id="ZC[S^*n!X-UluXw;,r/C" x="-76" y="91">
+<field name="VAR" id="3Mp9{Q}?VGRO4FVs2MhO">i</field>
+<value name="FROM">
+<block type="math_number" id="X9=Z!XXy#=CrXz0lXy.|">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="NHETggu%^XQGGr0~fsSW">
+<field name="NUM">10</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="E[POT-q9cWcrSGpnF7o6">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="log_out_put" id="zUb,[PfH$t0P|qU[=H,c">
+<value name="param1">
+<shadow type="text" id="pZRY]S$KX=;oxe7+D^G1">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="PiJ+F~Fd7uydj0~H=0{v">
+<field name="VAR" id="3Mp9{Q}?VGRO4FVs2MhO">i</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="|V-5PYfal8W`T5[Q}vQ6">
+<value name="param96">
+<shadow type="math_number" id="w#0bzchx~g6JbQXtc3XZ">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

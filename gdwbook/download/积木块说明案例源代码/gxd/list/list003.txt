@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="-C(lC?lXHDL0r,x,[1+^">test1</variable>
+</variables>
+<block type="variables_set" id=";:pEbPkWnasI`vyErEFn" x="412" y="-164">
+<field name="VAR" id="-C(lC?lXHDL0r,x,[1+^">test1</field>
+<value name="VALUE">
+<block type="lists_create_with" id="Z4ko@/IRVG09=8.OK+5=">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="math_number" id="0*maM~bosZbxF@B#W+B(">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="math_number" id="B4AaMOc(|~68e|328Ou]">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="math_number" id="G`_iTBiOv.j{u=-2Hvbn">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="E9MLgC%iu,S;Z^^8nCJV">
+<value name="param1">
+<shadow type="text" id="P1kSQ0vf:SL??a6`ueWa">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="lists_getIndex" id="wftrbpl?5mLmHWEUJsD!">
+<mutation statement="false" at="true"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FROM_END</field>
+<value name="VALUE">
+<block type="variables_get" id="aPNy3Day_KCZYK:Gpi[(">
+<field name="VAR" id="-C(lC?lXHDL0r,x,[1+^">test1</field>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id="q)JBWZ6r2DrxT?0b=X/w">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

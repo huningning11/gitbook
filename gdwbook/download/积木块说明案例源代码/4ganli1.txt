@@ -1,0 +1,22 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="-+_`K?5vCt^i=LRjp4,$" x="-18" y="-3">
+<value name="param1">
+<shadow type="text" id="O_~MR)$nqndkEy~Vv~DB">
+<field name="TEXT">准备启动</field>
+</shadow>
+</value>
+<next>
+<block type="robot_sim7600_poweron" id="VsTK4z4x+zFEDMLz[B*J">
+<next>
+<block type="log_out_put" id="]i?sI^7C9zW)MaON7D*Y">
+<value name="param1">
+<shadow type="text" id="HAm}@cZa[:090JSaKP]6">
+<field name="TEXT">已开机</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

@@ -1,0 +1,47 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="s~!fj=M~7L/56=aSNDCF">心率</variable>
+</variables>
+<block type="controls_repeat_ext" id="dSD+`mzd^9[m+K6{2HU4" x="214" y="72">
+<value name="TIMES">
+<block type="math_number" id="w`Lh}|`Te+~Fu7i}gt}j">
+<field name="NUM">10</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="Cbvi[uNrbKAKaP3k-,]0">
+<field name="VAR" id="s~!fj=M~7L/56=aSNDCF">心率</field>
+<value name="VALUE">
+<block type="robot_get_Heartrate_data" id="D@08/!,}iZy0iFC+XFvp">
+<value name="param907">
+<shadow type="math_number" id="q=y)?9Or?R._4(p4fnRd">
+<field name="NUM">0</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="ugostI@i7vfeKLNmDP6r">
+<value name="param1">
+<shadow type="text" id="nz6?{{0]vz*bmXfzK4{x">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="NTN?ua?|lJPzT+pTDF1K">
+<field name="VAR" id="s~!fj=M~7L/56=aSNDCF">心率</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="TD2#rCm_pR_n|UwN0tFN">
+<value name="param96">
+<shadow type="math_number" id="0z9Jm27P-NS_@./BRg^P">
+<field name="NUM">5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

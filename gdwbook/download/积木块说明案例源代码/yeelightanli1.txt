@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="viD}3meC,{ad[ULQ6I/^">灯的实例</variable>
+</variables>
+<block type="variables_set" id="0-ZfRUP.2a(W@]$xSmI|" x="-40" y="41">
+<field name="VAR" id="viD}3meC,{ad[ULQ6I/^">灯的实例</field>
+<value name="VALUE">
+<block type="wzz_yeelight" id="~jd`-B}yGm:%%fv*9+6t">
+<value name="param571">
+<shadow type="text" id=")^nqH)wsuNWQVenclq#x">
+<field name="TEXT">192.168.1.101</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="wzz_yeelight_on_off" id="}W2),{EP6]gU8;Zwcxrn">
+<field name="param572">True</field>
+<value name="param573">
+<block type="variables_get" id="pCVEPXH3j$Cia.p0:^QT">
+<field name="VAR" id="viD}3meC,{ad[ULQ6I/^">灯的实例</field>
+</block>
+</value>
+<next>
+<block type="wzz_yeelight_setrgb" id="?pP6%w~V;^)%qaBI;xVO">
+<value name="param574">
+<block type="variables_get" id="PsUk)l|R[%$7qSNM7eg}">
+<field name="VAR" id="viD}3meC,{ad[ULQ6I/^">灯的实例</field>
+</block>
+</value>
+<value name="param575">
+<block type="wzz_v2_color" id="$C2J8kMpciCL+w3yj+ff">
+<field name="param401">#ff0000</field>
+</block>
+</value>
+<next>
+<block type="wzz_yeelight_set_bright" id="9gJl8uu9YM=%;8?!zf,;">
+<value name="param583">
+<block type="variables_get" id="n3D{GK*cfM.OPKu.+c?q">
+<field name="VAR" id="viD}3meC,{ad[ULQ6I/^">灯的实例</field>
+</block>
+</value>
+<value name="param584">
+<shadow type="math_number" id="Ia~3)49(i|S2`-W,9t~~">
+<field name="NUM">20</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="q8.-s?${^1fUf]D2nFXn">
+<value name="param96">
+<shadow type="math_number" id="Tq`g?!R}3f1z(ec#3du)">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<next>
+<block type="wzz_yeelight_on_off" id="ogvMI6=O2urFi8`J3JUq">
+<field name="param572">False</field>
+<value name="param573">
+<block type="variables_get" id="6p7E6^Zp`Z4KGIp,}SYP">
+<field name="VAR" id="viD}3meC,{ad[ULQ6I/^">灯的实例</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

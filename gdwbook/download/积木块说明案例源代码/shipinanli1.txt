@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="vNmdP3?8f)I:kn|bE9Pi">视频</variable>
+</variables>
+<block type="robot_play_video" id="G0?TJ4%DJDo`}KW)qL|A" x="20" y="-86">
+<value name="param212">
+<shadow type="text" id="I`R3SV|Tf#F$Xa|Aimtj">
+<field name="TEXT">/home/pi/temp/zuopin.mp4</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="iA%..cZ!^SB]I6K=ToP}">
+<field name="VAR" id="vNmdP3?8f)I:kn|bE9Pi">视频</field>
+<value name="VALUE">
+<block type="text" id="O*.h.v7Fha_xHe_GN;k(">
+<field name="TEXT">/home/pi/temp/zuopin.mp4</field>
+</block>
+</value>
+<next>
+<block type="robot_play_video_by_position" id="c30x{N#O,G1Fg1:nES}i">
+<value name="param213">
+<block type="variables_get" id="UZdwgEsGD{{2EV%nE6;R">
+<field name="VAR" id="vNmdP3?8f)I:kn|bE9Pi">视频</field>
+</block>
+</value>
+<value name="param214">
+<shadow type="math_number" id="Y:[cnDsZ$|_F`U(x{(02">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="param215">
+<shadow type="math_number" id="s=ga5a?fK7b{q)dl92np">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param216">
+<shadow type="math_number" id="{(JFq]f!O4kJ`HpkJEQj">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param217">
+<shadow type="math_number" id="xy)x0=%H(dj[x8I0r^Oy">
+<field name="NUM">600</field>
+</shadow>
+</value>
+<value name="param218">
+<shadow type="math_number" id="zkEJxR$s1oJMdAP.d@MX">
+<field name="NUM">600</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="H|r[)/lU7(x?9^0F+|_E">
+<value name="param96">
+<shadow type="math_number" id="^kvj=X}~l2wRgl^Z+7*b">
+<field name="NUM">20</field>
+</shadow>
+</value>
+<next>
+<block type="robot_stop_video" id="V-_Y9t[4)(=h`cL-U2~l">
+<value name="param219">
+<shadow type="math_number" id="4rbp^tH1?`5F3ii3@,x=">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

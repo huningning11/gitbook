@@ -1,0 +1,105 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="c#!N[bE5a2$|vz_]t*i{">变量</variable>
+</variables>
+<block type="variables_set" id="s@YFN(.d4U3mmd%,HGSO" x="518" y="2">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="text" id="H7$68((}Qs.d{W(9CO!I">
+<field name="TEXT"/>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="G=~q6^~f.0KA_d4?nU*O">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="s0~^|e8LExP#Y*?OQ.Bq">
+<value name="param937">
+<block type="variables_get" id="i#**!?HuZLhfL.+*D7|}">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="o:e7scdZxRrHi(9Yi+(C">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="lists_create_empty" id=")/uW+%0K.)dk40#hT:U{"/>
+</value>
+<next>
+<block type="log_out_put" id="jJ%_b*mDGe2R,-;.2`dh">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="I7Vj0qOPq(DF#Y7`4yYH">
+<value name="param937">
+<block type="variables_get" id="Uz5*{jp=1JH%MV/hnw8?">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="%mfG]tNP6GH|}dsS_#y2">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="math_number" id="ihPTKxB$5Jyzys6]95]M">
+<field name="NUM">0</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="9cKbdfUMR^bvOuY)02Su">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="Mm`+KS|::$uouj#$}Jj%">
+<value name="param937">
+<block type="variables_get" id="m8{BUj@DGF4}1D2bbzPe">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="D}yw%r,^,Q@VV1[Rb:A|">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="math_number" id="P]{T,#ab;,|dC8b*c-:,">
+<field name="NUM">3.5</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="cL?X*AB:+b9r`gme3bd~">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_var_type" id="):Ykw-ofg3.1Zvh+B,Dh">
+<value name="param937">
+<block type="variables_get" id="aPKQej%%C4Uy(?4O^=~=">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

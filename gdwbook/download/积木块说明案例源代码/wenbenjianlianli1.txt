@@ -1,0 +1,114 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="c#!N[bE5a2$|vz_]t*i{">变量</variable>
+</variables>
+<block type="variables_set" id="WtMU+4dn[ud*f6K$c9D1" x="388" y="-6">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="VALUE">
+<block type="text_join" id="gFzK+(ZLA0zGS%#{x)_H">
+<mutation items="3"/>
+<value name="ADD0">
+<block type="text" id="OJ%D)Jjum%)416,~ZOXZ">
+<field name="TEXT"></field>
+</block>
+</value>
+<value name="ADD1">
+<block type="text" id="6V_13!$`6*QJbd^K(?,c">
+<field name="TEXT">a</field>
+</block>
+</value>
+<value name="ADD2">
+<block type="text" id="9+7~Fe4yI!!21k`D-0ri">
+<field name="TEXT">b</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="text_append" id=":bPmmJAhTGDqgPcOedDg">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+<value name="TEXT">
+<shadow type="text" id="Vf1B8JvdZ#I8$8CF8dHC">
+<field name="TEXT"/>
+</shadow>
+<block type="text" id="@lCJDD3UDg[LvB;S0q(P">
+<field name="TEXT">c</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="c^ynq`w9|p]%I3@`B)(!">
+<value name="param1">
+<shadow type="text" id="]9W1w(6u[x]p^H6EP)pJ">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="k=cmH9:gF:/H!uwCi$C{">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="#q|7RtRWU7~#S-gp6l9*">
+<value name="param1">
+<shadow type="text" id="xqZD7-46I$*1Y-!0AA(E">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_changeCase" id="?.vlLzZ[!-XUlvi*c#}O">
+<field name="CASE">UPPERCASE</field>
+<value name="TEXT">
+<shadow type="text" id="4BJKfzu;=wFVJ5x6_uF]">
+<field name="TEXT">abc</field>
+</shadow>
+<block type="variables_get" id="U|wT}kkdy3D~smj:Wz.C">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="5RUIdjw{{MDJ!OL4tm-C">
+<value name="param1">
+<shadow type="text" id="S;F2_GIs-%D17?@6G4R_">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="text_trim" id="jD6n!G_N}]wM@V~$sOoj">
+<field name="MODE">BOTH</field>
+<value name="TEXT">
+<shadow type="text" id="1o+t{Fz_6(5,m_^=J+oT">
+<field name="TEXT">abc</field>
+</shadow>
+<block type="variables_get" id="UTO|zyXoVe~x*EU-d0uR">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="=T9kD?f4_R]Phidgx^CS">
+<value name="param1">
+<shadow type="text" id="E~u)7A0swV#L*1Rr4G:x">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_str_Completion" id="ut+P`1}GoQvzm%G3:P$`">
+<value name="param739">
+<block type="variables_get" id="0p6#fUkz|3S(~Deg__1I">
+<field name="VAR" id="c#!N[bE5a2$|vz_]t*i{">变量</field>
+</block>
+</value>
+<value name="param740">
+<block type="math_number" id="e7s@{bFW^YfkxDm-k)p9">
+<field name="NUM">5</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

@@ -1,0 +1,51 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="{x9bB!e0i1dL^MS3/B_4">test1</variable>
+</variables>
+<block type="variables_set" id="]@LU:h64m-/Wx/VJR+()" x="310" y="-253">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+<value name="VALUE">
+<block type="wzz_create_empty_dict" id="$Sa_]X}toz[_+pW.l6`d"/>
+</value>
+<next>
+<block type="wzz_add_data_dict" id="xKyMcH1GjYt6d|%A2-8i">
+<value name="param603">
+<block type="variables_get" id="#R$a[eZn/s.xl+Lk!%WP">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+</block>
+</value>
+<value name="param604">
+<shadow type="text" id="aSCo%~}iYOo5w3Rd!n_3">
+<field name="TEXT">key</field>
+</shadow>
+</value>
+<value name="param605">
+<shadow type="text" id="u_EYKxi)|RBgX0!^!B~x">
+<field name="TEXT">abc123</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="Cmh`R9:yFh)xhQE^BX-i">
+<value name="param1">
+<shadow type="text" id="z]Ow).,wV*,fdA|JLynb">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_arry_get_attribute" id="fY/1OZ$gZxmz(~5m`}:|">
+<value name="param129">
+<block type="variables_get" id="u!Kxys|9/_~zk4doVE@y">
+<field name="VAR" id="{x9bB!e0i1dL^MS3/B_4">test1</field>
+</block>
+</value>
+<value name="param130">
+<block type="text" id="KCPpC:`jg#,Gc:w*B+-Z">
+<field name="TEXT">key</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

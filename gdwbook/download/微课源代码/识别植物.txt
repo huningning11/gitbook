@@ -1,0 +1,274 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="K1U^VPP5!WbSuF:D)L/)">按钮2</variable>
+<variable id="XfcM~SVT-|%rrmQdju-4">照片路径</variable>
+<variable id="d94a0HeQ9~zs.X`T#4M$">按钮3</variable>
+<variable id="B(U`-SxqA`6sLWg*D-Kh">按钮</variable>
+<variable id="d}QWhc.|s4%[_ND2C:a5">识别植物</variable>
+<variable id="/UW?OX_NQX/4F4wZ=wn2">识别动物</variable>
+<variable id="k4vmRFfNqV,.FWBI{VZY">识别果蔬</variable>
+</variables>
+<block type="controls_whileUntil" id="pYUl0fBn^Z2BQFLpCo%W" x="168" y="115">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="V86IdI=y7Y4ozq~!P=VX">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="DC,W5K~o133bV7zO2SKY">
+<field name="VAR" id="K1U^VPP5!WbSuF:D)L/)">按钮2</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="mpi;I;n0TE4I}4*rsl1K">
+<value name="param">
+<shadow type="math_number" id="~~q}5K6ZTYIJ)(J$,kpI">
+<field name="NUM">24</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="Id0h5daqFO!COP|WpJAa">
+<field name="VAR" id="d94a0HeQ9~zs.X`T#4M$">按钮3</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="bZYXn]Qk;,7Y;J~9yO55">
+<value name="param">
+<shadow type="math_number" id="DwO]~/Ku**1C*DdzW8(D">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="cH@fU!_+(?:NgSU.@t_X">
+<field name="VAR" id="B(U`-SxqA`6sLWg*D-Kh">按钮</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="igFGc;^z0=c_I$)L|$g4">
+<value name="param">
+<shadow type="math_number" id="pjPHc1hJ5H|$koM*0~Gn">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="^i,c%=MNf[3,$mx0h#(Q">
+<value name="IF0">
+<block type="logic_compare" id=")g]`gkhr.wW*:pCE}BVw">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="1?oFTAH,isN@TbK!t[Jb">
+<field name="VAR" id="B(U`-SxqA`6sLWg*D-Kh">按钮</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="40OWV+iugnWR7dTltVxs">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="procedures_callnoreturn" id="v2pcbZC6wn?w8.ub6%).">
+<mutation name="拍摄照片"/>
+<next>
+<block type="variables_set" id="X!)VZP);3j1LD5QaNsCI">
+<field name="VAR" id="d}QWhc.|s4%[_ND2C:a5">识别植物</field>
+<value name="VALUE">
+<block type="robot_classify_plant" id="hy|vq7G6w6W{*+~^G}qo">
+<value name="param781">
+<shadow type="text" id="*1U-9~6:DalHW%L`ZZFg">
+<field name="TEXT">/home/pi/imageTemp/绿萝.jpg</field>
+</shadow>
+<block type="variables_get" id=",,?;lNf(}|$B~rzYJaZb">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="9U]49TbMCd2KQsMS.q]$">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="7@6*@dqb98^;Y.DVHaK.">
+<field name="VAR" id="d}QWhc.|s4%[_ND2C:a5">识别植物</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id="51/Lu?mKxS^4[hfXsjl5">
+<value name="IF0">
+<block type="logic_compare" id=",d!IpGLqD?RNp+sSx[wO">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="{Z/|d[1Y,x,ng@4oi@VX">
+<field name="VAR" id="K1U^VPP5!WbSuF:D)L/)">按钮2</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="#)G!!C(Vp|S,|x|zFC5B">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="procedures_callnoreturn" id="XE3-LmCZC)aWyg1Dso-Q">
+<mutation name="拍摄照片"/>
+<next>
+<block type="variables_set" id="e|uqLMkCuX]h[n;lA-rJ">
+<field name="VAR" id="/UW?OX_NQX/4F4wZ=wn2">识别动物</field>
+<value name="VALUE">
+<block type="robot_classify_animal" id="%x3f.*o0=vp#Df)H`%T+">
+<value name="param780">
+<shadow type="text" id="n/!u9tZWJCp{`#/z0RqT">
+<field name="TEXT">/home/pi/imageTemp/dog.jpg</field>
+</shadow>
+<block type="variables_get" id="#B0=W3F=M:JyHf+_d65I">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="1qN~*}:~%hRz.kT%a*.6">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="v/qF@sNM_#ute%`o]~sb">
+<field name="VAR" id="/UW?OX_NQX/4F4wZ=wn2">识别动物</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="controls_if" id=")Y=((jZ7b*czXA%G+ZrI">
+<value name="IF0">
+<block type="logic_compare" id="ybt{NZ3Mf*]FlrWTn{G]">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="`U*bAPBCSZt}I.J%C}Hy">
+<field name="VAR" id="d94a0HeQ9~zs.X`T#4M$">按钮3</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="ii7$=,/y8N#Xl,S(jGPU">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="procedures_callnoreturn" id="Q.QZ1e]s$Qbh2VQW+U,D">
+<mutation name="拍摄照片"/>
+<next>
+<block type="variables_set" id="y;NfK6H^etat+tc#{_LM">
+<field name="VAR" id="k4vmRFfNqV,.FWBI{VZY">识别果蔬</field>
+<value name="VALUE">
+<block type="robot_classify_ingredient" id="Y6z:g6kXvXXOIE4u}aRx">
+<value name="param799">
+<shadow type="text" id="6KVz*K}fyjCOsMxUeJzo">
+<field name="TEXT">/home/pi/imageTemp/苹果.jpg</field>
+</shadow>
+<block type="variables_get" id="/~510y6E7l6#luqnU`cg">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="UmE!-z5duED0wDK]5uK/">
+<value name="param1">
+<shadow type="text" id="gG@~@/Ehb/,dN7B7VEBv">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="!=;R,e9)~#|M-U.*L=C^">
+<field name="VAR" id="k4vmRFfNqV,.FWBI{VZY">识别果蔬</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="ARc(@Y|J2JQr6h5XH{0{">
+<value name="param96">
+<shadow type="math_number" id="Jp7bL1rKaNCK?GlGD!ao">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="WK__obvu)n8Fsw#E7[os" x="840" y="618">
+<field name="NAME">拍摄照片</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="variables_set" id="ZjfTmMJ3REJ*Y.8GNX|h">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="!?Ql=I6{9Y|[VSB?1lye">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="#rZ9;~[Fw;#]C;Bd~rS.">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="5Ud1P3SVc0};i3glXM3/">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_debug_image_out" id="38K#?+A)EK;U93=7j8R6">
+<value name="param278">
+<block type="variables_get" id="o**}zg];aV|Q!lkVLrcF">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="~P]waQ3Ykc:u(]p@k=aq">
+<value name="param1">
+<shadow type="text" id="?r!6o-X4FSo=15oqh@NC">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="(A*+39KW^.F*sNY_+A]U">
+<field name="VAR" id="XfcM~SVT-|%rrmQdju-4">照片路径</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

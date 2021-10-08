@@ -1,0 +1,45 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="controls_whileUntil" id="Y%sE8Mx)%-UbK!|.x2NJ" x="402" y="88">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="04.*]8V0G?_J8qzcFhE*">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="controls_if" id="ZQbs-!@W`^G$e.sKy/x(">
+<mutation else="1"/>
+<value name="IF0">
+<block type="get_infrared_result" id="m6KLoKA*[{j:?@b?%rH?">
+<value name="param">
+<shadow type="math_number" id="YOpDDz!Ctv?PJ=SlWDcl">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_led" id="vW,3z,5ED-tOvI]BFvG`">
+<field name="param155">5</field>
+<field name="param156">1</field>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_GPIO_control_led" id="rm{fYyV6;QA(zhOlvpS:">
+<field name="param155">5</field>
+<field name="param156">0</field>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="Y3n}X%fUT@nZp+fjVZV-">
+<value name="param96">
+<shadow type="math_number" id="8BcQ)8w|K4^lDW]%-x7K">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

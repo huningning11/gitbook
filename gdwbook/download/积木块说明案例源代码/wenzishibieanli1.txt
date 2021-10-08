@@ -1,0 +1,42 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="F0!w:lmg4](a{e}j3Z6]">手写图片</variable>
+</variables>
+<block type="variables_set" id=",B9fnel[$hYfrSueI;8g" x="-216" y="-280">
+<field name="VAR" id="F0!w:lmg4](a{e}j3Z6]">手写图片</field>
+<value name="VALUE">
+<block type="v1_2_wzz_usb_camera_capture_preview" id="TPfSBxq?}~[bU^/3,NMU">
+<field name="param657">'640*480'</field>
+<value name="param658">
+<shadow type="text" id="*vC!jxNq}EdU:,E[ECep">
+<field name="TEXT">/dev/video0</field>
+</shadow>
+</value>
+<value name="param0658">
+<shadow type="math_number" id="z78~VF@~6@OKbbYQ.QF[">
+<field name="NUM">1</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id=".T$hru%WzV!z85O@}qF2">
+<value name="param1">
+<shadow type="text" id="6ow`VG.eMM=Vjo7$li;G">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_handwriter_text_from_ai" id="^+`hhvsY0Mk[0hG~]zT_">
+<value name="param255">
+<shadow type="text" id="0Ikj#vwxD:]OC`fhIl|!">
+<field name="TEXT">/home/pi/imageTemp/temp.jpg</field>
+</shadow>
+<block type="variables_get" id="8`~-|*?#Kl:N[|ABhbjE">
+<field name="VAR" id="F0!w:lmg4](a{e}j3Z6]">手写图片</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

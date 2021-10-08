@@ -1,0 +1,102 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="/HLZH+jXDU+R]A:_`R{k" x="122" y="-334">
+<value name="param1">
+<shadow type="text" id="Jp{g7+_%K#h)^TA)rmjQ">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="4Y4ww)Cr)P`]zo,AFveo">
+<field name="OP">SIN</field>
+<value name="NUM">
+<block type="math_number" id="=g_^uA]?tV(DsBKav?xx">
+<field name="NUM">30</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="}5H$zR_=X^]FtbU^(sIG">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="vz=bX+%sC5BwnkRo`M:x">
+<field name="OP">COS</field>
+<value name="NUM">
+<block type="math_number" id="OQi}s|fQo`!Zi.Iz*e+$">
+<field name="NUM">30</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="QIE_yLW2No.rCCi7s)ce">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="|_PH$4/v/2:4HN~O(5N!">
+<field name="OP">TAN</field>
+<value name="NUM">
+<block type="math_number" id="R+hdD)ba|U-V/.J,*9`w">
+<field name="NUM">30</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="_OL=c*pSf*Ocg.$^C{(v">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="1wQz2LYF}_3]Ze0kIe;o">
+<field name="OP">ASIN</field>
+<value name="NUM">
+<block type="math_number" id="7p0j?hVnW.5STn[fUKtf">
+<field name="NUM">0.5</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="k[?1Oe0{2c|9Nqoq?b]7">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="TKO7_=R%[#a9fud6Zmhl">
+<field name="OP">ACOS</field>
+<value name="NUM">
+<block type="math_number" id="Og2~Y,@z4h*YT=E]/D%|">
+<field name="NUM">0.87</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="[buoZF30IDxZKc.9InL(">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_trig" id="XQ26v:.Mxj9!?oNE~JA`">
+<field name="OP">ATAN</field>
+<value name="NUM">
+<block type="math_number" id="`t0Qd?hQ*%VVm83Jx2ji">
+<field name="NUM">0.58</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

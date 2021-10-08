@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="B=!+(:SZR.RxFeuDh#`n">i</variable>
+</variables>
+<block type="robot_GPIO_control" id="QE6Yz3BnCh#/+yi:Q5{D" x="-494" y="-468">
+<field name="param141">21</field>
+<field name="param142">1</field>
+<next>
+<block type="controls_for" id="okqYcOI/B!zw]oWx~l=8">
+<field name="VAR" id="B=!+(:SZR.RxFeuDh#`n">i</field>
+<value name="FROM">
+<block type="math_number" id="9B+ePo4)S)cf{GEI,^;,">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="P^i0@=H3{-Euj5rCeew]">
+<field name="NUM">1000</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id="gYmN_FTYp,L_$wi_.iaE">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_GPIO_control" id="kctLfHVIez}Le,yl?|j6">
+<field name="param141">21</field>
+<field name="param142">0</field>
+<next>
+<block type="robot_time_wait" id="4*kKc/.o4e{41%6JzH?1">
+<value name="param96">
+<shadow type="math_number" id="9^|Ms@^?3OXz2[h5Z-I=">
+<field name="NUM">0.005</field>
+</shadow>
+</value>
+<next>
+<block type="robot_GPIO_control" id="$Kdf;I[9JJ`]v5=/v;;f">
+<field name="param141">21</field>
+<field name="param142">1</field>
+<next>
+<block type="robot_time_wait" id="s?zL8xY)?l+xtnKyWr]I">
+<value name="param96">
+<shadow type="math_number" id="l1~__JF^HAGigKr%REZs">
+<field name="NUM">0.02</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_GPIO_control" id="(tH_w4VdlZRP)aw{S4Y|">
+<field name="param141">21</field>
+<field name="param142">1</field>
+<next>
+<block type="log_out_put" id="(Nf`4B]YT-:!z%H3Pcqx">
+<value name="param1">
+<shadow type="text" id="}u[Z`E^2sjX6h]+|oW!Q">
+<field name="TEXT">结束！</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

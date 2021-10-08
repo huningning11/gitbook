@@ -1,0 +1,61 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="O[g^5IT0a:IN@daiyQyQ" x="111" y="127">
+<value name="param1">
+<shadow type="text" id="[`s0)lzBy(i!eo5bsm75">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+<next>
+<block type="robot_printer_connect" id="kqCNb0J6D(=zA{lGP@Ct">
+<next>
+<block type="robot_printer_chinese_position_text" id="f.jV_#l{~uclgdNY=6{P">
+<value name="param237">
+<shadow type="text" id="yzx3Ez0+{Ju_s3E]-?%`">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param238">
+<shadow type="math_number" id="S_r0%[/m_[rctam$70$7">
+<field name="NUM">25</field>
+</shadow>
+</value>
+<value name="param239">
+<shadow type="math_number" id="]`d@1I:Sc|ioYVr6[jmz">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param240">
+<shadow type="math_number" id=",}|Pi*1J.SP@@.I0IO0m">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<next>
+<block type="robot_printer_chinese_position_text" id="IRYA`[6re|MZWas5m_HO">
+<value name="param237">
+<shadow type="text" id="7:eL-1Y%F5#[T8g5yhj;">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param238">
+<shadow type="math_number" id="awN4+8]0AN_EP*Y}AH{9">
+<field name="NUM">25</field>
+</shadow>
+</value>
+<value name="param239">
+<shadow type="math_number" id="cf$ZYl`H/!w:r@-wb-?R">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param240">
+<shadow type="math_number" id="F2SDc]XXyKzyA|@)o^zS">
+<field name="NUM">5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

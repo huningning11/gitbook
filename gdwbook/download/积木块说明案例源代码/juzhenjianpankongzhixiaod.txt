@@ -1,0 +1,125 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="4YVJ6s2k7ae-/F`dJEeo">按键结果</variable>
+</variables>
+<block type="controls_whileUntil" id="LHws%=wAhFBI+]xniNH/" x="165" y="129">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id=".zg%WWZWeE]cW9QZd|Vf">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="EJ@`Jgf0[/cj@t|AMN[]">
+<field name="VAR" id="4YVJ6s2k7ae-/F`dJEeo">按键结果</field>
+<value name="VALUE">
+<block type="robot_arraykey_getkey" id="*9/N(jIXhP720@xs##$a">
+<value name="param457">
+<shadow type="math_number" id="n[oy0LoWe2OU7Z|Ya3s9">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param458">
+<shadow type="math_number" id="3wpW6bdY8yfdqLsu$bO]">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param455">
+<block type="robot_list1" id="3{I58,h-X(}RxR^XoBR5">
+<value name="param459">
+<shadow type="math_number" id="=niNdvG8iDZJ~W8~T#uS">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param460">
+<shadow type="math_number" id="$+(CGoY8r7}uu-YFSRIn">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param461">
+<shadow type="math_number" id="M6!*mF.{hKc3l47wk|o,">
+<field name="NUM">13</field>
+</shadow>
+</value>
+<value name="param462">
+<shadow type="math_number" id="OSK-:Zw.iBI4EB5bn78T">
+<field name="NUM">17</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param456">
+<block type="robot_list2" id="okqbz7!S?I.q]I${G9FY">
+<value name="param463">
+<shadow type="math_number" id="[*0vEf?/Uk$RYCEYA_eI">
+<field name="NUM">19</field>
+</shadow>
+</value>
+<value name="param464">
+<shadow type="math_number" id="V3dAnzhE-gFVsc~lj#pH">
+<field name="NUM">22</field>
+</shadow>
+</value>
+<value name="param465">
+<shadow type="math_number" id="`oo=v~Td[7c!VBB%Q-H7">
+<field name="NUM">26</field>
+</shadow>
+</value>
+<value name="param466">
+<shadow type="math_number" id="`msPj1dO,IDw9`FS~%8t">
+<field name="NUM">27</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="B*+%TcobBRaI,^.$p5@G">
+<value name="param1">
+<shadow type="text" id="^M_kliE=fwFzG?H`r0tK">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="-|bim-kQ`}30|yoDlfBN">
+<field name="VAR" id="4YVJ6s2k7ae-/F`dJEeo">按键结果</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="K#*qQ_St`LlW4^KT3?,0">
+<value name="IF0">
+<block type="logic_compare" id="^ohYk0U6}%TEd|[,7Dmx">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="%8i,8%U:@aULS)a.M!vM">
+<field name="VAR" id="4YVJ6s2k7ae-/F`dJEeo">按键结果</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="y*ouNqhf60H4ZqA(Onf9">
+<field name="NUM">23</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_GPIO_control_reverse" id="/ZBZp)xgsW#u/tUT{5dg">
+<field name="param185">24</field>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="MR?Vx9EnW9})OwrHNIlB">
+<value name="param96">
+<shadow type="math_number" id="wq,!ewy!g|-zOR-wG74]">
+<field name="NUM">2</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

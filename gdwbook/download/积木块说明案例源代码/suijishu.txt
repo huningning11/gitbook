@@ -1,0 +1,31 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="r*8OH?@D#l:MvB8F}K`H" x="226" y="-166">
+<value name="param1">
+<shadow type="text" id="k$ZQ+3t4=*21YhHOGl4w">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_random_float" id="OO{21(KdH431,3P1C|};"/>
+</value>
+<next>
+<block type="log_out_put" id=":[U@/RTDP`J((LCbxt1J">
+<value name="param1">
+<shadow type="text" id="LDTxNP4A!aAr]gNX(:sj">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="math_random_int" id="7[nkeG1f[Tt[VRGB1c-*">
+<value name="FROM">
+<block type="math_number" id="pl%POC#-;I.ho1M.b`wh">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="R8/F|tfwbynKH[xx{P%g">
+<field name="NUM">100</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</xml>

@@ -1,0 +1,46 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="(p7.{_;DO%LSA)w3nex{">变量</variable>
+</variables>
+<block type="variables_set" id="Rdi#9VV%Hc/R~mbG2jx?" x="255" y="-154">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+<value name="VALUE">
+<block type="wzz_create_empty_dict" id="hP`hQ)08~1vEgcMmls9^"/>
+</value>
+<next>
+<block type="wzz_add_data_dict" id="Nhjo@[kavh@zdaPc.+l5">
+<value name="param603">
+<block type="variables_get" id="!h`I}qpcF:I05fEo4Hy!">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+</block>
+</value>
+<value name="param604">
+<shadow type="text" id="d9eXvgBr%pxQ$zRM#lwu">
+<field name="TEXT">key</field>
+</shadow>
+</value>
+<value name="param605">
+<shadow type="text" id="Sc_7n4-.6kWuf{b3CMzc">
+<field name="TEXT">abc123</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="W^x%bhpi/^i6CziAFKm0">
+<value name="param1">
+<shadow type="text">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_dict_get_values" id="$ZlP!6q*bX=lu6Ei$JkS">
+<value name="param613">
+<block type="variables_get" id="8[p3nijlcEfc%r^_n!dD">
+<field name="VAR" id="(p7.{_;DO%LSA)w3nex{">变量</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

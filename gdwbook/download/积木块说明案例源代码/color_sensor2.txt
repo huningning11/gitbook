@@ -1,0 +1,130 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="Us]Gq)V%:?SF5C*4C1u@">按钮结果</variable>
+<variable id="V)Rn$.vGHbH{;)^{,A82">RGB数据</variable>
+<variable id="b%*Utb(*CX;U4qsNb-{O">i</variable>
+</variables>
+<block type="robot_ledstrip_init" id="M,L@pWx0?cM.owsDhU`9" x="146" y="-369">
+<value name="param259">
+<shadow type="math_number" id="0nnW?6/t19tY5%8/{KEE">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param260">
+<shadow type="math_number" id="6Sfi:NP~O-jc`#Il0x{H">
+<field name="NUM">30</field>
+</shadow>
+</value>
+<value name="param261">
+<shadow type="math_number" id="-MYM`aIC.0J5Vtj3-T[5">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id="ydsy#2mH|k9eT!}d`l{o">
+<value name="TIMES">
+<block type="math_number" id="];g;x=Ypzy%b6y5-B}0|">
+<field name="NUM">10000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="Nc5h|%CxLt}Y)(Bfnx$,">
+<field name="VAR" id="Us]Gq)V%:?SF5C*4C1u@">按钮结果</field>
+<value name="VALUE">
+<block type="get_infrared_result" id="M[2FO~T:6B/^bZ5|wCnd">
+<value name="param">
+<shadow type="math_number" id="HaFb*JVbYfih8,Cs[Z5#">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_whileUntil" id="wcMu5ljpCA{^yqeY0M+M">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="get_infrared_result" id="#)abYvb^8B]4uie}~;!/">
+<value name="param">
+<shadow type="math_number" id="b0*|C6ey;q0v8Z[#^.6E">
+<field name="NUM">25</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_pass" id="y_ug;2{*1vaGTlkNYsHT"/>
+</statement>
+<next>
+<block type="controls_if" id="isCnQ!~_5}V,43hCn-tH">
+<value name="IF0">
+<block type="variables_get" id="`]YDD;$(,)w$($QzA5*p">
+<field name="VAR" id="Us]Gq)V%:?SF5C*4C1u@">按钮结果</field>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="J%GE(o:5.[rVIsSkg{Cg">
+<field name="VAR" id="V)Rn$.vGHbH{;)^{,A82">RGB数据</field>
+<value name="VALUE">
+<block type="robot_colorsensor_get_raw" id="pxysf,rL3)-s)!pvw_%w"/>
+</value>
+<next>
+<block type="controls_for" id="McE:O,OJ2$MnTDEN|v{9">
+<field name="VAR" id="b%*Utb(*CX;U4qsNb-{O">i</field>
+<value name="FROM">
+<block type="math_number" id="$g@PTTcx:S4{dtmla,$Y">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="TO">
+<block type="math_number" id="./pt4{D/|1VDgnowtbqp">
+<field name="NUM">29</field>
+</block>
+</value>
+<value name="BY">
+<block type="math_number" id=":G#E)hsD7ji68o0IhTUI">
+<field name="NUM">1</field>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_ledstrip_setpixelcolor" id="?:jm~|bs7M)82}MRLEwL">
+<value name="param262">
+<shadow type="math_number" id="cnY*fTsdZ{Z49*tZlhAU">
+<field name="NUM">1</field>
+</shadow>
+<block type="variables_get" id="~U=B3[`~MRrfpB,s~k=o">
+<field name="VAR" id="b%*Utb(*CX;U4qsNb-{O">i</field>
+</block>
+</value>
+<value name="param263">
+<block type="variables_get" id="LMvt|9J(p!,|dGP:B9)8">
+<field name="VAR" id="V)Rn$.vGHbH{;)^{,A82">RGB数据</field>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="WX#GqPr+zBW7wn5w!wAW"/>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="lw+5(!K%/tcqmHM.bWV6">
+<value name="param96">
+<shadow type="math_number" id="%_r6ihN9}3n7hn#h2Fv.">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

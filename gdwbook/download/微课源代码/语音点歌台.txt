@@ -1,0 +1,329 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="Ym^2RQF3gCfTUZk_.Tu;">语音输入</variable>
+<variable id="-?{rP.s{7ib%;CRe3Qy7">识别文字</variable>
+</variables>
+<block type="robot_respeaker_start" id="wOCvk(8v_43!W5eIV_N|" x="293" y="7"/>
+<block type="procedures_defnoreturn" id="|Uq,sSSx;QkFUxj]^Ql:" x="283" y="57">
+<field name="NAME">Wakeup</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="robot_play_local_voice" id="H+u`{7)Jkt|EKfn]8Tbb">
+<value name="param200">
+<shadow type="text" id="Tv3eF`})y!Kl2DWd|IU8">
+<field name="TEXT">/home/pi/temp/ding.mp3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="hY1Qq}1KGQ);1FHcwY?#">
+<value name="param96">
+<shadow type="math_number" id="xik%w=nhhE|8mY(o~INU">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id=")O|yLH2qY)b7U?{yfl(:">
+<field name="VAR" id="Ym^2RQF3gCfTUZk_.Tu;">语音输入</field>
+<value name="VALUE">
+<block type="robot_respeaker_voice_to_file" id="3q?|5VR0sZQ7J}laRa2b">
+<value name="param448">
+<shadow type="math_number" id="hB1!xz#5/W/ZW?1)leM)">
+<field name="NUM">2</field>
+</shadow>
+</value>
+<value name="param449">
+<shadow type="text" id="dcLwGJoaLBQSeop6nH?M">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="8_Fbw6Ed%7lnc_T]|qv0">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+<value name="VALUE">
+<block type="robot_audio_to_text" id="$N9Z.zojBe-T^M?ZPNJv">
+<value name="param250">
+<shadow type="text" id="N|/)07UJ}Q[3p6#LLJ@w">
+<field name="TEXT">/home/pi/temp/respeaker.mp3</field>
+</shadow>
+<block type="variables_get" id="G=S4^f]L)t0rW0}`jOE`">
+<field name="VAR" id="Ym^2RQF3gCfTUZk_.Tu;">语音输入</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="?ouuBl5c.7{9}[ha!cg5">
+<value name="param1">
+<shadow type="text" id="kZF)dtd1Yw=66YZ9}iXk">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="j^mj91Fo1xE@S%~0OG%L">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="1RBA51nU;XaLi@qyQ?1v">
+<mutation elseif="6"/>
+<value name="IF0">
+<block type="logic_compare" id="hMn=ys^/#q%@L|uK!k_L">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="M0u%bfu+1o4U(OcVcf7k">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="zr!_`r)j~]FI}NCGT7oj">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="+k^td5e$+ipJ?(?Jq@D5">
+<field name="TEXT">笑起来</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="4kv%;vRuc.l7d;H!-4}s">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_play_local_voice" id="O%f/%1;-bQ#d,-?,,uiX">
+<value name="param200">
+<shadow type="text" id="`4`31qBMcUT,|I8t[6v*">
+<field name="TEXT">/home/pi/Music/你笑起来真好看.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_compare" id="CYt3`:^#ocK~*sF~7+|t">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id=":OcPA$`%xT.?i{rWC_aL">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="/Ff`iW5zE9.rz%kN!m3x">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="/WD7fyCIOb]4~}_m}m;_">
+<field name="TEXT">中国</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="!Hxv(t`ey((h`u7M=4+e">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="robot_play_local_voice" id="S5R28ft`u8lwV}YuB;3x">
+<value name="param200">
+<shadow type="text" id="JRmGjMQW2VCdKM{.|]:8">
+<field name="TEXT">/home/pi/Music/我的中国心.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_compare" id="c?nHIcQm+SJ)f?/}MAVM">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="L;q/U{!9O[PP-fR)1JV;">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="`qc*SJ?rn[:-i_JrA8Z8">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id=";4XZs6$^@Q-3}vG=txI1">
+<field name="TEXT">祖国</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="P^=KR8Xic5HRu}d_9o+D">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="robot_play_local_voice" id="6O~3Atbb}^}~7/0Z1_W?">
+<value name="param200">
+<shadow type="text" id="c`0HB7+flrSU6TCuVJOh">
+<field name="TEXT">/home/pi/Music/我和我的祖国.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_compare" id="TP;Ya(9r.yfgB#-SCqCu">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="8dxk:%1zaNP9BL5bPD8$">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="XY~oReT.xdi{0Z/^.R`$">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="]v|jk~2M6?2KxbIo*Sh;">
+<field name="TEXT">追梦</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="sa6C;Nd|mwbHbaf/VZdf">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO3">
+<block type="robot_play_local_voice" id="6HCOEi0mf+R6l5/dA%uU">
+<value name="param200">
+<shadow type="text" id="R~JYUMnqH`f!I$]^xxxn">
+<field name="TEXT">/home/pi/Music/追梦人.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF4">
+<block type="logic_compare" id="G5)df/.=p;;jv$dK#kFP">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="M;-r1T{l/@g,4cv+WGlk">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="4[^|kv;R|ljw,3W0X(X#">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="$%i#3h0p=xbs2oy{NqqM">
+<field name="TEXT">天大地大</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="d-9d7*P)#|SobfynM@,r">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO4">
+<block type="robot_play_local_voice" id="0LL:+beQj{@te@JR%I7$">
+<value name="param200">
+<shadow type="text" id="2PVejNJCjq:#Vp55106_">
+<field name="TEXT">/home/pi/Music/天大地大.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF5">
+<block type="logic_compare" id="_iO11CnvWUj,?!:4k@#Z">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="sr/h6lS88C/9UQhZdt_-">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="f)DrqKdTuB=A@,(ZKLhI">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="snQnJoD(QZ{tL~+U`1:$">
+<field name="TEXT">小手</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Z*)o=R6r0h4+]#K?nn!0">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO5">
+<block type="robot_play_local_voice" id="o()nq%2B@tM7m]M4`9o1">
+<value name="param200">
+<shadow type="text" id="|^J9D^aG%i6C2J%_0ir8">
+<field name="TEXT">/home/pi/Music/小手拍拍.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF6">
+<block type="logic_compare" id="F65H1$2!A8^b^dZP*)al">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="text_indexOf" id="9:[cDOIO,lb,fh5~gF`d">
+<field name="END">FIRST</field>
+<value name="VALUE">
+<block type="variables_get" id="q-E(8@(Fby1C1/oXFq=(">
+<field name="VAR" id="-?{rP.s{7ib%;CRe3Qy7">识别文字</field>
+</block>
+</value>
+<value name="FIND">
+<shadow type="text" id="|pE*vX7Rc_0iCHjLvSvg">
+<field name="TEXT">跳蛙</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="AbYIE1wvp?0/mu(HSz{0">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO6">
+<block type="robot_play_local_voice" id="A8dm?:I}{84?y.i$i*!i">
+<value name="param200">
+<shadow type="text" id="EL?KRAIytk:@CTZ1ULqS">
+<field name="TEXT">/home/pi/Music/小跳蛙.mp3</field>
+</shadow>
+</value>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="xBb(aR@JRQmpGx|EJW%I">
+<value name="param96">
+<shadow type="math_number" id=".f-r?T}|lXw{^Mq`f?z.">
+<field name="NUM">5</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

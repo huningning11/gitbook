@@ -1,0 +1,156 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="KE,XX6oki:Sv6qz,nC5j">test1</variable>
+</variables>
+<block type="variables_set" id="*hCC-OV7qAU}h{,M9V;?" x="153" y="154">
+<field name="VAR" id="KE,XX6oki:Sv6qz,nC5j">test1</field>
+<value name="VALUE">
+<block type="logic_ternary" id="R4{IyS7`3Hdobqcb5@T-">
+<value name="IF">
+<block type="logic_operation" id="D;f)GJ9GhUeSR^hI+GJP">
+<field name="OP">AND</field>
+<value name="A">
+<block type="logic_compare" id="T`]--FEHW^:S3Rw8zlhd">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_number" id="Y]#r*N06Say=AO$kW`rI">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Bb`uRHiRx_-97okrk(yV">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<value name="B">
+<block type="logic_compare" id="h%=N1N}|_Wqz$uzik-P7">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_number" id="?]tIWLQ5Wg~$LPL`D1ue">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="52M]v*puOM9K6oBFKYLC">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<value name="THEN">
+<block type="math_number" id="X}hp3M{/97~vaE5#9~#V">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="ELSE">
+<block type="math_number" id="8-1+eH8GOVIKN7,Ja,v?">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="ucdPoq6h#7wuz@Pl$2uN">
+<mutation elseif="3" else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="B|TvKS!BlXm0T](t?[:p">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="math_number" id="__tBoD8xM5A:@Ehl^u8F">
+<field name="NUM">0</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="_/2*EPq`|:tD;VTC|I.n">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="log_out_put" id="?]s4}7,YkjY]rOd?ow37">
+<value name="param1">
+<shadow type="text" id="F_D^!tDF%*m3LkBc1_Ah">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="8c6:B`nIV=qkgXzor)7x">
+<field name="VAR" id="KE,XX6oki:Sv6qz,nC5j">test1</field>
+</block>
+</value>
+</block>
+</statement>
+<value name="IF1">
+<block type="logic_negate" id="Rv)XJsQX`6A9Ty0{1aFu">
+<value name="BOOL">
+<block type="logic_compare" id="u2YQqJ!C6vS*e[ITdC39">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="math_number" id="Ymj^Qld`}rw;!Shh?vIA">
+<field name="NUM">1</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="Vc^9]h1T#mD.2^vD3j^f">
+<field name="NUM">1</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO1">
+<block type="log_out_put" id="T4=#rrq6_-iZM0@WRGmk">
+<value name="param1">
+<shadow type="text" id="TAr[Z*AS,^P=4AF}]J7a">
+<field name="TEXT">1=1</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF2">
+<block type="logic_negate" id="j=GrYq0FGGQ7DL8]6j!v">
+<value name="BOOL">
+<block type="logic_null" id="QAtG`nQ--|a=z`wm=Lt("/>
+</value>
+</block>
+</value>
+<statement name="DO2">
+<block type="log_out_put" id="m9t.]!qyA){F):N:-{^Z">
+<value name="param1">
+<shadow type="text" id="3p=pEBs!;P8.ziQ`y,8P">
+<field name="TEXT">非空</field>
+</shadow>
+</value>
+</block>
+</statement>
+<value name="IF3">
+<block type="logic_boolean" id="/qI6krW(M0Lkf``7F|S9">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO3">
+<block type="log_out_put" id="$)b4+F.T_PBH@iyMIPY{">
+<value name="param1">
+<shadow type="text" id="Sf!DUI=fA1Yr:ZPE[h*^">
+<field name="TEXT">真</field>
+</shadow>
+</value>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="log_out_put" id="s~FoQGadF^Kyo+H[|+!_">
+<value name="param1">
+<shadow type="text" id="fi8e4cLu1j6!:_`6bVPC">
+<field name="TEXT">Hello</field>
+</shadow>
+</value>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

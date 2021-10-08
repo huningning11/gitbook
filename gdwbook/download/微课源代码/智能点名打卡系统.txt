@@ -1,0 +1,191 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="jD=8i`Qay-qf4;k-0?ni">读取信息</variable>
+<variable id="NexW],gx`%`[#.}y(/LU">获取姓名</variable>
+</variables>
+<block type="v2_wzz_set_mqtt_server_port" id="LErBb2;Jr08P$W!8[BF9" inline="true" x="-47" y="367">
+<value name="param402">
+<shadow type="text" id="_.tNfJ{9A-pv0WczMM8h">
+<field name="TEXT">www.gdwrobot.top</field>
+</shadow>
+</value>
+<value name="param403">
+<shadow type="math_number" id="qdO{4AvyEFH]=3dV8[QQ">
+<field name="NUM">1883</field>
+</shadow>
+</value>
+<value name="param404">
+<shadow type="text" id="05aYFU@Ka1Qw?j/wne19">
+<field name="TEXT"/>
+</shadow>
+</value>
+<value name="param405">
+<shadow type="text" id="epeB@J[i3W+LZD/aoa|r">
+<field name="TEXT"/>
+</shadow>
+</value>
+<next>
+<block type="controls_repeat_ext" id="rwSwq!LwkYI^LgeAiKP:">
+<value name="TIMES">
+<block type="math_number" id="3eVj|Y|ZxqoRlLnh~1Zg">
+<field name="NUM">10000</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="p9#zepgw$*f`3;b]NUQF">
+<field name="VAR" id="jD=8i`Qay-qf4;k-0?ni">读取信息</field>
+<value name="VALUE">
+<block type="robot_mfrc_read_no_block" id="lyau(-z_om^ge7DofX(8"/>
+</value>
+<next>
+<block type="variables_set" id="3cddKRL%fH6m7i]gC=RF">
+<field name="VAR" id="NexW],gx`%`[#.}y(/LU">获取姓名</field>
+<value name="VALUE">
+<block type="lists_getIndex" id="=eRrIo18ogmr!D~us`n?">
+<mutation statement="false" at="true"/>
+<field name="MODE">GET</field>
+<field name="WHERE">FROM_START</field>
+<value name="VALUE">
+<block type="variables_get" id="d}N~v!i)^[fESb6N5(1Q">
+<field name="VAR" id="jD=8i`Qay-qf4;k-0?ni">读取信息</field>
+</block>
+</value>
+<value name="AT">
+<block type="math_number" id="n/@_d?FR{ZA~K}Ymyqdb">
+<field name="NUM">2</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="dC7QixS~]yUPxDdqymMV">
+<value name="IF0">
+<block type="logic_compare" id="(L1s=ibTtr`b9cEjpefm">
+<field name="OP">NEQ</field>
+<value name="A">
+<block type="variables_get" id="4+;|x`mH`?+_EORZyTW?">
+<field name="VAR" id="NexW],gx`%`[#.}y(/LU">获取姓名</field>
+</block>
+</value>
+<value name="B">
+<block type="logic_null" id="-{}E5i6l^r$QKEJ;k)r@"/>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_play_local_voice" id="R]U{0@c+odl:U{KO6o^(">
+<value name="param200">
+<shadow type="text" id=")x3,F*#ow(Z`aBwyT@PX">
+<field name="TEXT">/home/pi/temp/ding.mp3</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="naqPSxbsMG,]/:rs^+D3">
+<value name="param96">
+<shadow type="math_number" id="-9=E~o)0~MFWNa*Js84m">
+<field name="NUM">0.5</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id=",pIls|d]s6@.S)S!~eLJ">
+<value name="param1">
+<shadow type="text" id="ZH0MfR0e~rVN+nk4UF`t">
+<field name="TEXT">已写入</field>
+</shadow>
+<block type="variables_get" id=",J/b$-]*SN-q3:B.zeK.">
+<field name="VAR" id="NexW],gx`%`[#.}y(/LU">获取姓名</field>
+</block>
+</value>
+<next>
+<block type="robot_speak_with_parameter" id="^nR9wH[PoIjA#]HG$iyz" inline="true">
+<value name="param289">
+<shadow type="text" id="Zn;4!M,Tky%3P}m{`FY:">
+<field name="TEXT">请输入中文字符串</field>
+</shadow>
+<block type="text_join" id="#@[y9%zm;pcPCy|Zong6">
+<mutation items="2"/>
+<value name="ADD0">
+<block type="variables_get" id="YXjhcz!1nV8peIN_liBk">
+<field name="VAR" id="NexW],gx`%`[#.}y(/LU">获取姓名</field>
+</block>
+</value>
+<value name="ADD1">
+<block type="text" id="=QRExLSMX.Sc_aCt7E/W">
+<field name="TEXT">，打卡成功</field>
+</block>
+</value>
+</block>
+</value>
+<value name="param290">
+<shadow type="math_number" id=",@Hd+^z.-^4AmNS]pR0b">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<value name="param291">
+<shadow type="math_number" id="[HbWYjv{S.?dD!YM__-o">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param292">
+<shadow type="math_number" id="2`8/Cy8Lg[F[;7W#NY=b">
+<field name="NUM">6</field>
+</shadow>
+</value>
+<next>
+<block type="robot_publish_data" id="z5DCbV{)m7+iVk6:ji,G">
+<value name="param97">
+<block type="text" id="0j^6{3`Y$+STd`Kgm$qh">
+<field name="TEXT">chengmingliang01</field>
+</block>
+</value>
+<value name="param98">
+<shadow type="text" id="1QMLKn|^RpgezLwQ%Sxq">
+<field name="TEXT">点名</field>
+</shadow>
+</value>
+<value name="param99">
+<shadow type="text" id="JEB7t-ICH4qzq|*u#uuZ">
+<field name="TEXT">1</field>
+</shadow>
+<block type="variables_get" id="-N6%J}k%/bh~.h{J8MtD">
+<field name="VAR" id="NexW],gx`%`[#.}y(/LU">获取姓名</field>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="05]nGs9tC^@USKwR0H{a">
+<value name="param96">
+<shadow type="math_number" id="h=_mY/K]/c2=iG`PQq5t">
+<field name="NUM">2</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="pHnG0l}S#$(EnCK-E;9j">
+<value name="param96">
+<shadow type="math_number" id="Q[$vW/Ey|DQ~E36]v_Qq">
+<field name="NUM">0.3</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

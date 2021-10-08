@@ -1,0 +1,10 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="0btf99U3Zhw]Rp4)Hyr%" x="9" y="63">
+<value name="param1">
+<shadow type="text" id="GR*T7DQHDvD_Wn9:9y9/">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_current_year" id="$G^sx~NRcaXca(NZ2Z@E"/>
+</value>
+</block>
+</xml>

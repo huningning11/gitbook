@@ -1,0 +1,66 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="W!ij-g6tHm7F2i#uiAE*">数据</variable>
+<variable id="Cz$}=SrJ4%nr/H,r[U:b">读取数据</variable>
+</variables>
+<block type="robot_mfrc_init" id="niJZT]K-@h/5C!ZFvfCE" x="278" y="-423">
+<value name="param301">
+<shadow type="math_number" id="8`x!L1KKaYL@HT}5*tso">
+<field name="NUM">25</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="GC+`P|0^%r~ZsLKZ8uIl">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_boolean" id="y4t=+(@sCkEP[R81q6pf">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<statement name="DO">
+<block type="variables_set" id="R]{ERj#Hh3#o]iPJn{`5">
+<field name="VAR" id="W!ij-g6tHm7F2i#uiAE*">数据</field>
+<value name="VALUE">
+<block type="robot_mfrc_write_no_block" id="b,85!gL/7IG[a@_VKz0y">
+<value name="param302">
+<shadow type="text" id="$wD,aMuFPqw%=}hl/`^Z">
+<field name="TEXT">test</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_time_wait" id="Fe#^o$GhTeOC18/HEZRn">
+<value name="param96">
+<shadow type="math_number" id="!c7c=sd*D[F*oSJ=2+S8">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="o/3Cw2jAS/xPC/zQs5A^">
+<field name="VAR" id="Cz$}=SrJ4%nr/H,r[U:b">读取数据</field>
+<value name="VALUE">
+<block type="robot_mfrc_read_no_block" id="7]nI[_f|(cS=#Z%L_1C1"/>
+</value>
+<next>
+<block type="log_out_put" id="$d)sy0oB?e2?gH0{5`H5">
+<value name="param1">
+<shadow type="text" id=".WbUqu,0:H4GGd+g[Nf+">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="V*J]e(^jNT1zQ7|O0NDa">
+<field name="VAR" id="Cz$}=SrJ4%nr/H,r[U:b">读取数据</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</xml>

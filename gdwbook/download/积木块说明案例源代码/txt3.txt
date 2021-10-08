@@ -1,0 +1,50 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="robot_ledstrip_init" id="pR7(@My+#7ug%.z08ZS2" x="8" y="337">
+<value name="param259">
+<shadow type="math_number" id="bO)TnwJxiHurI$x*zX[B">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param260">
+<shadow type="math_number" id="@zfRdml6a`-?%:0N9K4p">
+<field name="NUM">8</field>
+</shadow>
+</value>
+<value name="param261">
+<shadow type="math_number" id="4Pq1@b];HvmGz(gwt2^s">
+<field name="NUM">50</field>
+</shadow>
+</value>
+<next>
+<block type="robot_ledstrip_setpixelcolor" id="LFav{M#F2ea(Q49ZvG7n">
+<value name="param262">
+<shadow type="math_number" id="A[@9Q#F0.#IaSl|9SaQ@">
+<field name="NUM">0</field>
+</shadow>
+</value>
+<value name="param263">
+<block type="robot_color" id="yr@#~r$YtUou1A}}i,.a">
+<value name="param247">
+<shadow type="math_number" id="VP]9gt#Wiy~j`tS6rQg5">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="gNGOdIVXWX9YYOT-BV(+">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="HK3QBCQC)b7@=_ZxfpmO">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_lewstrip_show" id="ZeqA[D{*/KoXv[LX52yw"/>
+</next>
+</block>
+</next>
+</block>
+</xml>

@@ -1,0 +1,57 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="9n~K}O%dUxGTBM$O|^Pb">文件对象</variable>
+</variables>
+<block type="variables_set" id="B~Q9q~5^Bb,_We=2fG.1" x="-18" y="-93">
+<field name="VAR" id="9n~K}O%dUxGTBM$O|^Pb">文件对象</field>
+<value name="VALUE">
+<block type="wzz_openFile" id="H[xDdP:9.U#[5^76I}(F">
+<field name="param377">'w+'</field>
+<value name="param378">
+<shadow type="text" id="xJDz:,?@FAgK]p8ks/+h">
+<field name="TEXT">/home/pi/temp/gdwrobot.txt</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="wzz_writeToFile" id="F]k.q(tz2Inff4m4kIF-">
+<value name="param380">
+<block type="variables_get" id="0.gmVpETq-2~k4d9UF=@">
+<field name="VAR" id="9n~K}O%dUxGTBM$O|^Pb">文件对象</field>
+</block>
+</value>
+<value name="param381">
+<shadow type="text" id="2?$GbX!?BP1VK^PbxK[j">
+<field name="TEXT">Hello GDWRobot!</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="9WAa=x=m.rK7Zq-yl]j.">
+<value name="param1">
+<shadow type="text" id="w@.wZ_uUHo=9p#qft-Sa">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="wzz_getCurrentFilePos" id="0eiwlTt+4Zn]d8=N)XjN">
+<value name="param386">
+<block type="variables_get" id="I/c}EQ-~ahRn$xy),K8)">
+<field name="VAR" id="9n~K}O%dUxGTBM$O|^Pb">文件对象</field>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_remove_file" id=")pFNI^O4_*FpXz4_GksB">
+<value name="param483">
+<shadow type="text" id="|~zVV00{-},S7W#9GA?N">
+<field name="TEXT">/home/pi/temp/gdwrobot.txt</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

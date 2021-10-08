@@ -1,0 +1,160 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="X4g(VHRj75+VwY1TBi9F">背景图片</variable>
+<variable id="`Xwbe|lYm`iX5,AnS/q2">图片文件</variable>
+</variables>
+<block type="robot_OLED_show" id="kb(#-jt:#.B3exM%|Fnt" x="307" y="-309">
+<next>
+<block type="robot_OLED_init" id="5Uie[$iNH;lmdgT=L13G">
+<value name="param288">
+<shadow type="text" id="D[J3`A*o2*8a^BaK?fE(">
+<field name="TEXT">ssd1306</field>
+</shadow>
+</value>
+<value name="param311">
+<shadow type="text" id="]]QMV7iC@;@|;y_mFIF8">
+<field name="TEXT">i2c</field>
+</shadow>
+</value>
+<value name="param312">
+<shadow type="text" id="!7e|Ft#R%_XX%cy+6m}-">
+<field name="TEXT">128</field>
+</shadow>
+</value>
+<value name="param313">
+<shadow type="text" id="RuXNCa08Ya.g-@u8g}gs">
+<field name="TEXT">64</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="mwTTDUld.Kn}uW}!|@W^">
+<field name="VAR" id="X4g(VHRj75+VwY1TBi9F">背景图片</field>
+<value name="VALUE">
+<block type="robot_get_new_image" id="[,j(t%G`}^%)*.qp[,AA">
+<value name="param274">
+<shadow type="text" id="k:2{O@IEF!cQ[0(qA}d2">
+<field name="TEXT">RGB</field>
+</shadow>
+</value>
+<value name="param275">
+<shadow type="math_number" id="]k0{Qf905-a@E%va}*yO">
+<field name="NUM">128</field>
+</shadow>
+</value>
+<value name="param276">
+<shadow type="math_number" id="@C8^z2+7q@7oD4THT+*+">
+<field name="NUM">64</field>
+</shadow>
+</value>
+<value name="param277">
+<block type="robot_color" id="wv37J,:jES?P-19.9Fq.">
+<value name="param247">
+<shadow type="math_number" id="R,yFgl]w[gDXo]|6Je=`">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param248">
+<shadow type="math_number" id="flg5X9$}9a_)g-?(=COB">
+<field name="NUM">255</field>
+</shadow>
+</value>
+<value name="param249">
+<shadow type="math_number" id="x3`ii.bi)OlT]+hiZr?S">
+<field name="NUM">255</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="variables_set" id="VxDkD7%Wp!r4@rI%itGN">
+<field name="VAR" id="`Xwbe|lYm`iX5,AnS/q2">图片文件</field>
+<value name="VALUE">
+<block type="robot_open_image" id="?M*fK:k4tXyl{hDr,{b$">
+<value name="param285">
+<shadow type="text" id=",pnZK^UaShmT4iQAp@Ye">
+<field name="TEXT">/home/pi/imageTemp/pi_logo.png</field>
+</shadow>
+</value>
+</block>
+</value>
+<next>
+<block type="robot_paste_image" id="laB8g+Eg416$}wL4{$/Y">
+<value name="param281">
+<block type="variables_get" id="-m+)q8xN*d`FT,/3Vk6B">
+<field name="VAR" id="X4g(VHRj75+VwY1TBi9F">背景图片</field>
+</block>
+</value>
+<value name="param282">
+<shadow type="math_number" id="xt^I)=V9He{tT914DwK;">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param283">
+<shadow type="math_number" id="5l1TU;BcUH*g!!lVY$Z2">
+<field name="NUM">10</field>
+</shadow>
+</value>
+<value name="param284">
+<block type="variables_get" id="`+vCR2s,rGO8ma5T;=%e">
+<field name="VAR" id="`Xwbe|lYm`iX5,AnS/q2">图片文件</field>
+</block>
+</value>
+<next>
+<block type="robot_OLED_display" id="_,+)H/cRnS6A6$O|!5wa">
+<value name="param289">
+<block type="variables_get" id="g~6F1prp[yU8WO*uUsa,">
+<field name="VAR" id="X4g(VHRj75+VwY1TBi9F">背景图片</field>
+</block>
+</value>
+<next>
+<block type="robot_image_add_string" id="xauq2?C/b:;,J/{BD5Pm">
+<value name="param284">
+<block type="variables_get" id="B|d0X`YWaoLt6nH5{yJ{">
+<field name="VAR" id="X4g(VHRj75+VwY1TBi9F">背景图片</field>
+</block>
+</value>
+<value name="param285">
+<shadow type="text" id="p|GZ6VCVwQc@D9b[MCgS">
+<field name="TEXT">古德微</field>
+</shadow>
+</value>
+<value name="param286">
+<shadow type="math_number" id="=wL[@]gA:YonXETQOdM)">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param287">
+<shadow type="math_number" id="d_wvrp1+P}+!QfF@FTre">
+<field name="NUM">70</field>
+</shadow>
+</value>
+<value name="param288">
+<shadow type="math_number" id=".9kLBml5uA}t=RUgcyXI">
+<field name="NUM">30</field>
+</shadow>
+</value>
+<next>
+<block type="robot_OLED_display" id="=:eHx3reC%p|Xl%TE2uh">
+<value name="param289">
+<block type="variables_get" id=")l@|I2]X`#}i9s{!o**5">
+<field name="VAR" id="X4g(VHRj75+VwY1TBi9F">背景图片</field>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

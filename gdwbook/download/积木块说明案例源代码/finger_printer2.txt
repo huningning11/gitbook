@@ -1,0 +1,496 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<variables>
+<variable id="$S_Y[j,+dqaWG?3gc9DB">指纹录制密码</variable>
+<variable id="N;3)fLIs4HGESxfUT;k%">矩阵键盘按钮结果</variable>
+<variable id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</variable>
+<variable id="Fy3fq3O[NzHh~%^sm8iu">识别指纹ID</variable>
+<variable id="t2wl|_|;vn2RDO*oE-8K">输入密码</variable>
+<variable id="=hjW.OnR.^LvBAc$#TuO">录制指纹ID</variable>
+</variables>
+<block type="procedures_defnoreturn" id=".*e5^_ui?XKwWJhtGZcD" x="0" y="0">
+<field name="NAME">初始化</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="variables_set" id="@#w#9iVSM,_`xSW@S~n`">
+<field name="VAR" id="$S_Y[j,+dqaWG?3gc9DB">指纹录制密码</field>
+<value name="VALUE">
+<block type="text" id="=^:MtK4y=MShy7YrxPY}">
+<field name="TEXT">123abc</field>
+</block>
+</value>
+<next>
+<block type="variables_set" id="q05PG|jj(EgksrO`s|5E">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+<value name="VALUE">
+<block type="robot_fingerprint_getdevice" id="EQ(KT^:D:L@{sh5h[n,q"/>
+</value>
+<next>
+<block type="log_out_put" id="gl2::GV]Y5!]9zH)[/MN">
+<value name="param1">
+<shadow type="text" id="@^=[i=ja4fwRq`H6okT{">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="variables_get" id="/cbiF0D[8@arE6!/1I*~">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="K87]!$(HN(rTJq=3vjT4">
+<value name="IF0">
+<block type="logic_negate" id="7Qg_Jq4iW7QsCU42$=x4">
+<value name="BOOL">
+<block type="lists_isEmpty" id="ufXA45[n|,C$ziWw4aig">
+<value name="VALUE">
+<block type="variables_get" id="!_l~l*N@2xzW$Soa%T7U">
+<field name="VAR" id="LgM?*u8}_l0U:]n*_]~I">USB设备列表</field>
+</block>
+</value>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_fingerprint_init" id="]3L`z]9PDP%KOu,{9c/P">
+<field name="param925">0</field>
+</block>
+</statement>
+<next>
+<block type="servo_pwm_output" id="[/a]WrcudnzP.nO!a6gC">
+<value name="param755">
+<shadow type="math_number" id="hAphj$|1+ccGgYAk#)mU">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="l.r~D~-++A3`0p/w[4f.">
+<field name="NUM">1000</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_callnoreturn" id="y!929|6(Ss(bS@?byB4`" x="56" y="261">
+<mutation name="初始化"/>
+<next>
+<block type="robot_add_thread_function_callback" id="KA_^.|sN;1)9$As?aZsf">
+<value name="param309">
+<shadow type="text" id="EpGw|`:?1-P|zRh?2H-i">
+<field name="TEXT">录制指纹</field>
+</shadow>
+</value>
+<next>
+<block type="robot_add_thread_function_callback" id="*yzl/::mcT0E-a]y]Hnq">
+<value name="param309">
+<shadow type="text" id="rt_nMF1Ku8n3NiRe,|C$">
+<field name="TEXT">指纹识别</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+<block type="procedures_defnoreturn" id="H]X*xbjs=.op~d%eR2^o" x="-309" y="352">
+<field name="NAME">指纹识别</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="controls_if" id="9=)Z,/#H_)UgStWYj=|0">
+<value name="IF0">
+<block type="get_infrared_feedback_result" id="I*swj~9(i)a!hFTjv(^S">
+<value name="param182">
+<shadow type="math_number" id="lO(9c}`w`VD}Jt;rJ4,8">
+<field name="NUM">24</field>
+</shadow>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="variables_set" id="xO[isrIC#!$4BkReX!F+">
+<field name="VAR" id="Fy3fq3O[NzHh~%^sm8iu">识别指纹ID</field>
+<value name="VALUE">
+<block type="robot_fingerprint_search" id="Frlypxy.WNZjM%OJUss*">
+<field name="param928">1</field>
+</block>
+</value>
+<next>
+<block type="controls_if" id="]I?/%jPc)Uf0p}#d0KTM">
+<value name="IF0">
+<block type="logic_compare" id="D^_H{{4j%mNa[fDth~S@">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="Ue,Y%`@KVT7{SP,w}31O">
+<field name="VAR" id="Fy3fq3O[NzHh~%^sm8iu">识别指纹ID</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="v~YS4)m5|cfsrr74/9,8">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_out" id="yvTAz=jVgXg*5#Bk|znV">
+<value name="param4">
+<shadow type="text" id="b,}*U[g$y8G.t)~Po0f*">
+<field name="TEXT">指纹识别成功，门已打开</field>
+</shadow>
+</value>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="$t1l4/7^yd9-S;[|3qt/">
+<value name="param96">
+<shadow type="math_number" id=":*O7xy[t{%:pk2W!m4Gm">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="Plh1tew=-hZ7NC%Y#GbY" x="133" y="417">
+<field name="NAME">录制指纹</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="variables_set" id="i%|j,yMV66|C1%zKI.xb" collapsed="true">
+<field name="VAR" id="N;3)fLIs4HGESxfUT;k%">矩阵键盘按钮结果</field>
+<value name="VALUE">
+<block type="robot_arraykey_getkey" id="05LM}G))XAiTtdi,]S[[">
+<value name="param457">
+<shadow type="math_number" id="y(N~R|N=]AIo*(^B0qo}">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param458">
+<shadow type="math_number" id="s`W|F?ZdE_dniB/fj1c[">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param455">
+<block type="robot_list1" id="#:$^b`.4V0.)P*o$q;qb">
+<value name="param459">
+<shadow type="math_number" id="svmino7tnJFY`Sd`i7Tu">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param460">
+<shadow type="math_number" id="-aUh6(kdeb|-v4uoe[A|">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param461">
+<shadow type="math_number" id="k#S1CtWdFVI^T2pU(yWb">
+<field name="NUM">13</field>
+</shadow>
+</value>
+<value name="param462">
+<shadow type="math_number" id="8.0gwV{8c3-WsZ=287Ep">
+<field name="NUM">17</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param456">
+<block type="robot_list2" id="IKU)kC/0DHtL@j|`tg}z">
+<value name="param463">
+<shadow type="math_number" id="JfCMK.5WIb||/k~MBEN;">
+<field name="NUM">19</field>
+</shadow>
+</value>
+<value name="param464">
+<shadow type="math_number" id="p72N2v0ktQ-*qL0ZW+vq">
+<field name="NUM">22</field>
+</shadow>
+</value>
+<value name="param465">
+<shadow type="math_number" id="lL8iv[?=F=-BxhE~BF/2">
+<field name="NUM">26</field>
+</shadow>
+</value>
+<value name="param466">
+<shadow type="math_number" id="T5LQoHqj%+CE/u=~R*/v">
+<field name="NUM">27</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="xZ=Lpc%ij8Np%f16sNP1">
+<value name="IF0">
+<block type="logic_compare" id="Y7?GrWu?W.(6v7fajdyE">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="WtjTi7Y!ct7,$@ZwOri]">
+<field name="VAR" id="N;3)fLIs4HGESxfUT;k%">矩阵键盘按钮结果</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id=":bgVN0hF7,#)xY4Y6cbq">
+<field name="NUM">43</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_out" id="]jazw,[t}nGmW)k|$x14">
+<value name="param4">
+<shadow type="text" id="5r)TN=K`2HLs=F7ZF(?S">
+<field name="TEXT">请输入录制指纹密码，按井号键结束</field>
+</shadow>
+</value>
+<next>
+<block type="variables_set" id="Iw6on7B_j?}f0V2NL^q!">
+<field name="VAR" id="t2wl|_|;vn2RDO*oE-8K">输入密码</field>
+<value name="VALUE">
+<block type="robot_getkey_numandstring" id="uMJDTo$+eenu]#l_]JV3">
+<value name="param590">
+<block type="robot_list1" id=",a)K#S;);eEia6hl#)L6">
+<value name="param459">
+<shadow type="math_number" id="KyuGbm}{k8Z}cJLfTk:L">
+<field name="NUM">4</field>
+</shadow>
+</value>
+<value name="param460">
+<shadow type="math_number" id="ra0M{@.:zbZd~YYPF.K/">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<value name="param461">
+<shadow type="math_number" id="bnt!vw3={zyCRbvM81lC">
+<field name="NUM">13</field>
+</shadow>
+</value>
+<value name="param462">
+<shadow type="math_number" id="$?}{j}D$]mXMddvAe9#A">
+<field name="NUM">17</field>
+</shadow>
+</value>
+</block>
+</value>
+<value name="param591">
+<block type="robot_list2" id="{ajs@2O+vmE=qVS.[h;B">
+<value name="param463">
+<shadow type="math_number" id="vwpmnyXd}~|?w6qoam]u">
+<field name="NUM">19</field>
+</shadow>
+</value>
+<value name="param464">
+<shadow type="math_number" id="D/r7i:1E7!*t#U3KovwJ">
+<field name="NUM">22</field>
+</shadow>
+</value>
+<value name="param465">
+<shadow type="math_number" id="=IVz49?9_IOU+db8Q?M1">
+<field name="NUM">26</field>
+</shadow>
+</value>
+<value name="param466">
+<shadow type="math_number" id="v(8EK|L40W=D@T=4bdN-">
+<field name="NUM">27</field>
+</shadow>
+</value>
+</block>
+</value>
+</block>
+</value>
+<next>
+<block type="controls_if" id="+T`p/yn3P9FDAa]74cOz">
+<mutation else="1"/>
+<value name="IF0">
+<block type="logic_compare" id="-{ps/}|)t:~{poIvAI[I">
+<field name="OP">EQ</field>
+<value name="A">
+<block type="variables_get" id="gSM}|rAnyIDD]bPsMvx}">
+<field name="VAR" id="t2wl|_|;vn2RDO*oE-8K">输入密码</field>
+</block>
+</value>
+<value name="B">
+<block type="variables_get" id="}X2B20CHtgg56^=r%*+0">
+<field name="VAR" id="$S_Y[j,+dqaWG?3gc9DB">指纹录制密码</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_out" id="^R/L+X5|k)M5zxR9uc0j">
+<value name="param4">
+<shadow type="text" id="cPAwwFX7e_QbN-(2=Gu=">
+<field name="TEXT">密码正确，开始录制</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="6=$et21-X6B*.8-*[$%F">
+<value name="param96">
+<shadow type="math_number" id="n)LJ8arX~@rl:/Ho2Iej">
+<field name="NUM">2</field>
+</shadow>
+</value>
+<next>
+<block type="controls_whileUntil" id="0Tp69[xA/JzxnvUhK!fC">
+<field name="MODE">WHILE</field>
+<value name="BOOL">
+<block type="logic_negate" id="~#9DK/VfPS-G2Yu,?8!g">
+<value name="BOOL">
+<block type="robot_fingerprint_getresult" id="G)lnkhENxqH[HW[kG`Ka"/>
+</value>
+</block>
+</value>
+<statement name="DO">
+<block type="robot_pass" id="2=K+N~%b)68M*f_tvt_c"/>
+</statement>
+<next>
+<block type="variables_set" id="xNY6~4_xpiOpf0QE)zAw">
+<field name="VAR" id="=hjW.OnR.^LvBAc$#TuO">录制指纹ID</field>
+<value name="VALUE">
+<block type="robot_fingerprint_enroll" id="IF`He~YBqoh?`)x.u?:?"/>
+</value>
+<next>
+<block type="controls_if" id="5Bb:K3Nvl:snuK5?q[Ps">
+<value name="IF0">
+<block type="logic_compare" id="DlF+NFCu@sasvyrFUqFZ">
+<field name="OP">GT</field>
+<value name="A">
+<block type="variables_get" id="=2yjrqj(-*P~PF`G$82*">
+<field name="VAR" id="=hjW.OnR.^LvBAc$#TuO">录制指纹ID</field>
+</block>
+</value>
+<value name="B">
+<block type="math_number" id="t.dAozCZnwH::JK`.y_+">
+<field name="NUM">0</field>
+</block>
+</value>
+</block>
+</value>
+<statement name="DO0">
+<block type="robot_speak_out" id="Xe(zD.jemOKgI,yJ{ty@">
+<value name="param4">
+<shadow type="text" id="}65iOkl$-2F}SnkTcG(0">
+<field name="TEXT">录制成功</field>
+</shadow>
+</value>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<statement name="ELSE">
+<block type="robot_speak_out" id="vqdp`G.aAJZ@9!!Ogq^d">
+<value name="param4">
+<shadow type="text" id="u,riO-~P@9l9cG3lhl61">
+<field name="TEXT">密码错误，请重新按下井号键后吗，输入密码</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="T-tk,}]tj?PkTo+@U]#^">
+<value name="param96">
+<shadow type="math_number" id="Li6+zTE#j+IkZj0PI8{{">
+<field name="NUM">2</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+<next>
+<block type="robot_time_wait" id="ZWwAi$$I]K9NJ8$Es+P-">
+<value name="param96">
+<shadow type="math_number" id="Fm6g$C;iPhS0mhTMg1VL">
+<field name="NUM">0.1</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+<block type="procedures_defnoreturn" id="BbbV)lc~gmP=0Bnab;z." x="-319" y="669">
+<field name="NAME">开关门</field>
+<comment pinned="false" h="80" w="160">描述该功能...</comment>
+<statement name="STACK">
+<block type="servo_pwm_output" id="r8I9AK(p$A8)D{Od,tA`">
+<value name="param755">
+<shadow type="math_number" id=",Fd:ebQT!(P)d?Vfz$#8">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="qq~Bp#K9y$?cdgC=gOMm">
+<field name="NUM">2000</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="=h2!~;)neMhtRGOjZ{e*">
+<value name="param96">
+<shadow type="math_number" id="{@rhZ+wIc5u+du5#Mf)$">
+<field name="NUM">5</field>
+</shadow>
+</value>
+<next>
+<block type="servo_pwm_output" id="^X2l/h-JIu6ougkMSA#-">
+<value name="param755">
+<shadow type="math_number" id="mzOlY@@j*6F+{gJGU_it">
+<field name="NUM">18</field>
+</shadow>
+</value>
+<value name="param756">
+<shadow type="math_number" id="xG~BK#4LP3d8+eZ7AW2D">
+<field name="NUM">1000</field>
+</shadow>
+</value>
+<next>
+<block type="robot_time_wait" id="lv7VAy1wR?BQ4,*e_PK)">
+<value name="param96">
+<shadow type="math_number" id="8,i;:*%2g)$-OfmE_];~">
+<field name="NUM">1</field>
+</shadow>
+</value>
+<next>
+<block type="pwm_stop" id=".{nItrY$4eSB-l~n*ciX">
+<value name="param9">
+<shadow type="math_number" id="-}bm6~;,;#nd!+AM9dR4">
+<field name="NUM">18</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</statement>
+</block>
+</xml>

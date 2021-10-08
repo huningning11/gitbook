@@ -1,0 +1,32 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="robot_Paj7620_init" id="RUBy~49j~HZ#C44wf)`2" x="-280" y="66">
+<next>
+<block type="log_out_put" id="N3irxWCwcilQZ3_Ix@Nd">
+<value name="param1">
+<shadow type="text" id="P:kmxurf5+`DlUSVT!76">
+<field name="TEXT">starting...</field>
+</shadow>
+</value>
+<next>
+<block type="log_out_put" id="x2Di50q1Vvsc7#i`!{jS">
+<value name="param1">
+<shadow type="text" id="8ilMmN=yQ_=vm~6X}53O">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_pajdata" id="v9aGF9Hq[mf|@U_,_@~X"/>
+</value>
+<next>
+<block type="log_out_put" id="x{0`,ZTFeB*,_(f5hC]a">
+<value name="param1">
+<shadow type="text" id="CQ,Vlt6IW;-|-J5V[o5*">
+<field name="TEXT">ending...</field>
+</shadow>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</xml>

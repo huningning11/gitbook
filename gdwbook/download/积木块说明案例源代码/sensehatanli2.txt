@@ -1,0 +1,115 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+<block type="log_out_put" id="Y@Eh?.@P3a#:*UV}o;r." x="-265" y="-83">
+<value name="param1">
+<shadow type="text" id=".D2%9e9y~K5P~ior`oR]">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_sense_temperature" id="SF[|JQ}ER*ievsrxIeyu"/>
+</value>
+<next>
+<block type="log_out_put" id="CP!mTYJOK}axzZGX%ZYt">
+<value name="param1">
+<shadow type="text" id="nil@16-YW7[c~Vu6#Rm9">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_sense_humidity" id="%[rD6TLvT`nYMW.dy,{D"/>
+</value>
+<next>
+<block type="log_out_put" id="!B_t%~UY[7I+/}+x-U+i">
+<value name="param1">
+<shadow type="text" id="Vl:CzEtl)ukoQ6^}:Do-">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_sense_pressure" id="5trk5.qfXfR;es{_-A~%"/>
+</value>
+<next>
+<block type="robot_imu_enable_config" id="l{N6n-b.I~6qH,aBuuVY">
+<value name="param160">
+<block type="logic_boolean" id="ty5vQ~8k5lb!fNAHdz${">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<value name="param161">
+<block type="logic_boolean" id="XNIu!aTDvwhbxQ%-23(}">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<value name="param162">
+<block type="logic_boolean" id="KXV]B%|7H,,!di}mbdaK">
+<field name="BOOL">TRUE</field>
+</block>
+</value>
+<next>
+<block type="log_out_put" id="{eT_X~XD}%56aGF/%-Kc">
+<value name="param1">
+<shadow type="text" id="3.kuiTS[v92/R;V3I-..">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_sense_compass" id="FvJLCB!MGlM^f8Y)6%|K"/>
+</value>
+<next>
+<block type="log_out_put" id="w`[GA$[r0?L34LUe87+a">
+<value name="param1">
+<shadow type="text" id="e+A6UmX$VBN=J^!kR*Ag">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_sense_euler" id="EN;4KKq;z3x0Df[0z_=r"/>
+</value>
+<next>
+<block type="log_out_put" id="BO1aXPhPuI/$WGmqd[G`">
+<value name="param1">
+<shadow type="text" id="!/jckba7%+k,,+C0t6);">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_imu_accelerometer_x" id="uFf)lxDzvV,[cmwVnfWP"/>
+</value>
+<next>
+<block type="log_out_put" id="zDkX2_YlkK`gW!(@oJr2">
+<value name="param1">
+<shadow type="text" id="~4Qn}i+@BL5w)Nw;}yd[">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_imu_accelerometer_y" id="H:5#2~$/XMh{d(:s.2:v"/>
+</value>
+<next>
+<block type="log_out_put" id="iVuLX$u|S?8Gyun#?m0j">
+<value name="param1">
+<shadow type="text" id="WsTt;o:V#yJ!Y=|ll_b?">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_get_imu_accelerometer_z" id="!_q8-skv6y*w-v48{!(A"/>
+</value>
+<next>
+<block type="log_out_put" id="MouV8`~e%9Wnq}AY{zy|">
+<value name="param1">
+<shadow type="text" id="*:]Tde,Fuv1/:k1F{/7o">
+<field name="TEXT">Hello</field>
+</shadow>
+<block type="robot_sense_get_stick_attribute" id="-Dld+Y|8FjO^]6Bukix4">
+<field name="param178">'direction'</field>
+<value name="param177">
+<block type="robot_sense_wait_stick_event" id="_%X.JKm./Hwsi^_hIh#J"/>
+</value>
+</block>
+</value>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+</next>
+</block>
+<block type="robot_add_stick_any_callback" id="a5;Vr$8cLk5+4$r!p_fz" x="-26" y="622"/>
+</xml>
